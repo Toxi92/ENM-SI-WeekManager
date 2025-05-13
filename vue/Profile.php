@@ -27,7 +27,7 @@ include_once("../Controlleur/controlleur_monprofil.php");
     <button id="toggleButton" class="toggle-button">+</button>
     <h1 class="Titre">Mon Profil</h1>
     
-    <a class="BouttonAcceuilProfil" href="./index.php"><p>Accueil</p></a>
+    <a class="BouttonAcceuilProfil" href="../index.php"><p>Accueil</p></a>
 
     
     <div>    
