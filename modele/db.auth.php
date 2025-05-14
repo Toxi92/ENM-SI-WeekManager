@@ -57,7 +57,7 @@ class QueryUser{
     public function updateUserField($userEmail, $field, $value) {
         $allowedFields = ['email', 'pwd', 'username'];
         if (in_array($field, $allowedFields)) {
-            $sql = "UPDATE Utilisateurs SET $field = :value WHERE ID = :email";
+            $sql = "UPDATE Utilisateurs SET $field = :value WHERE email = :email";
             $stmt = $this->bdd->getConnexion()->prepare($sql);
             return $stmt->execute([
                 'value' => $value,

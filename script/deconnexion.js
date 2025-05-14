@@ -7,7 +7,7 @@ document.getElementById('deconnexion').addEventListener('click', function (e) {
     .then(response => {
         if (response.ok) {
             // Rediriger l'utilisateur vers la page d'accueil
-            window.location.href = './index.php';
+            window.location.href = '../index.php';
         } else {
             console.error('Erreur lors de la déconnexion.');
         }

@@ -32,8 +32,7 @@ include_once("../controlleur/controlleur_monprofil.php");
     
     <div>    
         <h2 class="TitreSection">Informations Personnelles</h2>
-
-        <div>    
+    
         <div class="DivProfil">
             <div>
                 <label for="nom">Username :</label>
@@ -47,11 +46,10 @@ include_once("../controlleur/controlleur_monprofil.php");
             </div>
 
 
-
-
             <div>
                 <input type="submit" id="deconnexion" value="Déconnexion">
                 <script src="../script/deconnexion.js"></script>
+            </div>
         </div>
     </div>
     

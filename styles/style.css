@@ -142,74 +142,46 @@ html{
     text-decoration: none;
 }
 
-/* Uniformisation des champs dans .DivProfil */
 .DivProfil {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Espacement uniforme entre les champs */
     max-width: 600px;
-    margin: 30px auto;
-    background-color: #fff;
+    margin: 50px auto;
     padding: 20px;
-    border-radius: 8px;
+    background: white;
+    border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .DivProfil div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px; /* Espacement entre le label et le champ */
+    margin-bottom: 15px;
 }
 
 .DivProfil label {
-    flex: 1;
-    font-size: 16px;
-    font-weight: bold; /* Texte plus visible */
-    color: #333; /* Couleur plus foncée pour une meilleure lisibilité */
-    text-align: right; /* Aligne le texte à droite */
-    margin-right: 10px; /* Espacement entre le label et le champ */
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .DivProfil input[type="text"] {
-    flex: 2;
+    width: 100%;
     padding: 10px;
-    font-size: 14px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f9f9f9;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 .DivProfil button {
-    flex: 0.5;
+    margin-top: 10px;
     padding: 10px 15px;
-    font-size: 14px;
-    color: #fff;
-    background-color: #007BFF;
+    background-color: #0078d7;
+    color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .DivProfil button:hover {
-    background-color: #0056b3;
-}
-
-/* Champ sans bouton (comme l'IP) aligné avec les autres */
-.DivProfil div:last-child input[type="text"] {
-    flex: 2.5; /* Prend plus de place pour compenser l'absence de bouton */
-}
-
-/* Bouton en mode "Sauvegarder" */
-.DivProfil button.sauvegarder {
-    background-color: #28a745; /* Vert */
-    color: #fff;
-    transition: background-color 0.3s ease;
-}
-
-.DivProfil button.sauvegarder:hover {
-    background-color: #218838; /* Vert plus foncé au survol */
+    background-color: #005a9e;
 }
 
 /* Style pour le bouton de déconnexion */
