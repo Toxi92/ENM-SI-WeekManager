@@ -9,7 +9,7 @@ class QueryUser{
         $this->bdd = $bdd;
     }
     public function inscription($username,$password,$email){
-        $req = $this->bdd->getConnexion()->prepare("INSERT INTO Utilisateurs (email,pwd,username,admin) VALUES (:email,:pwd,:username,0)");
+        $req = $this->bdd->getConnexion()->prepare('INSERT INTO Utilisateurs (email,pwd,username,admin) VALUES (:email,:pwd,:username,0)');
         $req->execute(array(
             'email'=>$email,
             'username' => $username,

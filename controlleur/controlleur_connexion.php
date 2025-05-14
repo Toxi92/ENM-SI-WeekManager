@@ -1,10 +1,9 @@
 <?php
-
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
     require_once("../modele/db.auth.php");
     $email = $_POST['email'];
     $password = $_POST['password'];
-    
+
     if ($query->getUserByEmail($email)!=false && password_verify($password, $query->getUserByEmail($email)['pwd'])) {
         session_start();
         $res=$query->getUserByEmail($email);
@@ -18,4 +17,3 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "<script>alert('Identifiants incorrects.');</script>";
     }
 }
-?>

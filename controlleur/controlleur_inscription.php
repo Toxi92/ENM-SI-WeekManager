@@ -10,8 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
     $query->inscription($username,$password,$email);
-    echo error_log(E_ALL);
     header('Location: ../vue/Connexion.php');
-    echo alert("Inscription réussie ! Vous pouvez maintenant vous connecter.");
+    exit;
 };
 ?>
