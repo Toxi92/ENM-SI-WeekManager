@@ -1,7 +1,7 @@
 document.getElementById('deconnexion').addEventListener('click', function (e) {
     e.preventDefault(); // Empêche le rechargement de la page
     // Effectuer une requête vers le contrôleur de déconnexion
-    fetch('../Controlleur/controlleur_deconnexion.php', {
+    fetch('../controlleur/controlleur_deconnexion.php', {
         method: 'POST'
     })
     .then(response => {

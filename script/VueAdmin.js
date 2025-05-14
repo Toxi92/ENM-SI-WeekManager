@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         toggleButton.textContent = isPlus ? "-" : "+";
 
         // Appeler le contrôleur PHP pour gérer l'état
-        fetch("../Controlleur/controlleur_monprofil.php", {
+        fetch("../controlleur/controlleur_monprofil.php", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

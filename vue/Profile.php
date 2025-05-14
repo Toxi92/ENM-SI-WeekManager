@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-include_once("../Controlleur/controlleur_monprofil.php");
+include_once("../controlleur/controlleur_monprofil.php");
 ?>
 
 <!DOCTYPE html>
@@ -16,8 +16,8 @@ include_once("../Controlleur/controlleur_monprofil.php");
 
     <link rel="stylesheet" href="../styles/style.css">
 
-    <script src="../Script/sauvegardeProfile.js"></script>
-    <script src="../Script/VueAdmin.js"></script>
+    <script src="../script/SauvegardeProfile.js"></script>
+    <script src="../script/VueAdmin.js"></script>
 
 <title>Profile</title>
 
@@ -51,7 +51,7 @@ include_once("../Controlleur/controlleur_monprofil.php");
 
             <div>
                 <input type="submit" id="deconnexion" value="Déconnexion">
-                <script src="../Script/deconnexion.js"></script>
+                <script src="../script/deconnexion.js"></script>
         </div>
     </div>
     

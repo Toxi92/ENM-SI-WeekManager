@@ -24,7 +24,7 @@
                         value: input.value // Nouvelle valeur du champ
                     };
     
-                    fetch("../Controlleur/controlleur_monprofil.php", {
+                    fetch("../controlleur/controlleur_monprofil.php", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"
