@@ -350,3 +350,18 @@ html, body {
 .FooterButton:hover {
     background-color: #005a9e; /* Couleur plus foncée au survol */
 }
+
+.BouttonMdpOublie {
+    display: block;
+    margin-top: 10px;
+    color: #0078d7;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.BouttonMdpOublie:hover {
+    color: #005a9e;
+    text-decoration: underline;
+}

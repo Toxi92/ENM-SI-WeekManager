@@ -30,6 +30,7 @@
             <input type="password" id="password" name="password" required>
             <input type="submit" value="Se connecter">
             <a class="BouttonInscription" href="./Inscription.php"><p>S'inscrire</p></a>
+            <a class="BouttonMdpOublie" href="./MdpOublie.php">Mot de passe oublié ?</a>
         </form>
         <?php require_once("../controlleur/controlleur_connexion.php"); ?>
     </div>
