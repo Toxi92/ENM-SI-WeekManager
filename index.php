@@ -23,8 +23,13 @@ if(session_status() == PHP_SESSION_NONE) {
 </head>
 
 <header>
-    <h1 class="Titre">Bienvenue</h1>
+
     <?php
+
+    if (!isset($_SESSION['user'])) { ?>
+        <h1 class="Titre">Bienvenue</h1>
+    <?php }
+
 
     if (isset($_SESSION['user'])) { ?>
         <div class="DivLogin">
@@ -50,18 +55,123 @@ if(session_status() == PHP_SESSION_NONE) {
 
 <body>
 
+    <?php if (isset($_SESSION['user'])) { ?>
+        <div class="DivAjoutTache">
+            <a class="BouttonAjoutTache" href="/vue/AjoutTache.php">Ajout d'une tâche</a>
+        </div>
+        <div class="DivRemiseAZero">
+            <form action="/controlleur/reset_schedule.php" method="post">
+                <button class="BouttonRemiseAZero" type="submit">Remise à zéro</button>
+            </form>
+        </div>
+    <?php } ?>
 
+    <div class="DivEmploiDuTemps">
+    <table class="EmploiDuTemps">
+        <thead>
+            <tr>
+                <th>Heures</th>
+                <th>Lundi</th>
+                <th>Mardi</th>
+                <th>Mercredi</th>
+                <th>Jeudi</th>
+                <th>Vendredi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>08h - 09h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>09h - 10h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>10h - 11h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>11h - 12h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>12h - 13h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>13h - 14h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>14h - 15h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>15h - 16h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>16h - 17h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>17h - 18h</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 
 </body>
 
-<footer>
-    <div class="banderole_bas">
-                <a class="ligne_banderole_bas" href="./mentions_legale.html"><p>Mentions Légales</p></a>
-                <a class="ligne_banderole_bas" href="./get_partenaires_by_bdd.php"><p>Sites partenaires</p></a>
-                <a class="ligne_banderole_bas" href="https://www.youtube.com/watch?v=G3e-cpL7ofc&pp=ygUGI3dlcHVp"><p>Arrêter d'être nul en HTML/CSS ( à regarder )</p></a>
-                <a class="ligne_banderole_bas" href="/rien.html"><p>Plus trop d'idées</p></a>
-            </div>
+<footer class="Footer">
+    <div class="FooterButtons">
+        <a href="/vue/Contact.php" class="FooterButton">Contact</a>
+        <a href="/vue/About.php" class="FooterButton">À propos</a>
+        <a href="/vue/Privacy.php" class="FooterButton">Confidentialité</a>
+        <a href="/vue/Help.php" class="FooterButton">Aide</a>
+    </div>
 </footer>
 
 </html>

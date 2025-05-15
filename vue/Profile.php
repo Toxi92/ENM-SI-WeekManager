@@ -55,13 +55,13 @@ include_once("../controlleur/controlleur_monprofil.php");
     
 </body>
 
-<footer>
-    <div class="banderole_bas">
-                <a class="ligne_banderole_bas" href="./mentions_legale.html"><p>Mentions Légales</p></a>
-                <a class="ligne_banderole_bas" href="./get_partenaires_by_bdd.php"><p>Sites partenaires</p></a>
-                <a class="ligne_banderole_bas" href="https://www.youtube.com/watch?v=G3e-cpL7ofc&pp=ygUGI3dlcHVp"><p>Arrêter d'être nul en HTML/CSS ( à regarder )</p></a>
-                <a class="ligne_banderole_bas" href="/rien.html"><p>Plus trop d'idées</p></a>
-            </div>
+<footer class="Footer">
+    <div class="FooterButtons">
+        <a href="/vue/Contact.php" class="FooterButton">Contact</a>
+        <a href="/vue/About.php" class="FooterButton">À propos</a>
+        <a href="/vue/Privacy.php" class="FooterButton">Confidentialité</a>
+        <a href="/vue/Help.php" class="FooterButton">Aide</a>
+    </div>
 </footer>
 
 </html>
