@@ -3,7 +3,14 @@
 include_once("db.auth.php");
 include_once("db.php");
 include_once("db.user.php");
-
+require_once(__DIR__."/../vendor/autoload.php");
+use Dotenv\Dotenv;
+$dotenv = Dotenv::createImmutable(__DIR__.'/../');
+$dotenv->load();
+$host = $_ENV['HOST'];
+$db = $_ENV['DB'];
+$user = $_ENV['LOGIN'];
+$password = $_ENV['PASSWORD'];
 class QueryEDT{
     private $bdd;
 
@@ -62,5 +69,5 @@ class QueryEDT{
             'id' => $id
         ));}
 }
-$bdd = new Database("mysql-molard.alwaysdata.net","molard_enm-week-manager","molard","kbbULD53-!");
+$bdd = new Database($host,$db,$user,$password);
 $query2 = new QueryEDT($bdd);

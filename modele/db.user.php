@@ -3,6 +3,10 @@
 require_once "db.auth.php";
 require_once "db.edt.php";
 require_once "db.php";
+require_once(__DIR__."/../vendor/autoload.php");
+use Dotenv\Dotenv;
+$dotenv = Dotenv::createImmutable(__DIR__.'/../');
+$dotenv->load();
 class Utilisateur {
     
     private string $username;
@@ -15,15 +19,21 @@ class Utilisateur {
         $this->password = "";
         $this->email = "";
         $this->admin = false;
+        
     }
 
-    public function login(string $username, string $password, string $email, bool $admin) {
+    public function login(string $username, string $password_user, string $email, bool $admin) {
         $this->username = $username;
-        $this->password = $password;
+        $this->password = $password_user;
 
         $this->email = $email;
         $this->admin = $admin;
-        $bdd = new Database("mysql-molard.alwaysdata.net","molard_enm-week-manager","molard","kbbULD53-!");
+
+        $host = $_ENV['HOST'];
+        $db = $_ENV['DB'];
+        $user = $_ENV['LOGIN'];
+        $password = $_ENV['PASSWORD'];
+        $bdd = new Database($host,"$db",$user,$password);
         $query2 = new QueryEDT($bdd);
         $query2->updateEDT($this->email);
 
