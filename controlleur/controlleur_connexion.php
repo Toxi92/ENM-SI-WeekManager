@@ -9,6 +9,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         $res=$query->getUserByEmail($email);
         $user->login($res['username'], $res['pwd'], $res['email'], $res['admin']);
         $_SESSION['user'] = serialize($user);
+        
         header('Location: ../index.php');
         exit;
     } elseif ($query->getUserByEmail($email)==false) {

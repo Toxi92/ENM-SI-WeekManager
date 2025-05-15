@@ -2,6 +2,7 @@
 
 include_once("db.php");
 include_once("db.user.php");
+include_once("db.edt.php");
 class QueryUser{
     private $bdd;
 
@@ -15,6 +16,9 @@ class QueryUser{
             'username' => $username,
             'pwd' => password_hash($password,PASSWORD_DEFAULT),
         ));
+        $bdd = new Database("mysql-molard.alwaysdata.net","molard_enm-week-manager","molard","kbbULD53-!");
+        $query2 = new QueryEDT($bdd);
+        $query2->createEDT($email);
     }
 
     public function getUserByEmail($email){

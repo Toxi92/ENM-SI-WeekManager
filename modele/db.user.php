@@ -1,7 +1,10 @@
 <?php
 
 require_once "db.auth.php";
+require_once "db.edt.php";
+require_once "db.php";
 class Utilisateur {
+    
     private string $username;
     private string $password;
     private string $email;
@@ -20,9 +23,13 @@ class Utilisateur {
 
         $this->email = $email;
         $this->admin = $admin;
+        $bdd = new Database("mysql-molard.alwaysdata.net","molard_enm-week-manager","molard","kbbULD53-!");
+        $query2 = new QueryEDT($bdd);
+        $query2->updateEDT($this->email);
 
     }
-
+    // The $queryEDT variable is correctly used here because db.edt.php is included above,
+    // which should define the QueryEDT class.
     public function getUsername(){
         return $this->username;
     }
