@@ -1,5 +1,9 @@
     document.addEventListener("DOMContentLoaded", () => {
         // Sélectionner tous les boutons "Modifier"
+        document.getElementById('showChangePwdBtn').onclick = function() {
+            var form = document.getElementById('changePwdForm');
+            form.style.display = (form.style.display === 'none') ? 'block' : 'none';
+        };
         const buttons = document.querySelectorAll(".DivProfil button");
 
         buttons.forEach(button => {

@@ -45,6 +45,17 @@ include_once("../controlleur/controlleur_monprofil.php");
                 <button>Modifier</button>
             </div>
 
+            <div>
+                <button id="showChangePwdBtn" type="button">Changer mot de passe</button>
+                <form id="changePwdForm" action="../controlleur/controlleur_changement_mdp.php" method="post" style="display:none; margin-top:10px;">
+                    <label for="current_password">Mot de passe actuel :</label>
+                    <input type="password" id="current_password" name="current_password" required>
+                    <label for="new_password">Nouveau mot de passe :</label>
+                    <input type="password" id="new_password" name="new_password" required>
+                    <input type="hidden" name="email" value="<?php echo $user->getEmail(); ?>">
+                    <input type="submit" value="Valider">
+                </form>
+            </div>            
 
             <div>
                 <input type="submit" id="deconnexion" value="Déconnexion">

@@ -46,6 +46,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Mettre à jour l'objet utilisateur dans la session
     $_SESSION['user'] = serialize($user);
+    
 }
-
 ?>
