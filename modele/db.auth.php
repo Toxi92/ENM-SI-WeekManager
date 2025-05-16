@@ -80,8 +80,8 @@ class QueryUser{
         }
         return false;
     }
-
 }
+
 $bdd = new Database($host,"$db",$user,$password);
 $query = new QueryUser($bdd);
 $user = new Utilisateur();

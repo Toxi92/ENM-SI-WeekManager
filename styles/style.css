@@ -365,3 +365,67 @@ html, body {
     color: #005a9e;
     text-decoration: underline;
 }
+
+.FormNouveauMDP {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.FormNouveauMDP label {
+    font-weight: bold;
+    text-align: left;
+}
+.FormNouveauMDP input[type="password"],
+.FormNouveauMDP input[type="submit"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.FormNouveauMDP input[type="submit"] {
+    background: #0078d7;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.FormNouveauMDP input[type="submit"]:hover {
+    background: #005a9e;
+}
+
+.notfound-container {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.notfound-title {
+    font-size: 4em;
+    color: #dc3545;
+    margin-bottom: 10px;
+}
+.notfound-message {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+.notfound-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0078d7;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.notfound-link:hover {
+    background: #005a9e;
+}

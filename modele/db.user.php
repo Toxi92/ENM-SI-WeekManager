@@ -70,4 +70,8 @@ class Utilisateur {
         $this->email = $email;
     }
 
+    public function changePassword(string $newPassword) {
+        $this->password = $newPassword;
+    }
+
 }
