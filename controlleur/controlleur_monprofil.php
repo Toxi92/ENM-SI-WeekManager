@@ -5,7 +5,10 @@ include_once("../modele/db.auth.php");
 session_start();
 
 if (!isset($_SESSION['user'])) {
-    header('Location: ../index.php');
+    echo '<script>
+    alert("Vous devez être connecté pour accéder à cette page.");
+    window.location.href = "../index.php";
+    </script>';
     exit;
 }
 $user = unserialize($_SESSION['user']);
