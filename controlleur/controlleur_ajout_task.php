@@ -19,7 +19,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     $user = unserialize($_SESSION['user']);
-
+    if (!isset($_POST['title']) || !isset($_POST['description']) || !isset($_POST['jour']) || !isset($_POST['heure_debut']) || !isset($_POST['heure_fin'])) {
+        echo '<script>
+        alert("Tous les champs doivent être remplis !");
+        window.location.href = "../vue/Task.php";
+        </script>';
+        exit;
+    }
+    if ($_POST['heure_debut'] > $_POST['heure_fin']) {
+        echo '<script>
+        alert("L\'heure de début doit être inférieure à l\'heure de fin !");
+        window.location.href = "../vue/Task.php";
+        </script>';
+        exit;
+    }
     try {
         $query3->createTask($user->getEmail(), $_POST['title'], $_POST['description'], $_POST['jour'],$_POST['heure_debut'], $_POST['heure_fin']);
         echo '<script>

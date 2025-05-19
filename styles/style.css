@@ -475,3 +475,82 @@ html, body {
 #changePwdForm input[type="submit"]:hover {
     background-color: #005a9e;
 }
+
+.DivAjoutTacheForm {
+    max-width: 450px;
+    margin: 40px auto 0 auto;
+    padding: 30px 28px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    text-align: center;
+}
+
+.DivAjoutTacheForm h2 {
+    color: #0078d7;
+    margin-bottom: 22px;
+    font-size: 24px;
+}
+
+.FormAjoutTache {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.FormAjoutTache label {
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    margin-bottom: 3px;
+}
+
+.FormAjoutTache input[type="text"],
+.FormAjoutTache textarea,
+.FormAjoutTache select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    margin-bottom: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    background: #f8f8f8;
+}
+
+.FormAjoutTache textarea {
+    resize: vertical;
+}
+
+.FormAjoutTache input[type="submit"] {
+    background-color: #0078d7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.FormAjoutTache input[type="submit"]:hover {
+    background-color: #005a9e;
+}
+
+.BouttonAcceuil {
+    display: inline-block;
+    margin-top: 18px;
+    background-color: brown;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.BouttonAcceuil:hover {
+    background-color: #a0522d;
+}
