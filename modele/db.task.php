@@ -95,8 +95,23 @@ public function createTask($email, $title, $description, $jour, $heureDeb, $heur
             'id_1'=>$this->getEDTidByEmail($email)
         ));
     }
+    public function getTaskById($id){
+        $req = $this->bdd->getConnexion()->prepare('SELECT * FROM Taches WHERE id = :id');
+        $req->execute(array(
+            'id'=>$id
+        ));
+        $result = $req->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
+    public function changeTaskColor($id, $color){
+        $req = $this->bdd->getConnexion()->prepare('UPDATE Taches SET Couleur = :Couleur WHERE id = :id');
+        $req->execute(array(
+            'Couleur'=>$color,
+            'id'=>$id
+        ));
+    }
 }
-    
+ 
 $query3 = new QueryTask($bdd);
 
 ?>

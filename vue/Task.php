@@ -60,4 +60,12 @@
         <a class="BouttonAcceuil" href="../index.php">Retour à l'accueil</a>
     </div>
 </body>
+<footer class="Footer">
+    <div class="FooterButtons">
+        <a href="/vue/Contact.php" class="FooterButton">Contact</a>
+        <a href="/vue/About.php" class="FooterButton">À propos</a>
+        <a href="/vue/Privacy.php" class="FooterButton">Confidentialité</a>
+        <a href="/vue/Help.php" class="FooterButton">Aide</a>
+    </div>
+</footer>
 </html>

@@ -9,7 +9,7 @@
 
     $jours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi'];
 
-    $heures = ['08:00:00','09:00:00','10:00:00','11:00:00','12:00:00','13:00:00','14:00:00','15:00:00','16:00:00','17:00:00'];
+    $heures = ['08:00:00','09:00:00','10:00:00','11:00:00','12:00:00','13:00:00','14:00:00','15:00:00','16:00:00','17:00:00','18:00:00'];
     $edt = [];
     foreach ($jours as $jour) {
         foreach ($heures as $heure) {
@@ -24,11 +24,13 @@
 
 
         foreach ($tasks as $task) {
+            $id = $task['id'];
             $jour = ucfirst(strtolower($task['Jour']));
             $debut = $task['DateHeureDeb'];
             $fin = $task['DateHeureFin'];
             $title = htmlspecialchars($task['Nom']);
             $desc = htmlspecialchars($task['Description']);
+            $color = $task['Couleur'];
 
             $startIndex = array_search($debut, $heures);
             $endIndex = array_search($fin, $heures);
@@ -36,7 +38,7 @@
             // Si l'heure de fin n'est pas pile sur un créneau, on la prend comme exclusive
             if ($startIndex !== false && $endIndex !== false) {
                 for ($i = $startIndex; $i < $endIndex; $i++) {
-                    $edt[$jour][$heures[$i]] = "<div class='TaskCell'>$title<br><span class='TaskDesc'>$desc</span></div>";
+                    $edt[$jour][$heures[$i]] = "<a href='/../vue/detailsTask.php?id=$id' style='color:inherit;text-decoration:none;'><div class='TaskCell' style='background: $color;'>$title<br><span class='TaskDesc'>$desc</span></div></a>";
                 }
             }
         }

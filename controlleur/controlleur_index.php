@@ -17,7 +17,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'reset') {
 
     include_once(__DIR__."/../modele/db.user.php");
     include_once(__DIR__."/../modele/db.auth.php");
-
+    include_once(__DIR__."/../modele/db.task.php");
     $user = unserialize($_SESSION['user']);
     try {
         $query3->deleteAllTasks($user->getEmail());
