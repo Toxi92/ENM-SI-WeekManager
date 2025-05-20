@@ -1,6 +1,7 @@
 <?php
 include_once(__DIR__."/modele/db.user.php");
 include_once(__DIR__."/controlleur/controlleur_index.php");
+include_once(__DIR__."/modele/db.task.php");
 
 if(session_status() == PHP_SESSION_NONE) {
     session_start();
@@ -65,104 +66,11 @@ if(session_status() == PHP_SESSION_NONE) {
                 <button class="BouttonRemiseAZero" type="submit">Remise à zéro</button>
             </form>
         </div>
-    <?php } ?>
+    <?php } 
+    include_once(__DIR__."/controlleur/controlleur_affiche_EDT.php");
+    ?>
 
-    <div class="DivEmploiDuTemps">
-    <table class="EmploiDuTemps">
-        <thead>
-            <tr>
-                <th>Heures</th>
-                <th>Lundi</th>
-                <th>Mardi</th>
-                <th>Mercredi</th>
-                <th>Jeudi</th>
-                <th>Vendredi</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>08h - 09h</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>09h - 10h</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>10h - 11h</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>11h - 12h</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>12h - 13h</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>13h - 14h</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>14h - 15h</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>15h - 16h</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>16h - 17h</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>17h - 18h</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+    
 
 </body>
 
