@@ -10,8 +10,23 @@ if (!isset($_SESSION['user'])) {
     exit;
 }
 include_once(__DIR__ . "/../modele/db.task.php");
+$user = unserialize($_SESSION['user']);
 
 $task_id = $_GET['id'] ?? $_POST['task_id'] ?? null;
+if (empty($query3->getTaskById($task_id))) {
+    echo '<script>
+    alert("Tâche introuvable.");
+    window.location.href = "/../index.php";
+    </script>';
+    exit;
+}
+if($query3->isTaskOwnedByUser($task_id,$user->getEmail()) == false){
+    echo '<script>
+    alert("Vous n\'avez pas accès à cette tâche.");
+    window.location.href = "/../index.php";
+    </script>';
+    exit;
+}
 $task = $task_id ? $query3->getTaskById($task_id) : null;
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['couleur'])) {
     $color = $_POST['couleur'];
