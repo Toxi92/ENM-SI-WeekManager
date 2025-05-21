@@ -22,6 +22,8 @@ if(session_status() == PHP_SESSION_NONE) {
 
     <title>Accueil</title>
 
+    <script src="/script/EDTtoPDF.js"></script>
+
 </head>
 
 <header>

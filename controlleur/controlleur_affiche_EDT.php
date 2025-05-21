@@ -56,16 +56,17 @@
                 </tr>
             </thead>
             <tbody>
-            <?php foreach ($heures as $i => $heure): ?>
-                <tr>
-                    <td><?php echo substr($heure,0,5) . ' - ' . date('H:i', strtotime($heure) + 3600); ?></td>
-                    <?php foreach ($jours as $jour): ?>
-                        <td>
-                            <?php echo $edt[$jour][$heure]; ?>
-                        </td>
-                    <?php endforeach; ?>
-                </tr>
-            <?php endforeach; ?>
+                <?php
+                for ($i = 0; $i < count($heures) - 1; $i++): ?>
+                    <tr>
+                        <td><?php echo substr($heures[$i],0,5) . ' - ' . substr($heures[$i+1],0,5); ?></td>
+                        <?php foreach ($jours as $jour): ?>
+                            <td>
+                                <?php echo $edt[$jour][$heures[$i]]; ?>
+                            </td>
+                        <?php endforeach; ?>
+                    </tr>
+                <?php endfor; ?>
             </tbody>
         </table>
     </div>
