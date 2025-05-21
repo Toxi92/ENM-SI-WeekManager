@@ -16,13 +16,20 @@
     <h1>Contact</h1>
     <p>Pour toute question ou suggestion, vous pouvez nous écrire à l'adresse suivante :</p>
     <p><a href="mailto:edgar.mlrd@gmail.com">edgar.mlrd@gmail.com</a></p>
-    <form method="post" action="#">
+    <div class="DivContact">
+        <form method="post" action="/../controlleur/controlleur_mail_support.php">
         <label for="email">Votre email :</label><br>
         <input type="email" id="email" name="email" required><br>
+        <label for="name">Votre nom :</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="subject">Objet :</label><br>
+        <input type="text" id="subject" name="subject" required><br>
         <label for="message">Votre message :</label><br>
         <textarea id="message" name="message" rows="5" required></textarea><br>
         <button type="submit">Envoyer</button>
     </form>
+    </div>
+
 </body>
 
 <footer class="Footer">

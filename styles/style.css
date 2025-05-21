@@ -665,3 +665,73 @@ html, body {
     transform: translateY(-2px) scale(1.04);
     box-shadow: 0 6px 24px rgba(255,0,234,0.18), 0 4px 16px rgba(0,224,255,0.14);
 }
+
+/* Container du formulaire de contact */
+.DivContact {
+    max-width: 500px;
+    margin: 40px auto 100px auto;
+    padding: 28px 32px;
+    background: #f7fafd;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.09);
+}
+
+/* Style du formulaire */
+.DivContact form {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* Labels */
+.DivContact label {
+    font-weight: 500;
+    margin-bottom: 3px;
+    color: #222;
+}
+
+/* Champs de saisie */
+.DivContact input[type="email"],
+.DivContact input[type="text"],
+.DivContact textarea {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid #b5c1d8;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #fff;
+    transition: border 0.2s;
+    box-sizing: border-box;
+}
+
+.DivContact input[type="email"]:focus,
+.DivContact input[type="text"]:focus,
+.DivContact textarea:focus {
+    border-color: #0078d7;
+    outline: none;
+}
+
+/* Zone de texte */
+.DivContact textarea {
+    resize: vertical;
+    min-height: 90px;
+    font-family: inherit;
+}
+
+/* Bouton envoyer */
+.DivContact button[type="submit"] {
+    background: #0078d7;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 11px 0;
+    font-size: 1.08rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+
+.DivContact button[type="submit"]:hover {
+    background: #005fa3;
+}

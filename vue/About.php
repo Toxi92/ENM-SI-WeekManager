@@ -16,7 +16,7 @@
     <h1>À propos</h1>
     <p>Ce site a été développé pour faciliter la gestion et le partage des emplois du temps au sein de l'ENM.</p>
     <p>Version : 1.0</p>
-    <p>Développé par l'équipe ENM-SI.</p>
+    <p>Développé par Edgar Molard lors de son passage dans le SIAV de l'ENM Paris.</p>
 </body>
 
 <footer class="Footer">
