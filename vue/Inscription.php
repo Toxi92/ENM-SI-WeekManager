@@ -46,10 +46,10 @@
 
 <footer class="Footer">
     <div class="FooterButtons">
-        <a href="/vue/Contact.php" class="FooterButton">Contact</a>
-        <a href="/vue/About.php" class="FooterButton">À propos</a>
-        <a href="/vue/Privacy.php" class="FooterButton">Confidentialité</a>
-        <a href="/vue/Help.php" class="FooterButton">Aide</a>
+        <a href="./Contact.php" class="FooterButton">Contact</a>
+        <a href="./About.php" class="FooterButton">À propos</a>
+        <a href="./Confidentialite.php" class="FooterButton">Confidentialité</a>
+        <a href="./Aide.php" class="FooterButton">Aide</a>
     </div>
 </footer>
 </html>

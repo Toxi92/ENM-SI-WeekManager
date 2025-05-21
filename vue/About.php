@@ -1,33 +1,24 @@
-<?php require_once("../controlleur/controlleur_mdp_oublie.php"); ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Mot de passe oublié</title>
+    <title>À propos</title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
-<body>
-    
+
+<header>
     <div class="DivAcceuil">
         <a class="BouttonAcceuil" href="../index.php"><p>Accueil</p></a>
     </div>
+</header>
 
-    <?php if(!isset($_GET['token'])){?>
-        <div class="DivConnexion">
-        
-            <form action="MdpOublie.php" method="post">
-                <h3>Mot de passe oublié</h3>
-                <label for="email">Adresse e-mail :</label>
-                <input type="email" id="email" name="email" required>
-                <input type="submit" value="Réinitialiser le mot de passe">
-            
-            </form>
-        
-        </div>
-    <?php } ?>
-
+<body>
+    <h1>À propos</h1>
+    <p>Ce site a été développé pour faciliter la gestion et le partage des emplois du temps au sein de l'ENM.</p>
+    <p>Version : 1.0</p>
+    <p>Développé par l'équipe ENM-SI.</p>
 </body>
+
 <footer class="Footer">
     <div class="FooterButtons">
         <a href="./Contact.php" class="FooterButton">Contact</a>
@@ -36,4 +27,5 @@
         <a href="./Aide.php" class="FooterButton">Aide</a>
     </div>
 </footer>
+
 </html>

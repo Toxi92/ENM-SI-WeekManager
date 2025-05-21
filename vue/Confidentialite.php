@@ -2,16 +2,22 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>404 - Page non trouvée</title>
+    <title>Confidentialité</title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
-<body>
-    <div class="notfound-container">
-        <div class="notfound-title">404</div>
-        <div class="notfound-message">Oups ! La page demandée n'existe pas.</div>
-        <a class="notfound-link" href="../index.php">Retour à l'accueil</a>
+
+<header>
+<div class="DivAcceuil">
+        <a class="BouttonAcceuil" href="../index.php"><p>Accueil</p></a>
     </div>
+</header>
+
+<body>
+    <h1>Politique de confidentialité</h1>
+    <p>Nous respectons votre vie privée. Les données collectées sont utilisées uniquement pour le bon fonctionnement du service et ne sont jamais partagées avec des tiers sans votre consentement.</p>
+    <p>Pour toute question concernant la confidentialité, veuillez nous contacter.</p>
 </body>
+
 <footer class="Footer">
     <div class="FooterButtons">
         <a href="./Contact.php" class="FooterButton">Contact</a>
@@ -20,4 +26,5 @@
         <a href="./Aide.php" class="FooterButton">Aide</a>
     </div>
 </footer>
+
 </html>

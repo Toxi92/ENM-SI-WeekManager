@@ -80,8 +80,8 @@ if(session_status() == PHP_SESSION_NONE) {
     <div class="FooterButtons">
         <a href="/vue/Contact.php" class="FooterButton">Contact</a>
         <a href="/vue/About.php" class="FooterButton">À propos</a>
-        <a href="/vue/Privacy.php" class="FooterButton">Confidentialité</a>
-        <a href="/vue/Help.php" class="FooterButton">Aide</a>
+        <a href="/vue/Confidentialite.php" class="FooterButton">Confidentialité</a>
+        <a href="/vue/Aide.php" class="FooterButton">Aide</a>
     </div>
 </footer>
 

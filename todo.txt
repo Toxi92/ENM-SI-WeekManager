@@ -1,2 +1,4 @@
 Ajout du partage des EDT avec système de permission ( vu , modification , owner )
-
+Support multilingue
+Mode Sombre
+Possibilité d'A2F ( à faire en dernier )
