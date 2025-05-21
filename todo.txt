@@ -1,4 +1,2 @@
-Création EDT EN PDF
-Création ou Implémentation d'outils d'impression pour ce pdf dans une page personalisée
 Ajout du partage des EDT avec système de permission ( vu , modification , owner )
 

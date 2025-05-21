@@ -58,7 +58,7 @@ async function setupEDTPDF() {
                 alert("Emploi du temps introuvable !");
                 return;
             }
-            window.printJS({ printable: edt, type: 'html', targetStyles: ['*'] });
+            window.printJS({ printable: edt, type: 'html', targetStyles: ['*'], css:[ '/../styles/style.css'] });
         };
         btnContainer.appendChild(btnPrint);
     }
