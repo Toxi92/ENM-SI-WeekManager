@@ -16,20 +16,52 @@ async function setupEDTPDF() {
     if (typeof window.html2canvas === "undefined") {
         await loadScript("https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js");
     }
-
-    // Ajoute le bouton si besoin
-if (!document.getElementById('btnEDTPDF')) {
-    const btn = document.createElement('button');
-    btn.id = 'btnEDTPDF';
-    btn.textContent = "Télécharger l'EDT en PDF";
-    btn.onclick = downloadEDTPDF;
-    const edtDiv = document.getElementsByClassName('DivEmploiDuTemps')[0];
-    if (edtDiv && edtDiv.parentNode) {
-        edtDiv.parentNode.insertBefore(btn, edtDiv.nextSibling); // Ajoute juste après l'EDT
-    } else {
-        document.body.appendChild(btn); // fallback
+    if (typeof window.printJS === "undefined") {
+        await loadScript("https://cdnjs.cloudflare.com/ajax/libs/print-js/1.6.0/print.min.js");
     }
-}
+
+
+    let btnContainer = document.getElementById('edt-btn-container');
+    if (!btnContainer) {
+        btnContainer = document.createElement('div');
+        btnContainer.id = 'edt-btn-container';
+        btnContainer.style.display = 'flex';
+        btnContainer.style.justifyContent = 'center';
+        btnContainer.style.gap = '20px';
+        btnContainer.style.margin = '30px auto 60px auto';
+        // Ajoute le conteneur juste après l'EDT
+        const edtDiv = document.getElementsByClassName('DivEmploiDuTemps')[0];
+        if (edtDiv && edtDiv.parentNode) {
+            edtDiv.parentNode.insertBefore(btnContainer, edtDiv.nextSibling);
+        } else {
+            document.body.appendChild(btnContainer);
+        }
+    }
+
+    // Ajoute le bouton Télécharger si besoin
+    if (!document.getElementById('btnEDTPDF')) {
+        const btn = document.createElement('button');
+        btn.id = 'btnEDTPDF';
+        btn.textContent = "Télécharger l'EDT en PDF";
+        btn.onclick = downloadEDTPDF;
+        btnContainer.appendChild(btn);
+    }
+
+    // Ajoute le bouton Imprimer si besoin
+    if (!document.getElementById('btnPrintPDF')) {
+        const btnPrint = document.createElement('button');
+        btnPrint.id = 'btnPrintPDF';
+        btnPrint.textContent = "Imprimer l'EDT";
+        btnPrint.onclick = () => {
+            const edt = document.getElementsByClassName('DivEmploiDuTemps')[0];
+            if (!edt) {
+                alert("Emploi du temps introuvable !");
+                return;
+            }
+            window.printJS({ printable: edt, type: 'html', targetStyles: ['*'] });
+        };
+        btnContainer.appendChild(btnPrint);
+    }
 }
 
 function downloadEDTPDF() {

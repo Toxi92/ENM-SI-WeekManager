@@ -621,26 +621,47 @@ html, body {
     background: #005a9e;
 }
 
+/* Conteneur des boutons sous l'EDT */
+#edt-btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 32px auto 70px auto;
+    flex-wrap: wrap;
+}
+
+/* Style général pour les deux boutons */
+#edt-btn-container button {
+    padding: 12px 32px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0,224,255,0.10), 0 2px 8px rgba(255,0,234,0.08);
+    transition: background 0.3s, transform 0.2s;
+    letter-spacing: 0.5px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
 /* Bouton Télécharger l'EDT en PDF */
 #btnEDTPDF {
     background: linear-gradient(90deg, #00e0ff 0%, #ff00ea 100%);
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 12px 28px;
-    font-size: 1.1em;
-    font-weight: bold;
-    box-shadow: 0 4px 16px rgba(0,224,255,0.15), 0 2px 8px rgba(255,0,234,0.10);
-    cursor: pointer;
-    margin: 20px auto 30px auto;
-    display: block;
-    transition: background 0.3s, transform 0.2s;
-    letter-spacing: 0.5px;
-    margin-bottom: 80px; /* ou plus selon la hauteur de ton footer */
 }
-
 #btnEDTPDF:hover {
     background: linear-gradient(90deg, #00bfff 0%, #c800ff 100%);
     transform: translateY(-2px) scale(1.04);
-    box-shadow: 0 6px 24px rgba(0,224,255,0.22), 0 4px 16px rgba(255,0,234,0.18);
+    box-shadow: 0 6px 24px rgba(0,224,255,0.18), 0 4px 16px rgba(255,0,234,0.14);
+}
+
+/* Bouton Imprimer l'EDT */
+#btnPrintPDF {
+    background: linear-gradient(90deg, #ff00ea 0%, #00e0ff 100%);
+}
+#btnPrintPDF:hover {
+    background: linear-gradient(90deg, #c800ff 0%, #00bfff 100%);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 6px 24px rgba(255,0,234,0.18), 0 4px 16px rgba(0,224,255,0.14);
 }
