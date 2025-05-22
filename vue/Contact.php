@@ -1,45 +1,49 @@
-<?php require_once("../controlleur/controlleur_mail_support.php"); ?>
+<?php
+require_once("../controlleur/controlleur_mail_support.php");
+require_once(__DIR__ . "/../controlleur/controlleur_lang.php");
+$lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'fr';
+$langData = getLangData($lang);
+// La fonction t() est déjà définie dans lang.php, inutile de la redéfinir ici
+?>
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<?php echo htmlspecialchars($lang); ?>">
 <head>
     <meta charset="UTF-8">
-    <title>Contact</title>
+    <title><?php echo t('contactTitle', $langData); ?></title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 
 <header>
     <div class="DivAcceuil">
-        <a class="BouttonAcceuil" href="../index.php"><p>Accueil</p></a>
+        <a class="BouttonAcceuil" href="../index.php"><p><?php echo t('home', $langData); ?></p></a>
     </div>
 </header>
 
 <body>
-    <h1>Contact</h1>
-    <p>Pour toute question ou suggestion, vous pouvez nous écrire à l'adresse suivante :</p>
-    <p><a href="mailto:edgar.mlrd@gmail.com">edgar.mlrd@gmail.com</a></p>
+    <h1><?php echo t('contactTitle', $langData); ?></h1>
+    <p><?php echo t('contactIntro', $langData); ?></p>
+    <p><a href="mailto:<?php echo t('contactMail', $langData); ?>"><?php echo t('contactMail', $langData); ?></a></p>
     <div class="DivContact">
         <form method="post" action="/../controlleur/controlleur_mail_support.php">
-        <label for="email">Votre email :</label><br>
-        <input type="email" id="email" name="email" required><br>
-        <label for="name">Votre nom :</label><br>
-        <input type="text" id="name" name="name" required><br>
-        <label for="subject">Objet :</label><br>
-        <input type="text" id="subject" name="subject" required><br>
-        <label for="message">Votre message :</label><br>
-        <textarea id="message" name="message" rows="5" required></textarea><br>
-        <button type="submit">Envoyer</button>
-    </form>
+            <label for="email"><?php echo t('contactFormEmail', $langData); ?></label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="name"><?php echo t('contactFormName', $langData); ?></label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="subject"><?php echo t('contactFormSubject', $langData); ?></label><br>
+            <input type="text" id="subject" name="subject" required><br>
+            <label for="message"><?php echo t('contactFormMessage', $langData); ?></label><br>
+            <textarea id="message" name="message" rows="5" required></textarea><br>
+            <button type="submit"><?php echo t('contactFormSend', $langData); ?></button>
+        </form>
     </div>
-
 </body>
 
 <footer class="Footer">
     <div class="FooterButtons">
-        <a href="./Contact.php" class="FooterButton">Contact</a>
-        <a href="./About.php" class="FooterButton">À propos</a>
-        <a href="./Confidentialite.php" class="FooterButton">Confidentialité</a>
-        <a href="./Aide.php" class="FooterButton">Aide</a>
+        <a href="./Contact.php" class="FooterButton"><?php echo t('footerContact', $langData); ?></a>
+        <a href="./About.php" class="FooterButton"><?php echo t('footerAbout', $langData); ?></a>
+        <a href="./Confidentialite.php" class="FooterButton"><?php echo t('footerConfidentialite', $langData); ?></a>
+        <a href="./Aide.php" class="FooterButton"><?php echo t('footerAide', $langData); ?></a>
     </div>
 </footer>
-
 </html>

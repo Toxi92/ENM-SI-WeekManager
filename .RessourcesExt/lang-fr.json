@@ -123,5 +123,6 @@
   "edtTuesday": "Mardi",
   "edtWednesday": "Mercredi",
   "edtThursday": "Jeudi",
-  "edtFriday": "Vendredi"
+  "edtFriday": "Vendredi",
+  "invalidField": "Champ invalide."
 }

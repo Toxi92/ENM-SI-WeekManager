@@ -4,7 +4,7 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-require_once(__DIR__ . "/lang.php");
+require_once(__DIR__ . "/controlleur_lang.php");
 $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'fr';
 $langData = getLangData($lang);
 
@@ -12,7 +12,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'reset') {
     if (!isset($_SESSION['user'])) {
         echo 
         '<script>
-        alert("Vous devez être connecté pour accéder à cette ressource.");
+        alert("'.t('resetNotConnected', $langData).'");
         window.location.href = "../index.php";
         </script>';
         exit;
@@ -25,12 +25,12 @@ if(isset($_GET['action']) && $_GET['action'] == 'reset') {
     try {
         $query3->deleteAllTasks($user->getEmail());
         echo '<script>
-        alert("Toutes les tâches ont été supprimées avec succès !");
+        alert("'.t('resetSuccess', $langData).'");
         window.location.href = "/../index.php";
         </script>';
     } catch (Exception $e) {
         echo '<script>
-        alert("Erreur lors de la suppression des tâches : ' . $e->getMessage() . '");
+        alert("'.t('resetError', $langData).' ' . addslashes($e->getMessage()) . '");
         window.location.href = "/../index.php";
         </script>';
     }

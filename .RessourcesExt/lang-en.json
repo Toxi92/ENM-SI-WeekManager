@@ -123,5 +123,6 @@
   "edtTuesday": "Tuesday",
   "edtWednesday": "Wednesday",
   "edtThursday": "Thursday",
-  "edtFriday": "Friday"
+  "edtFriday": "Friday",
+  "invalidField": "Invalid Field."
 }

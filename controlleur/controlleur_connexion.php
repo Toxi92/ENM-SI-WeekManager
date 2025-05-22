@@ -5,7 +5,7 @@ if(!isset($_SESSION)){
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
     require_once("../modele/db.auth.php");
-    require_once(__DIR__ . "/lang.php");
+    require_once(__DIR__ . "/controlleur_lang.php");
     $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'fr';
     $langData = getLangData($lang);
     $email = $_POST['email'];
@@ -20,8 +20,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: ../index.php');
         exit;
     } elseif ($query->getUserByEmail($email)==false) {
-        echo "<script>alert('L\'adresse e-mail n\'existe pas.');</script>";
+        echo "<script>alert('".t('loginMailNotExist', $langData)."');</script>";
     } else {
-        echo "<script>alert('Identifiants incorrects.');</script>";
+        echo "<script>alert('".t('loginIncorrect', $langData)."');</script>";
     }
 }

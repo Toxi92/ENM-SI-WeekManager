@@ -1,29 +1,30 @@
-<?php 
-require_once(__DIR__ . "/lang.php");
+<?php
+require_once(__DIR__ . "/../controlleur/controlleur_lang.php");
 $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'fr';
-$langData = getLangData($lang); 
+$langData = getLangData($lang);
+
 ?>
 
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<?php echo htmlspecialchars($lang); ?>">
 <head>
     <meta charset="UTF-8">
-    <title>404 - Page non trouvée</title>
+    <title><?php echo t('notFoundTitle', $langData); ?></title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
     <div class="notfound-container">
-        <div class="notfound-title">404</div>
-        <div class="notfound-message">Oups ! La page demandée n'existe pas.</div>
-        <a class="notfound-link" href="../index.php">Retour à l'accueil</a>
+        <div class="notfound-title"><?php echo t('notFoundHeader', $langData); ?></div>
+        <div class="notfound-message"><?php echo t('notFoundMessage', $langData); ?></div>
+        <a class="notfound-link" href="../index.php"><?php echo t('notFoundBackHome', $langData); ?></a>
     </div>
 </body>
 <footer class="Footer">
     <div class="FooterButtons">
-        <a href="./Contact.php" class="FooterButton">Contact</a>
-        <a href="./About.php" class="FooterButton">À propos</a>
-        <a href="./Confidentialite.php" class="FooterButton">Confidentialité</a>
-        <a href="./Aide.php" class="FooterButton">Aide</a>
+        <a href="./Contact.php" class="FooterButton"><?php echo t('footerContact', $langData); ?></a>
+        <a href="./About.php" class="FooterButton"><?php echo t('footerAbout', $langData); ?></a>
+        <a href="./Confidentialite.php" class="FooterButton"><?php echo t('footerConfidentialite', $langData); ?></a>
+        <a href="./Aide.php" class="FooterButton"><?php echo t('footerAide', $langData); ?></a>
     </div>
 </footer>
 </html>

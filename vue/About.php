@@ -1,35 +1,36 @@
 <?php 
-require_once(__DIR__ . "/lang.php");
+require_once(__DIR__ . "/../controlleur/controlleur_lang.php");
 $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'fr';
 $langData = getLangData($lang); 
 ?>
+
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<?php echo htmlspecialchars($lang); ?>">
 <head>
     <meta charset="UTF-8">
-    <title>À propos</title>
+    <title><?php echo t('aboutTitle', $langData); ?></title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 
 <header>
     <div class="DivAcceuil">
-        <a class="BouttonAcceuil" href="../index.php"><p>Accueil</p></a>
+        <a class="BouttonAcceuil" href="../index.php"><p><?php echo t('home', $langData); ?></p></a>
     </div>
 </header>
 
 <body>
-    <h1>À propos</h1>
-    <p>Ce site a été développé pour faciliter la gestion et le partage des emplois du temps au sein de l'ENM.</p>
-    <p>Version : 1.0</p>
-    <p>Développé par Edgar Molard lors de son passage dans le SIAV de l'ENM Paris.</p>
+    <h1><?php echo t('aboutTitle', $langData); ?></h1>
+    <p><?php echo t('aboutText1', $langData); ?></p>
+    <p><?php echo t('aboutVersion', $langData); ?></p>
+    <p><?php echo t('aboutAuthor', $langData); ?></p>
 </body>
 
 <footer class="Footer">
     <div class="FooterButtons">
-        <a href="./Contact.php" class="FooterButton">Contact</a>
-        <a href="./About.php" class="FooterButton">À propos</a>
-        <a href="./Confidentialite.php" class="FooterButton">Confidentialité</a>
-        <a href="./Aide.php" class="FooterButton">Aide</a>
+        <a href="./Contact.php" class="FooterButton"><?php echo t('footerContact', $langData); ?></a>
+        <a href="./About.php" class="FooterButton"><?php echo t('footerAbout', $langData); ?></a>
+        <a href="./Confidentialite.php" class="FooterButton"><?php echo t('footerConfidentialite', $langData); ?></a>
+        <a href="./Aide.php" class="FooterButton"><?php echo t('footerAide', $langData); ?></a>
     </div>
 </footer>
 

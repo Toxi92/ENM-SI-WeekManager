@@ -1,35 +1,35 @@
 <?php 
-require_once(__DIR__ . "/lang.php");
+require_once(__DIR__ . "/../controlleur/controlleur_lang.php");
 $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'fr';
 $langData = getLangData($lang); 
 ?>
 
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<?php echo htmlspecialchars($lang); ?>">
 <head>
     <meta charset="UTF-8">
-    <title>Confidentialité</title>
+    <title><?php echo t('privacyTitle', $langData); ?></title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 
 <header>
-<div class="DivAcceuil">
-        <a class="BouttonAcceuil" href="../index.php"><p>Accueil</p></a>
+    <div class="DivAcceuil">
+        <a class="BouttonAcceuil" href="../index.php"><p><?php echo t('home', $langData); ?></p></a>
     </div>
 </header>
 
 <body>
-    <h1>Politique de confidentialité</h1>
-    <p>Nous respectons votre vie privée. Les données collectées sont utilisées uniquement pour le bon fonctionnement du service et ne sont jamais partagées avec des tiers sans votre consentement.</p>
-    <p>Pour toute question concernant la confidentialité, veuillez nous contacter.</p>
+    <h1><?php echo t('privacyTitle', $langData); ?></h1>
+    <p><?php echo t('privacyText1', $langData); ?></p>
+    <p><?php echo t('privacyText2', $langData); ?></p>
 </body>
 
 <footer class="Footer">
     <div class="FooterButtons">
-        <a href="./Contact.php" class="FooterButton">Contact</a>
-        <a href="./About.php" class="FooterButton">À propos</a>
-        <a href="./Confidentialite.php" class="FooterButton">Confidentialité</a>
-        <a href="./Aide.php" class="FooterButton">Aide</a>
+        <a href="./Contact.php" class="FooterButton"><?php echo t('footerContact', $langData); ?></a>
+        <a href="./About.php" class="FooterButton"><?php echo t('footerAbout', $langData); ?></a>
+        <a href="./Confidentialite.php" class="FooterButton"><?php echo t('footerConfidentialite', $langData); ?></a>
+        <a href="./Aide.php" class="FooterButton"><?php echo t('footerAide', $langData); ?></a>
     </div>
 </footer>
 

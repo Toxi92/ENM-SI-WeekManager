@@ -1,40 +1,39 @@
-<?php 
-require_once(__DIR__ . "/lang.php");
+<?php
+require_once(__DIR__ . "/../controlleur/controlleur_lang.php");
 $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'fr';
 $langData = getLangData($lang); 
 ?>
 
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<?php echo htmlspecialchars($lang); ?>">
 <head>
     <meta charset="UTF-8">
-    <title>Aide</title>
+    <title><?php echo t('helpTitle', $langData); ?></title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 
 <header>
     <div class="DivAcceuil">
-        <a class="BouttonAcceuil" href="../index.php"><p>Accueil</p></a>
+        <a class="BouttonAcceuil" href="../index.php"><p><?php echo t('home', $langData); ?></p></a>
     </div>
 </header>
 
-
 <body>
-    <h1>Aide</h1>
-    <p>Bienvenue dans la section d'aide. Ici, vous trouverez des réponses aux questions fréquentes et des guides pour utiliser l'application.</p>
+    <h1><?php echo t('helpTitle', $langData); ?></h1>
+    <p><?php echo t('helpIntro', $langData); ?></p>
     <ul>
-        <li><strong>Comment télécharger mon emploi du temps ?</strong> Cliquez sur le bouton "Télécharger l'EDT en PDF".</li>
-        <li><strong>Comment imprimer ?</strong> Utilisez le bouton "Imprimer l'EDT".</li>
-        <li><strong>Besoin d'aide supplémentaire ?</strong> Contactez-nous via la page de contact.</li>
+        <li><strong><?php echo t('helpDownload', $langData); ?></strong> <?php echo t('helpDownloadText', $langData); ?></li>
+        <li><strong><?php echo t('helpPrint', $langData); ?></strong> <?php echo t('helpPrintText', $langData); ?></li>
+        <li><strong><?php echo t('helpContact', $langData); ?></strong> <?php echo t('helpContactText', $langData); ?></li>
     </ul>
 </body>
 
 <footer class="Footer">
     <div class="FooterButtons">
-        <a href="./Contact.php" class="FooterButton">Contact</a>
-        <a href="./About.php" class="FooterButton">À propos</a>
-        <a href="./Confidentialite.php" class="FooterButton">Confidentialité</a>
-        <a href="./Aide.php" class="FooterButton">Aide</a>
+        <a href="./Contact.php" class="FooterButton"><?php echo t('footerContact', $langData); ?></a>
+        <a href="./About.php" class="FooterButton"><?php echo t('footerAbout', $langData); ?></a>
+        <a href="./Confidentialite.php" class="FooterButton"><?php echo t('footerConfidentialite', $langData); ?></a>
+        <a href="./Aide.php" class="FooterButton"><?php echo t('footerAide', $langData); ?></a>
     </div>
 </footer>
 

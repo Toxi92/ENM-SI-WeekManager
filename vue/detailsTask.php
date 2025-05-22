@@ -1,46 +1,50 @@
 <?php
 include_once("../controlleur/controlleur_detailsTask.php");
+require_once(__DIR__ . "/../controlleur/controlleur_lang.php");
+$lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'fr';
+$langData = getLangData($lang);
+
 ?>
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<?php echo htmlspecialchars($lang); ?>">
 <head>
     <meta charset="UTF-8">
-    <title>Détails de la tâche</title>
+    <title><?php echo t('taskDetailsTitle', $langData); ?></title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
     <div class="DivDetailsTask">
-        <h2>Détails de la tâche</h2>
+        <h2><?php echo t('taskDetailsTitle', $langData); ?></h2>
         <?php
         if (isset($task)) {
         ?>
-            <p><strong>Nom :</strong> <?php echo htmlspecialchars($task['Nom']); ?></p>
-            <p><strong>Description :</strong> <?php echo htmlspecialchars($task['Description']); ?></p>
+            <p><strong><?php echo t('taskName', $langData); ?></strong> <?php echo htmlspecialchars($task['Nom']); ?></p>
+            <p><strong><?php echo t('taskDescription', $langData); ?></strong> <?php echo htmlspecialchars($task['Description']); ?></p>
             <form action="../controlleur/controlleur_detailsTask.php" method="post" style="margin-bottom:20px;">
                 <input type="hidden" name="task_id" value="<?php echo $task['id']; ?>">
                 <input type="hidden" name="delete" value="">
-                <input type="submit" value="Supprimer la tâche" class="BtnSupprimerTache" onclick="return confirm('Supprimer cette tâche ?');">
+                <input type="submit" value="<?php echo t('taskDelete', $langData); ?>" class="BtnSupprimerTache" onclick="return confirm('<?php echo t('taskDeleteConfirm', $langData); ?>');">
             </form>
             <form action="../controlleur/controlleur_detailsTask.php" method="post" class="FormCouleurTache">
                 <input type="hidden" name="task_id" value="<?php echo $task['id']; ?>">
-                <label for="couleur">Couleur dans l'EDT :</label>
+                <label for="couleur"><?php echo t('taskColorLabel', $langData); ?></label>
                 <input type="color" id="couleur" name="couleur" value="<?php echo htmlspecialchars($task['Couleur'] ?? '#0078d7'); ?>">
-                <input type="submit" value="Changer la couleur">
+                <input type="submit" value="<?php echo t('taskColorChange', $langData); ?>">
             </form>
         <?php
         } else {
-            echo "<p>Tâche introuvable.</p>";
+            echo "<p>" . t('taskNotFound', $langData) . "</p>";
         }
         ?>
-        <a class="BouttonAcceuil" href="../index.php">Retour à l'accueil</a>
+        <a class="BouttonAcceuil" href="../index.php"><?php echo t('backHome', $langData); ?></a>
     </div>
 </body>
 <footer class="Footer">
     <div class="FooterButtons">
-        <a href="./Contact.php" class="FooterButton">Contact</a>
-        <a href="./About.php" class="FooterButton">À propos</a>
-        <a href="./Confidentialite.php" class="FooterButton">Confidentialité</a>
-        <a href="./Aide.php" class="FooterButton">Aide</a>
+        <a href="./Contact.php" class="FooterButton"><?php echo t('footerContact', $langData); ?></a>
+        <a href="./About.php" class="FooterButton"><?php echo t('footerAbout', $langData); ?></a>
+        <a href="./Confidentialite.php" class="FooterButton"><?php echo t('footerConfidentialite', $langData); ?></a>
+        <a href="./Aide.php" class="FooterButton"><?php echo t('footerAide', $langData); ?></a>
     </div>
 </footer>
 </html>

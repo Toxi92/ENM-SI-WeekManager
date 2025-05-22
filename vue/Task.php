@@ -1,34 +1,40 @@
-<?php include("../controlleur/controlleur_ajout_task.php"); ?>
+<?php
+include_once("../controlleur/controlleur_ajout_task.php"); 
+require_once(__DIR__ . "/../controlleur/controlleur_lang.php");
+$lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'fr';
+$langData = getLangData($lang);
+
+?>
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<?php echo htmlspecialchars($lang); ?>">
 <head>
     <meta charset="UTF-8">
-    <title>Ajouter une tâche</title>
+    <title><?php echo t('taskAddTitle', $langData); ?></title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
     <div class="DivAjoutTacheForm">
-        <h2>Ajouter une tâche</h2>
+        <h2><?php echo t('taskAddTitle', $langData); ?></h2>
         <form action="../controlleur/controlleur_ajout_task.php" method="post" class="FormAjoutTache">
-            <label for="title">Nom de la tâche :</label>
+            <label for="title"><?php echo t('taskFormName', $langData); ?></label>
             <input type="text" id="title" name="title" required>
 
-            <label for="description">Description :</label>
+            <label for="description"><?php echo t('taskFormDescription', $langData); ?></label>
             <textarea id="description" name="description" rows="3" required></textarea>
 
-            <label for="jour">Jour :</label>
+            <label for="jour"><?php echo t('taskFormDay', $langData); ?></label>
             <select id="jour" name="jour" required>
-                <option value="">--Choisir un jour--</option>
-                <option value="Lundi">Lundi</option>
-                <option value="Mardi">Mardi</option>
-                <option value="Mercredi">Mercredi</option>
-                <option value="Jeudi">Jeudi</option>
-                <option value="Vendredi">Vendredi</option>
+                <option value=""><?php echo t('taskFormDayPlaceholder', $langData); ?></option>
+                <option value="Lundi"><?php echo t('taskFormDayMonday', $langData); ?></option>
+                <option value="Mardi"><?php echo t('taskFormDayTuesday', $langData); ?></option>
+                <option value="Mercredi"><?php echo t('taskFormDayWednesday', $langData); ?></option>
+                <option value="Jeudi"><?php echo t('taskFormDayThursday', $langData); ?></option>
+                <option value="Vendredi"><?php echo t('taskFormDayFriday', $langData); ?></option>
             </select>
 
-            <label for="heure_debut">Heure de début :</label>
+            <label for="heure_debut"><?php echo t('taskFormStart', $langData); ?></label>
             <select id="heure_debut" name="heure_debut" required>
-                <option value="">--Choisir une heure--</option>
+                <option value=""><?php echo t('taskFormStartPlaceholder', $langData); ?></option>
                 <option value="08:00">08:00</option>
                 <option value="09:00">09:00</option>
                 <option value="10:00">10:00</option>
@@ -41,9 +47,9 @@
                 <option value="17:00">17:00</option>
             </select>
 
-            <label for="heure_fin">Heure de fin :</label>
+            <label for="heure_fin"><?php echo t('taskFormEnd', $langData); ?></label>
             <select id="heure_fin" name="heure_fin" required>
-                <option value="">--Choisir une heure--</option>
+                <option value=""><?php echo t('taskFormEndPlaceholder', $langData); ?></option>
                 <option value="09:00">09:00</option>
                 <option value="10:00">10:00</option>
                 <option value="11:00">11:00</option>
@@ -56,17 +62,17 @@
                 <option value="18:00">18:00</option>
             </select>
 
-            <input type="submit" value="Ajouter la tâche">
+            <input type="submit" value="<?php echo t('taskFormSubmit', $langData); ?>">
         </form>
-        <a class="BouttonAcceuil" href="../index.php">Retour à l'accueil</a>
+        <a class="BouttonAcceuil" href="../index.php"><?php echo t('backHome', $langData); ?></a>
     </div>
 </body>
 <footer class="Footer">
     <div class="FooterButtons">
-        <a href="./Contact.php" class="FooterButton">Contact</a>
-        <a href="./About.php" class="FooterButton">À propos</a>
-        <a href="./Confidentialite.php" class="FooterButton">Confidentialité</a>
-        <a href="./Aide.php" class="FooterButton">Aide</a>
+        <a href="./Contact.php" class="FooterButton"><?php echo t('footerContact', $langData); ?></a>
+        <a href="./About.php" class="FooterButton"><?php echo t('footerAbout', $langData); ?></a>
+        <a href="./Confidentialite.php" class="FooterButton"><?php echo t('footerConfidentialite', $langData); ?></a>
+        <a href="./Aide.php" class="FooterButton"><?php echo t('footerAide', $langData); ?></a>
     </div>
 </footer>
 </html>

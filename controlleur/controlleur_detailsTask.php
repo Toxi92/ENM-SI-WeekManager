@@ -3,13 +3,13 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-require_once(__DIR__ . "/lang.php");
+require_once(__DIR__ . "/controlleur_lang.php");
 $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'fr';
 $langData = getLangData($lang);
 
 if (!isset($_SESSION['user'])) {
     echo '<script>
-    alert("Vous devez être connecté pour accéder à cette page.");
+    alert("'.t('taskNotConnected', $langData).'");
     window.location.href = "../index.php";
     </script>';
     exit;
@@ -20,24 +20,25 @@ $user = unserialize($_SESSION['user']);
 $task_id = $_GET['id'] ?? $_POST['task_id'] ?? null;
 if (empty($query3->getTaskById($task_id))) {
     echo '<script>
-    alert("Tâche introuvable.");
+    alert("'.t('taskNotFound', $langData).'");
     window.location.href = "/../index.php";
     </script>';
     exit;
 }
 if($query3->isTaskOwnedByUser($task_id,$user->getEmail()) == false){
     echo '<script>
-    alert("Vous n\'avez pas accès à cette tâche.");
+    alert("'.t('taskNoAccess', $langData).'");
     window.location.href = "/../index.php";
     </script>';
     exit;
 }
 $task = $task_id ? $query3->getTaskById($task_id) : null;
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['couleur'])) {
     $color = $_POST['couleur'];
     $query3->changeTaskColor($task['id'], $color);
     echo '<script>
-    alert("La couleur de la tâche a été mise à jour avec succès !");
+    alert("'.t('taskColorSuccess', $langData).'");
     window.location.href = "/../index.php";
     </script>';
     exit;
@@ -46,8 +47,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['couleur'])) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete'])) {
     $query3->deleteTask($_POST['task_id']);
     echo '<script>
-    alert("La tâche a été supprimée avec succès !");
+    alert("'.t('taskDeleteSuccess', $langData).'");
     window.location.href = "/../index.php";
     </script>';
     exit;
 }
+?>
