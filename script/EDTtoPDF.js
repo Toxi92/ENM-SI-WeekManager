@@ -42,7 +42,7 @@ async function setupEDTPDF() {
     if (!document.getElementById('btnEDTPDF')) {
         const btn = document.createElement('button');
         btn.id = 'btnEDTPDF';
-        btn.textContent = "Télécharger l'EDT en PDF";
+        btn.textContent = jsTranslations.download;
         btn.onclick = downloadEDTPDF;
         btnContainer.appendChild(btn);
     }
@@ -51,7 +51,7 @@ async function setupEDTPDF() {
     if (!document.getElementById('btnPrintPDF')) {
         const btnPrint = document.createElement('button');
         btnPrint.id = 'btnPrintPDF';
-        btnPrint.textContent = "Imprimer l'EDT";
+        btnPrint.textContent = jsTranslations.print;
         btnPrint.onclick = () => {
             const edt = document.getElementsByClassName('DivEmploiDuTemps')[0];
             if (!edt) {

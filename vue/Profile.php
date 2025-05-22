@@ -64,6 +64,16 @@ $langData = getLangData($lang);
         <a href="./About.php" class="FooterButton"><?php echo t('footerAbout', $langData); ?></a>
         <a href="./Confidentialite.php" class="FooterButton"><?php echo t('footerConfidentialite', $langData); ?></a>
         <a href="./Aide.php" class="FooterButton"><?php echo t('footerAide', $langData); ?></a>
+        <div class="LangSelector" style="position:absolute;top:10px;right:10px;">
+            <form method="post" action="">
+                <button type="submit" name="lang" value="fr" style="background:none;border:none;padding:0;cursor:pointer;">
+                    <img src="/../images/fr.png" alt="Français" width="32" height="20">
+                </button>
+                <button type="submit" name="lang" value="en" style="background:none;border:none;padding:0;cursor:pointer;">
+                    <img src="/../images/en.png" alt="English" width="32" height="20">
+                </button>
+            </form>
+        </div>
     </div>
 </footer>
 </html>

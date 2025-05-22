@@ -124,5 +124,8 @@
   "edtWednesday": "Mercredi",
   "edtThursday": "Jeudi",
   "edtFriday": "Vendredi",
-  "invalidField": "Champ invalide."
+  "invalidField": "Champ invalide.",
+    "btnDownloadEDT": "Télécharger l'emploi du temps",
+    "btnPrintEDT": "Imprimer l'emploi du temps",
+    "edtNotFound": "Emploi du temps introuvable."
 }

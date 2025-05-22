@@ -124,5 +124,8 @@
   "edtWednesday": "Wednesday",
   "edtThursday": "Thursday",
   "edtFriday": "Friday",
-  "invalidField": "Invalid Field."
+  "invalidField": "Invalid Field.",
+    "btnDownloadEDT": "Download timetable",
+    "btnPrintEDT": "Print timetable",
+    "edtNotFound": "Timetable not found."
 }
