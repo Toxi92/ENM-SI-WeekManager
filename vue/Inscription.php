@@ -10,7 +10,8 @@ $langData = getLangData($lang);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/style.css">
+    <link  id='Style_theme' rel="stylesheet" href="../styles/style.css">
+    <script src="../script/changeTheme.js"></script>
     <title><?php echo t('registerTitle', $langData); ?></title>
 </head>
 <header>
@@ -19,6 +20,7 @@ $langData = getLangData($lang);
     </div>
 </header>
 <body>
+    <main>
     <div class="DivConnexion">
         <form action="Inscription.php" method="post" id="formulaire_inscription">
             <label for="username"><?php echo t('registerName', $langData); ?></label>
@@ -33,6 +35,7 @@ $langData = getLangData($lang);
             <a class="BouttonInscription" href="./Connexion.php"><p><?php echo t('registerAlready', $langData); ?></p></a>
         </form>
     </div>
+    </main>
 </body>
 <footer class="Footer">
     <div class="FooterButtons">

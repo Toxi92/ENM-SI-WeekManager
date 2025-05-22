@@ -10,7 +10,8 @@ $langData = getLangData($lang);
 <head>
     <meta charset="UTF-8">
     <title><?php echo t('contactTitle', $langData); ?></title>
-    <link rel="stylesheet" href="../styles/style.css">
+    <link  id='Style_theme' rel="stylesheet" href="../styles/style.css">
+    <script src="../script/changeTheme.js"></script>
 </head>
 
 <header>
@@ -20,22 +21,24 @@ $langData = getLangData($lang);
 </header>
 
 <body>
-    <h1><?php echo t('contactTitle', $langData); ?></h1>
-    <p><?php echo t('contactIntro', $langData); ?></p>
-    <p><a href="mailto:<?php echo t('contactMail', $langData); ?>"><?php echo t('contactMail', $langData); ?></a></p>
-    <div class="DivContact">
-        <form method="post" action="/../controlleur/controlleur_mail_support.php">
-            <label for="email"><?php echo t('contactFormEmail', $langData); ?></label><br>
-            <input type="email" id="email" name="email" required><br>
-            <label for="name"><?php echo t('contactFormName', $langData); ?></label><br>
-            <input type="text" id="name" name="name" required><br>
-            <label for="subject"><?php echo t('contactFormSubject', $langData); ?></label><br>
-            <input type="text" id="subject" name="subject" required><br>
-            <label for="message"><?php echo t('contactFormMessage', $langData); ?></label><br>
-            <textarea id="message" name="message" rows="5" required></textarea><br>
-            <button type="submit"><?php echo t('contactFormSend', $langData); ?></button>
-        </form>
-    </div>
+    <main>
+        <h1><?php echo t('contactTitle', $langData); ?></h1>
+        <p><?php echo t('contactIntro', $langData); ?></p>
+        <p><a href="mailto:<?php echo t('contactMail', $langData); ?>"><?php echo t('contactMail', $langData); ?></a></p>
+        <div class="DivContact">
+            <form method="post" action="/../controlleur/controlleur_mail_support.php">
+                <label for="email"><?php echo t('contactFormEmail', $langData); ?></label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="name"><?php echo t('contactFormName', $langData); ?></label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="subject"><?php echo t('contactFormSubject', $langData); ?></label><br>
+                <input type="text" id="subject" name="subject" required><br>
+                <label for="message"><?php echo t('contactFormMessage', $langData); ?></label><br>
+                <textarea id="message" name="message" rows="5" required></textarea><br>
+                <button type="submit"><?php echo t('contactFormSend', $langData); ?></button>
+            </form>
+        </div>
+    </main>
 </body>
 
 <footer class="Footer">

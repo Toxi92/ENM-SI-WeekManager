@@ -18,7 +18,8 @@ $langData = getLangData($lang);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/style.css">
+    <link  id='Style_theme' rel="stylesheet" href="/styles/style.css">
+    <script src="/script/changeTheme.js"></script>
     <title><?php echo t('homeTitle', $langData); ?></title>
     <script src="/script/EDTtoPDF.js"></script>
     <script>
@@ -55,18 +56,20 @@ $langData = getLangData($lang);
 </header>
 
 <body>
-    <?php if (isset($_SESSION['user'])) { ?>
-        <div class="DivAjoutTache">
-            <a class="BouttonAjoutTache" href="/vue/Task.php"><?php echo t('homeAddTask', $langData); ?></a>
-        </div>
-        <div class="DivRemiseAZero">
-            <form action="index.php?action=reset" method="post">
-                <button class="BouttonRemiseAZero" type="submit"><?php echo t('homeReset', $langData); ?></button>
-            </form>
-        </div>
-    <?php } 
-    include_once(__DIR__."/controlleur/controlleur_affiche_EDT.php");
-    ?>
+    <main>
+        <?php if (isset($_SESSION['user'])) { ?>
+            <div class="DivAjoutTache">
+                <a class="BouttonAjoutTache" href="/vue/Task.php"><?php echo t('homeAddTask', $langData); ?></a>
+            </div>
+            <div class="DivRemiseAZero">
+                <form action="index.php?action=reset" method="post">
+                    <button class="BouttonRemiseAZero" type="submit"><?php echo t('homeReset', $langData); ?></button>
+                </form>
+            </div>
+        <?php } 
+        include_once(__DIR__."/controlleur/controlleur_affiche_EDT.php");
+        ?>
+    </main>
 </body>
 
 <footer class="Footer">

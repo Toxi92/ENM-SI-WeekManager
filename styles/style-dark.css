@@ -1,0 +1,780 @@
+/* Couleurs générales */
+html, body {
+    background:#181a1b  no-repeat center center fixed;
+    color: #e0e0e0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: black;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Lexend-VariableFont_wght';
+    min-height: 100vh;
+    height: 100%;
+}
+a, a:visited {
+    color: #80bfff;
+    text-decoration: none;
+}
+a:hover {
+    color: #ffb380;
+    text-decoration: underline;
+}
+
+.Titre, .TitreSection {
+    color: #ffd700;
+    margin-bottom: 20px;
+}
+
+ .DivProfil {
+    background-color: #23272a;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.DivLogin {
+    display: flex;
+    justify-content: flex-end; /* Aligne le bouton à droite */
+    padding: 10px; /* Ajoute un peu d'espace autour */
+
+}
+
+.BouttonLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto; /* Ajuste automatiquement la largeur */
+    height: auto; /* Ajuste automatiquement la hauteur */
+    color: lightgray;
+    padding: 5px 10px; /* Ajoute de l'espace interne au bouton */
+    border-radius: 5px; /* Ajoute des coins arrondis */
+    text-decoration: none; /* Supprime le soulignement du lien */
+    background-color: #444;
+}
+
+input, button, select, textarea {
+    background-color: #2c2f33;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 6px 10px;
+}
+
+input:focus, button:focus, select:focus, textarea:focus {
+    outline: 2px solid #ffd700;
+}
+
+
+.BouttonAjoutTache {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #444950;
+    color: #ffd700;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.BouttonAjoutTache:hover {
+    background-color: #555b63;
+    color: #fff;
+}
+
+button {
+    background-color: #444950;
+    color: #ffd700;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover{
+    background-color: #555b63;
+    color: #fff;
+}
+
+.Footer {
+    background-color: #23272a;
+    color: #e0e0e0;
+    border-top: 1px solid #444;
+    padding: 20px 0 10px 0;
+    margin-top: 40px;
+    position: relative;
+    width: 100%;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.FooterButtons {
+    display: flex;
+    justify-content: center; /* Centre les boutons horizontalement */
+    gap: 20px; /* Espacement entre les boutons */
+}
+
+.FooterButton {
+    display: inline-block;
+    padding: 10px 20px; /* Espacement interne des boutons */
+    background-color: #0078d7; /* Couleur de fond des boutons */
+    color: white; /* Couleur du texte */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    font-size: 14px; /* Taille du texte */
+    font-weight: bold;
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease; /* Animation pour le survol */
+}
+
+.FooterButton:hover {
+    background-color: #005a9e; /* Couleur plus foncée au survol */
+}
+
+.LangSelector button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0 2px;
+    cursor: pointer;
+}
+
+.LangSelector img {
+    border: 1px solid #444;
+    border-radius: 3px;
+    background: #2c2f33;
+}
+
+.DivProfil label {
+    color: #ffd700;
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+.DivProfil input[readonly] {
+    background-color: #23272a;
+    color: #aaa;
+    border: 1px solid #444;
+}
+
+.DivProfil button {
+    margin-left: 10px;
+    background: #444950;
+    color: #ffd700;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s;
+}
+.DivProfil button:hover {
+    background: #555b63;
+    color: #fff;
+}
+
+form {
+    background: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    background: #23272a;
+}
+::-webkit-scrollbar-thumb {
+    background: #444950;
+    border-radius: 5px;
+}
+
+.DivAjoutTache {
+    text-align: left;
+    margin: 20px 0;
+}
+
+/* Conteneur principal */
+.DivAjoutTacheForm {
+    background-color: #23272a;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    padding: 32px 24px;
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+/* Titres */
+h2 {
+    color: #ffd700;
+    margin-bottom: 24px;
+}
+
+/* Labels */
+label {
+    color: #ffd700;
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 6px;
+}
+
+/* Inputs, selects, textarea */
+input[type="text"],
+input[type="submit"],
+select,
+textarea {
+    background-color: #2c2f33;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 8px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #ffd700;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Boutons */
+input[type="submit"],
+.BouttonAcceuil {
+    background-color: #444950;
+    color: #ffd700;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 18px;
+    margin-top: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+input[type="submit"]:hover,
+.BouttonAcceuil:hover {
+    background-color: #555b63;
+    color: #fff;
+}
+
+/* Bouton thème */
+#toggleThemeBtn {
+    background: #23272a;
+    color: #ffd700;
+    border: 1px solid #444;
+    border-radius: 50%;
+    font-size: 1.5em;
+    padding: 8px 14px;
+    cursor: pointer;
+    margin: 20px 0 10px 20px;
+    transition: background 0.2s;
+}
+#toggleThemeBtn:hover {
+    background: #444950;
+    color: #fff;
+}
+
+/* Bouton accueil */
+.BouttonAcceuilProfil {
+    display: inline-block;
+    background: #444950;
+    color: #ffd700;
+    border-radius: 4px;
+    padding: 8px 18px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s;
+}
+.BouttonAcceuilProfil:hover {
+    background: #555b63;
+    color: #fff;
+}
+
+/* Bloc profil */
+.DivProfil {
+    background: #23272a;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    padding: 24px 20px;
+    max-width: 500px;
+    margin: 0 auto 30px auto;
+}
+
+/* Inputs et boutons */
+.DivProfil input[type="text"],
+.DivProfil input[type="password"] {
+    background: #2c2f33;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 8px 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.DivProfil input[type="submit"] {
+    background: #444950;
+    color: #ffd700;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s;
+}
+.DivProfil input[type="submit"]:hover {
+    background: #555b63;
+    color: #fff;
+}
+
+/* Formulaire de changement de mot de passe */
+#changePwdForm {
+    background: #23272a;
+    border-radius: 6px;
+    padding: 12px 10px;
+    margin-top: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+/* Not found */
+.notfound-container {
+    background: #23272a;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    max-width: 480px;
+    margin: 60px auto 40px auto;
+    padding: 40px 30px 30px 30px;
+    text-align: center;
+}
+
+.notfound-title {
+    color: #ffd700;
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.notfound-message {
+    color: #e0e0e0;
+    font-size: 1.2em;
+    margin-bottom: 28px;
+}
+
+.notfound-link {
+    display: inline-block;
+    background: #444950;
+    color: #ffd700;
+    border-radius: 4px;
+    padding: 10px 24px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    margin-top: 10px;
+}
+.notfound-link:hover {
+    background: #555b63;
+    color: #fff;
+}
+
+/* Accueil */
+.DivAcceuil {
+    margin: 30px 0 20px 0;
+    text-align: left;
+}
+
+.BouttonAcceuil {
+    display: inline-block;
+    background: #444950;
+    color: #ffd700;
+    border-radius: 4px;
+    padding: 8px 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    margin-top: 18px;
+}
+.BouttonAcceuil:hover {
+    background: #555b63;
+    color: #fff;
+}
+
+/* Bloc connexion */
+.DivConnexion {
+    background: #23272a;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    padding: 32px 24px;
+    max-width: 400px;
+    margin: 40px auto;
+}
+
+.DivConnexion h3 {
+    color: #ffd700;
+    margin-bottom: 20px;
+}
+
+.DivConnexion label {
+    color: #ffd700;
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 6px;
+}
+
+.DivConnexion input[type="text"],
+.DivConnexion input[type="email"],
+.DivConnexion input[type="password"] {
+    background-color: #2c2f33;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 8px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+}
+
+.DivConnexion input[type="text"]:focus,
+.DivConnexion input[type="email"]:focus,
+.DivConnexion input[type="password"]:focus {
+    outline: 2px solid #ffd700;
+}
+
+.DivConnexion input[type="submit"] {
+    background-color: #444950;
+    color: #ffd700;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    margin-top: 10px;
+}
+.DivConnexion input[type="submit"]:hover {
+    background-color: #555b63;
+    color: #fff;
+}
+
+/* Lien vers la connexion/inscription */
+.BouttonInscription {
+    display: block;
+    background: #23272a;
+    color: #80bfff;
+    border-radius: 4px;
+    padding: 8px 0;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.BouttonInscription:hover {
+    color: #ffb380;
+    background: #23272a;
+}
+
+/* Lien mot de passe oublié */
+.BouttonMdpOublie {
+    display: block;
+    color: #ffd700;
+    text-align: center;
+    margin-top: 8px;
+    text-decoration: underline;
+    font-size: 0.98em;
+    transition: color 0.2s;
+}
+.BouttonMdpOublie:hover {
+    color: #ffb380;
+}
+
+/* Bloc principal des détails */
+.DivDetailsTask {
+    background: #23272a;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    max-width: 500px;
+    margin: 60px auto 40px auto;
+    padding: 36px 28px 28px 28px;
+    text-align: left;
+}
+
+.DivDetailsTask h2 {
+    color: #ffd700;
+    margin-bottom: 24px;
+}
+
+.DivDetailsTask p {
+    color: #e0e0e0;
+    margin-bottom: 16px;
+    font-size: 1.1em;
+}
+
+.DivDetailsTask strong {
+    color: #ffd700;
+}
+
+/* Bouton supprimer */
+.BtnSupprimerTache {
+    background: #c0392b;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: background 0.2s;
+}
+.BtnSupprimerTache:hover {
+    background: #e74c3c;
+}
+
+/* Formulaire de couleur */
+.FormCouleurTache label {
+    color: #ffd700;
+    margin-right: 10px;
+}
+
+.FormCouleurTache input[type="color"] {
+    background: #2c2f33;
+    border: 1px solid #444;
+    border-radius: 4px;
+    width: 40px;
+    height: 32px;
+    vertical-align: middle;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.FormCouleurTache input[type="submit"] {
+    background: #444950;
+    color: #ffd700;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.FormCouleurTache input[type="submit"]:hover {
+    background: #555b63;
+    color: #fff;
+}
+
+/* Bloc formulaire de contact */
+.DivContact {
+    background: #23272a;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    padding: 32px 24px;
+    max-width: 420px;
+    margin: 40px auto 30px auto;
+}
+
+.DivContact label {
+    color: #ffd700;
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 6px;
+}
+
+.DivContact input[type="email"],
+.DivContact input[type="text"],
+.DivContact textarea {
+    background-color: #2c2f33;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 8px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+}
+
+.DivContact input[type="email"]:focus,
+.DivContact input[type="text"]:focus,
+.DivContact textarea:focus {
+    outline: 2px solid #ffd700;
+}
+
+.DivContact textarea {
+    resize: vertical;
+}
+
+.DivContact button[type="submit"] {
+    background-color: #444950;
+    color: #ffd700;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    margin-top: 10px;
+}
+
+.DivContact button[type="submit"]:hover {
+    background-color: #555b63;
+    color: #fff;
+}
+
+/* Titre principal */
+h1 {
+    color: #ffd700;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+/* Paragraphes */
+p {
+    color: #e0e0e0;
+    max-width: 800px;
+    margin: 18px auto;
+    font-size: 1.08em;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Liste d'aide */
+ul {
+    background: #23272a;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    max-width: 600px;
+    margin: 32px auto 0 auto;
+    padding: 24px 30px;
+    color: #e0e0e0;
+    font-size: 1.08em;
+    list-style: disc inside;
+}
+
+ul li {
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+ul li strong {
+    color: #ffd700;
+}
+
+/* Footer déjà stylé dans les précédents extraits */
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    background: #23272a;
+}
+::-webkit-scrollbar-thumb {
+    background: #444950;
+    border-radius: 5px;
+}
+
+#btnPrintPDF:hover {
+
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 6px 24px rgba(255,0,234,0.18), 0 4px 16px rgba(0,224,255,0.14);
+}
+
+#btnEDTPDF:hover {
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 6px 24px rgba(0,224,255,0.18), 0 4px 16px rgba(255,0,234,0.14);
+}
+
+#edt-btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 32px auto 70px auto;
+    flex-wrap: wrap;
+}
+
+/* Style général pour les deux boutons */
+#edt-btn-container button {
+    padding: 12px 32px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0,224,255,0.10), 0 2px 8px rgba(255,0,234,0.08);
+    transition: background 0.3s, transform 0.2s;
+    letter-spacing: 0.5px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.DivRemiseAZero {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.BouttonRemiseAZero {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #dc3545; /* Rouge */
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.BouttonRemiseAZero:hover {
+    background-color: #c82333; /* Rouge plus foncé */
+}
+
+.EmploiDuTemps {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 14px;
+}
+
+.EmploiDuTemps thead th {
+    background-color: #0078d7;
+    color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.EmploiDuTemps tbody td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    height: 40px;
+}
+
+.EmploiDuTemps tbody tr:nth-child(even) {
+    background-color: #444040;
+}
+
+.EmploiDuTemps tbody tr:nth-child(odd) {
+    background-color: #777070;
+}
+
+/* Ajoute ce bloc pour le layout principal */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main, .main-content {
+    flex: 1 0 auto;
+}

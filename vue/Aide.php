@@ -9,7 +9,8 @@ $langData = getLangData($lang);
 <head>
     <meta charset="UTF-8">
     <title><?php echo t('helpTitle', $langData); ?></title>
-    <link rel="stylesheet" href="../styles/style.css">
+    <link  id='Style_theme' rel="stylesheet" href="../styles/style.css">
+    <script src="../script/changeTheme.js"></script>
 </head>
 
 <header>
@@ -19,13 +20,15 @@ $langData = getLangData($lang);
 </header>
 
 <body>
-    <h1><?php echo t('helpTitle', $langData); ?></h1>
-    <p><?php echo t('helpIntro', $langData); ?></p>
-    <ul>
-        <li><strong><?php echo t('helpDownload', $langData); ?></strong> <?php echo t('helpDownloadText', $langData); ?></li>
-        <li><strong><?php echo t('helpPrint', $langData); ?></strong> <?php echo t('helpPrintText', $langData); ?></li>
-        <li><strong><?php echo t('helpContact', $langData); ?></strong> <?php echo t('helpContactText', $langData); ?></li>
-    </ul>
+    <main>
+        <h1><?php echo t('helpTitle', $langData); ?></h1>
+        <p><?php echo t('helpIntro', $langData); ?></p>
+        <ul>
+            <li><strong><?php echo t('helpDownload', $langData); ?></strong> <?php echo t('helpDownloadText', $langData); ?></li>
+            <li><strong><?php echo t('helpPrint', $langData); ?></strong> <?php echo t('helpPrintText', $langData); ?></li>
+            <li><strong><?php echo t('helpContact', $langData); ?></strong> <?php echo t('helpContactText', $langData); ?></li>
+        </ul>
+    </main>
 </body>
 
 <footer class="Footer">

@@ -10,14 +10,16 @@ $langData = getLangData($lang);
 <head>
     <meta charset="UTF-8">
     <title><?php echo t('notFoundTitle', $langData); ?></title>
-    <link rel="stylesheet" href="../styles/style.css">
+    <link  id='Style_theme' rel="stylesheet" href="../styles/style.css">
+    <script src="../script/changeTheme.js"></script>
 </head>
-<body>
-    <div class="notfound-container">
-        <div class="notfound-title"><?php echo t('notFoundHeader', $langData); ?></div>
-        <div class="notfound-message"><?php echo t('notFoundMessage', $langData); ?></div>
-        <a class="notfound-link" href="../index.php"><?php echo t('notFoundBackHome', $langData); ?></a>
-    </div>
+<body><main>
+        <div class="notfound-container">
+            <div class="notfound-title"><?php echo t('notFoundHeader', $langData); ?></div>
+            <div class="notfound-message"><?php echo t('notFoundMessage', $langData); ?></div>
+            <a class="notfound-link" href="../index.php"><?php echo t('notFoundBackHome', $langData); ?></a>
+        </div>
+    </main>
 </body>
 <footer class="Footer">
     <div class="FooterButtons">

@@ -9,7 +9,8 @@ $langData = getLangData($lang);
 <head>
     <meta charset="UTF-8">
     <title><?php echo t('aboutTitle', $langData); ?></title>
-    <link rel="stylesheet" href="../styles/style.css">
+    <link  id='Style_theme' rel="stylesheet" href="../styles/style.css">
+    <script src="../script/changeTheme.js"></script>
 </head>
 
 <header>
@@ -19,10 +20,12 @@ $langData = getLangData($lang);
 </header>
 
 <body>
-    <h1><?php echo t('aboutTitle', $langData); ?></h1>
-    <p><?php echo t('aboutText1', $langData); ?></p>
-    <p><?php echo t('aboutVersion', $langData); ?></p>
-    <p><?php echo t('aboutAuthor', $langData); ?></p>
+    <main>
+        <h1><?php echo t('aboutTitle', $langData); ?></h1>
+        <p><?php echo t('aboutText1', $langData); ?></p>
+        <p><?php echo t('aboutVersion', $langData); ?></p>
+        <p><?php echo t('aboutAuthor', $langData); ?></p>
+    </main>
 </body>
 
 <footer class="Footer">

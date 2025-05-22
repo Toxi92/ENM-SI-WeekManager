@@ -11,24 +11,26 @@ $langData = getLangData($lang);
 <head>
     <meta charset="UTF-8">
     <title><?php echo t('forgotTitle', $langData); ?></title>
-    <link rel="stylesheet" href="../styles/style.css">
+    <link  id='Style_theme' rel="stylesheet" href="../styles/style.css">
+    <script src="../script/changeTheme.js"></script>
 </head>
 <body>
-    <div class="DivAcceuil">
-        <a class="BouttonAcceuil" href="../index.php"><p><?php echo t('home', $langData); ?></p></a>
-    </div>
-
-    <?php if(!isset($_GET['token'])){?>
-        <div class="DivConnexion">
-            <form action="MdpOublie.php" method="post">
-                <h3><?php echo t('forgotHeader', $langData); ?></h3>
-                <label for="email"><?php echo t('forgotEmailLabel', $langData); ?></label>
-                <input type="email" id="email" name="email" required>
-                <input type="submit" value="<?php echo t('forgotButton', $langData); ?>">
-            </form>
+    <main>
+        <div class="DivAcceuil">
+            <a class="BouttonAcceuil" href="../index.php"><p><?php echo t('home', $langData); ?></p></a>
         </div>
-    <?php } ?>
 
+        <?php if(!isset($_GET['token'])){?>
+            <div class="DivConnexion">
+                <form action="MdpOublie.php" method="post">
+                    <h3><?php echo t('forgotHeader', $langData); ?></h3>
+                    <label for="email"><?php echo t('forgotEmailLabel', $langData); ?></label>
+                    <input type="email" id="email" name="email" required>
+                    <input type="submit" value="<?php echo t('forgotButton', $langData); ?>">
+                </form>
+            </div>
+        <?php } ?>
+    </main>
 </body>
 <footer class="Footer">
     <div class="FooterButtons">

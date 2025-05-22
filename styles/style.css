@@ -220,7 +220,7 @@ html, body {
     text-align: center; /* Centre le texte */
 }
 
-.toggle-button {
+#toggleThemeBtn {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -235,12 +235,12 @@ html, body {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.toggle-button:hover {
+#toggleThemeBtn:hover {
     background-color: #0056b3; /* Bleu plus foncé au survol */
     transform: scale(1.1); /* Légère mise en avant au survol */
 }
 
-.toggle-button:active {
+#toggleThemeBtn:active {
     background-color: #004085; /* Bleu encore plus foncé lors du clic */
     transform: scale(0.95); /* Légère réduction lors du clic */
 }
