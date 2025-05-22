@@ -5,6 +5,9 @@
     include_once(__DIR__."/../modele/db.user.php");
     include_once(__DIR__."/../modele/db.auth.php");
     include_once(__DIR__."/../modele/db.task.php");
+    require_once(__DIR__ . "/lang.php");
+    $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'fr';
+    $langData = getLangData($lang);
 
 
     $jours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi'];

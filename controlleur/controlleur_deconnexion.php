@@ -1,6 +1,9 @@
 <?php 
 // filepath: /home/toxi/Desktop/BTS_SIO/Projet/UberPizza/Controlleur/controlleur_deconnexion.php
-session_start();
+if(!isset($_SESSION)){
+    session_start();
+}
+
 
 // Supprimer uniquement l'objet utilisateur de la session
 if (isset($_SESSION['user'])) {

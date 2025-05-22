@@ -1,3 +1,4 @@
+<?php include("../controlleur/controlleur_ajout_task.php"); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>

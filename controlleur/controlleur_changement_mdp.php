@@ -2,7 +2,13 @@
 
 include_once("../modele/db.user.php");
 include_once("../modele/db.auth.php");
-session_start();
+require_once(__DIR__ . "/lang.php");
+$lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'fr';
+$langData = getLangData($lang);
+if(!isset($_SESSION)){
+    session_start();
+}
+
 
 if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['new_password']) && isset($_POST['current_password']) && isset($_POST['email'])) {
     $current_password = $_POST['current_password'];

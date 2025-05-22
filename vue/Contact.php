@@ -1,3 +1,4 @@
+<?php require_once("../controlleur/controlleur_mail_support.php"); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>

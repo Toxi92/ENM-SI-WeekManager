@@ -1,3 +1,6 @@
+<?php
+include_once("../controlleur/controlleur_detailsTask.php");
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,7 +12,6 @@
     <div class="DivDetailsTask">
         <h2>Détails de la tâche</h2>
         <?php
-        include_once("../controlleur/controlleur_detailsTask.php");
         if (isset($task)) {
         ?>
             <p><strong>Nom :</strong> <?php echo htmlspecialchars($task['Nom']); ?></p>

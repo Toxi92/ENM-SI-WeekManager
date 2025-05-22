@@ -1,3 +1,6 @@
+<?php
+require_once("../controlleur/controlleur_inscription.php");
+?>
 <!DOCTYPE html>
 
 <html lang="fr">
@@ -37,9 +40,7 @@
             <input type="submit" value="Continuer l'inscription">
             <a class="BouttonInscription" href="./Connexion.php"><p>Vous avez déjà un compte ?</p></a>
         </form>
-            <?php
-            require_once("../controlleur/controlleur_inscription.php");
-            ?>
+
     </div>
     
 </body>

@@ -4,6 +4,9 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
+require_once(__DIR__ . "/lang.php");
+$lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'fr';
+$langData = getLangData($lang);
 
 if(isset($_GET['action']) && $_GET['action'] == 'reset') {
     if (!isset($_SESSION['user'])) {

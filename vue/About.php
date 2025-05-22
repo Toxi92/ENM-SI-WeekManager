@@ -1,3 +1,8 @@
+<?php 
+require_once(__DIR__ . "/lang.php");
+$lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'fr';
+$langData = getLangData($lang); 
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>

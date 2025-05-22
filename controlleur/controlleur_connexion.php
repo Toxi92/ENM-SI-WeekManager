@@ -1,6 +1,13 @@
 <?php
+if(!isset($_SESSION)){
+    session_start();
+}
+
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
     require_once("../modele/db.auth.php");
+    require_once(__DIR__ . "/lang.php");
+    $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'fr';
+    $langData = getLangData($lang);
     $email = $_POST['email'];
     $password = $_POST['password'];
 
