@@ -12,13 +12,20 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'];
 
     if ($query->getUserByEmail($email)!=false && password_verify($password, $query->getUserByEmail($email)['pwd'])) {
-        session_start();
-        $res=$query->getUserByEmail($email);
-        $user->login($res['username'], $res['pwd'], $res['email'], $res['admin']);
-        $_SESSION['user'] = serialize($user);
-        
-        header('Location: ../index.php');
-        exit;
+        if($query->ISa2fON($email)==false){
+            session_start();
+            $res=$query->getUserByEmail($email);
+            $user->login($res['username'], $res['pwd'], $res['email'], $res['admin']);
+            $_SESSION['user'] = serialize($user);
+            
+            header('Location: ../index.php');
+            exit;
+        }else{
+            $_SESSION['email'] = $email;
+            $_SESSSION['pwd'] = $password;
+            header('Location: /../vue/Connexion_A2F.php');
+        }
+
     } elseif ($query->getUserByEmail($email)==false) {
         echo "<script>alert('".t('loginMailNotExist', $langData)."');</script>";
     } else {

@@ -53,7 +53,15 @@ $langData = getLangData($lang);
                         <input type="hidden" name="email" value="<?php echo $user->getEmail(); ?>">
                         <input type="submit" value="<?php echo t('profileValidate', $langData); ?>">
                     </form>
-                </div>            
+                </div>
+                <?php
+                include_once(__DIR__ . "/../modele/db.auth.php");
+                if ($query->ISa2fON($user->getEmail())) {
+                    echo '<a href="../vue/DesactivationA2F.php" class="activation-a2f-btn">Désactiver la double authentification</a>';
+                } else {
+                    echo '<a href="../vue/ActivationA2F.php" class="activation-a2f-btn">Activer la double authentification</a>';
+                }
+                ?>
                 <div>
                     <input type="submit" id="deconnexion" value="<?php echo t('profileLogout', $langData); ?>">
                     <script src="../script/deconnexion.js"></script>

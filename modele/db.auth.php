@@ -80,6 +80,49 @@ class QueryUser{
         }
         return false;
     }
+
+    public function ISa2fON($email){
+        $req = $this->bdd->getConnexion()->prepare("SELECT * FROM Utilisateurs WHERE email = :email");
+        $req->execute(array(
+            'email' => $email
+        ));
+        $result = $req->fetch();
+        if($result['a2f'] == 1){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public function setA2f($email){
+        $req = $this->bdd->getConnexion()->prepare("UPDATE Utilisateurs SET a2f = 1 WHERE email = :email");
+        $req->execute(array(
+            'email' => $email
+        ));
+    }
+    public function unsetA2f($email){
+        $req = $this->bdd->getConnexion()->prepare("UPDATE Utilisateurs SET a2f = 0 WHERE email = :email");
+        $req->execute(array(
+            'email' => $email
+        ));
+    }
+
+    public function getSecret($email){
+        $req = $this->bdd->getConnexion()->prepare("SELECT * FROM Utilisateurs WHERE email = :email");
+        $req->execute(array(
+            'email' => $email
+        ));
+        $result = $req->fetch();
+        return $result['a2f_secret'];
+    }
+
+    public function setSecret($email,$secret){
+        $req = $this->bdd->getConnexion()->prepare("UPDATE Utilisateurs SET a2f_secret = :secre where email = :email");
+        $req->execute(array(
+            'email' => $email,
+            'secre' => $secret
+        ));
+    }
 }
 
 $bdd = new Database($host,"$db",$user,$password);

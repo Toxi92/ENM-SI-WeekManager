@@ -125,7 +125,21 @@
   "edtThursday": "Jeudi",
   "edtFriday": "Vendredi",
   "invalidField": "Champ invalide.",
-    "btnDownloadEDT": "Télécharger l'emploi du temps",
-    "btnPrintEDT": "Imprimer l'emploi du temps",
-    "edtNotFound": "Emploi du temps introuvable."
+  "btnDownloadEDT": "Télécharger l'emploi du temps",
+  "btnPrintEDT": "Imprimer l'emploi du temps",
+  "edtNotFound": "Emploi du temps introuvable.",
+  "connexion": {
+      "a2f": {
+          "title": "Connexion - Authentification à deux facteurs",
+          "heading": "Authentification à deux facteurs",
+          "label_code": "Code reçu par SMS :",
+          "submit": "Valider"
+      }
+  },
+  "a2fIncorrect": "Code incorrecte ou expiré.",
+  "loginSuccess": "Connexion réussie !",
+  "a2fActivationTitle":"Activation de l'A2F",
+ "a2fEnterCode":"Code à entrer :",
+  "validate":"",
+  "a2fHelpText":""
 }

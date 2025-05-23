@@ -778,3 +778,88 @@ body {
 main, .main-content {
     flex: 1 0 auto;
 }
+
+.activation-a2f-body {
+    background: #181c24;
+    color: #e0e6ed;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.activation-a2f-container {
+    background: #232a36;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 32px 28px;
+    text-align: center;
+}
+
+.activation-a2f-title {
+    font-size: 1.7em;
+    margin-bottom: 24px;
+    color: #90caf9;
+}
+
+.activation-a2f-label {
+    font-size: 1.1em;
+    color: #b0bec5;
+}
+
+.activation-a2f-input {
+    margin-top: 10px;
+    padding: 10px 12px;
+    font-size: 1.1em;
+    border: 1px solid #374151;
+    border-radius: 6px;
+    background: #232a36;
+    color: #e0e6ed;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.activation-a2f-input:focus {
+    border: 1.5px solid #90caf9;
+}
+
+.activation-a2f-button {
+    margin-top: 18px;
+    padding: 10px 28px;
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.activation-a2f-button:hover {
+    background: #1565c0;
+}
+
+.activation-a2f-help {
+    margin-top: 22px;
+    color: #b0bec5;
+    font-size: 0.98em;
+}
+.activation-a2f-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #1976d2;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+    margin: 18px 0;
+    cursor: pointer;
+}
+.activation-a2f-btn:hover {
+    background: #1565c0;
+    box-shadow: 0 4px 16px rgba(25, 118, 210, 0.15);
+}

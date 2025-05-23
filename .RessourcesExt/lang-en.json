@@ -125,7 +125,22 @@
   "edtThursday": "Thursday",
   "edtFriday": "Friday",
   "invalidField": "Invalid Field.",
-    "btnDownloadEDT": "Download timetable",
-    "btnPrintEDT": "Print timetable",
-    "edtNotFound": "Timetable not found."
+  "btnDownloadEDT": "Download timetable",
+  "btnPrintEDT": "Print timetable",
+  "edtNotFound": "Timetable not found.",
+  "connexion": {
+      "a2f": {
+          "title": "Login - Two-Factor Authentication",
+          "heading": "Two-Factor Authentication",
+          "label_code": "Code received by SMS:",
+          "submit": "Validate"
+      }
+  },
+  "a2fIncorrect": "Incorrect code or expired.",
+  "loginSuccess": "Login successful!",
+  "a2fActivationTitle":"",
+ "a2fEnterCode":"",
+  "validate":"",
+  "a2fHelpText":""
 }
+
