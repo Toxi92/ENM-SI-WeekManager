@@ -11,18 +11,18 @@ require_once (__DIR__.'/../controlleur/controlleur_connexion_a2f.php'); // Inclu
 
 <head>
     <meta charset="UTF-8">
-    <title><?php echo t('connexion.a2f.title',$langData); ?></title>
+    <title><?php echo t('connexiona2ftitle',$langData); ?></title>
     <link id="Style_theme" rel="stylesheet" href="../styles/style.css">
     <script src="../script/changeTheme.js"></script>
 </head>
 
 <body><main>
     <div class="a2f-container">
-        <h2><?php echo t('connexion.a2f.heading',$langData); ?></h2>
+        <h2><?php echo t('connexiona2fheading',$langData); ?></h2>
         <form method="POST" action="../controlleur/controlleur_connexion_a2f.php">
-            <label for="a2f_code"><?php echo t('connexion.a2f.label_code',$langData); ?></label><br>
+            <label for="a2f_code"><?php echo t('connexiona2flabel_code',$langData); ?></label><br>
             <input type="text" id="a2f_code" name="a2f_code" maxlength="6" required autocomplete="one-time-code"><br>
-            <button type="submit"><?php echo t('connexion.a2f.submit',$langData); ?></button>
+            <button type="submit"><?php echo t('connexiona2fsubmit',$langData); ?></button>
         </form>
         <?php
         if (isset($_SESSION['a2f_error'])) {

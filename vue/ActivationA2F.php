@@ -2,12 +2,7 @@
 if(!isset($_SESSION)){
     session_start();
 }
-if(!isset($_SESSION['user'])) {
-    echo "<script>alert('".t('loginRequired', $langData)."'); 
-    window.location.href = '../vue/Connexion.php';
-    </script>";
-    exit;
-}
+
 require_once(__DIR__ . "/../controlleur/controlleur_lang.php");
 require_once(__DIR__ . "/../controlleur/controlleur_activation_a2f.php");
 $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'fr';
@@ -22,7 +17,13 @@ $langData = getLangData($lang);
     <link id="Style_theme" rel="stylesheet" href="../styles/style.css">
     <script src="../script/changeTheme.js"></script>
 </head>
+<header>
+    <a class="BouttonAcceuilProfil" href="../index.php"><p><?php echo t('profileHome', $langData); ?></p></a>
+</header>
 <body>
+    <main>
+        
+    </main>
 </body>
 
 <footer class="Footer">

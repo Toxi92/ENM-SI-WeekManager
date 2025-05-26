@@ -128,18 +128,15 @@
   "btnDownloadEDT": "Télécharger l'emploi du temps",
   "btnPrintEDT": "Imprimer l'emploi du temps",
   "edtNotFound": "Emploi du temps introuvable.",
-  "connexion": {
-      "a2f": {
-          "title": "Connexion - Authentification à deux facteurs",
-          "heading": "Authentification à deux facteurs",
-          "label_code": "Code reçu par SMS :",
-          "submit": "Valider"
-      }
-  },
+
+  "connexiona2ftitle": "Connexion - Authentification à deux facteurs",
+  "connexiona2fheading": "Authentification à deux facteurs",
+  "connexiona2flabel_code": "Code actuellement sur l'application d'authentification téléphone :",
+  "connexiona2fsubmit": "Valider",
   "a2fIncorrect": "Code incorrecte ou expiré.",
   "loginSuccess": "Connexion réussie !",
   "a2fActivationTitle":"Activation de l'A2F",
- "a2fEnterCode":"Code à entrer :",
-  "validate":"",
-  "a2fHelpText":""
+  "a2fEnterCode":"Clé à entrer manuellement : ",
+  "a2fDesactivated":"L'A2F a bien été désactivée !"
+
 }

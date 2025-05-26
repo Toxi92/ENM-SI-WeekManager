@@ -99,6 +99,7 @@ class QueryUser{
         $req->execute(array(
             'email' => $email
         ));
+
     }
     public function unsetA2f($email){
         $req = $this->bdd->getConnexion()->prepare("UPDATE Utilisateurs SET a2f = 0 WHERE email = :email");
@@ -121,6 +122,13 @@ class QueryUser{
         $req->execute(array(
             'email' => $email,
             'secre' => $secret
+        ));
+        
+    }
+    public function delSecret($email){
+        $req = $this->bdd->getConnexion()->prepare("UPDATE Utilisateurs SET a2f_secret = NULL where email = :email");
+        $req->execute(array(
+            "email"=> $email
         ));
     }
 }

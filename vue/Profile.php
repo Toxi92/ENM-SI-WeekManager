@@ -57,9 +57,9 @@ $langData = getLangData($lang);
                 <?php
                 include_once(__DIR__ . "/../modele/db.auth.php");
                 if ($query->ISa2fON($user->getEmail())) {
-                    echo '<a href="../vue/DesactivationA2F.php" class="activation-a2f-btn">Désactiver la double authentification</a>';
+                    echo '<a href="../controlleur/controlleur_desactivation_a2f.php" class="activation-a2f-btn">Désactiver la double authentification</a>';
                 } else {
-                    echo '<a href="../vue/ActivationA2F.php" class="activation-a2f-btn">Activer la double authentification</a>';
+                    echo '<a href="../vue/ActivationA2F.php" class="activation-a2f-btn" >Activer la double authentification</a>';
                 }
                 ?>
                 <div>
