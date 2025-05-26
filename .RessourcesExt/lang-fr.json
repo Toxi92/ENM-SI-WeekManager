@@ -137,6 +137,17 @@
   "loginSuccess": "Connexion réussie !",
   "a2fActivationTitle":"Activation de l'A2F",
   "a2fEnterCode":"Clé à entrer manuellement : ",
-  "a2fDesactivated":"L'A2F a bien été désactivée !"
-
+  "a2fDesactivated":"L'A2F a bien été désactivée !",
+  "sharedEDTTitle": "Emplois du temps partagés avec moi",
+  "sharedEDTNone": "Aucun emploi du temps partagé pour l'instant.",
+  "sharedEDTOwner": "Propriétaire :",
+  "sharedEDTRank": "Rang :",
+  "sharedEDTView": "Voir",
+  "sharedEDTRank1": "Voir",
+  "sharedEDTRank2": "Voir et modifier",
+  "sharedEDTRank3": "Détenteur seulement",
+  "sharedEDTBackHome": "Retour à l'accueil",
+  "sharedEDTSuccess":"Emploi du temps partagé avec succès avec le mail : ",
+  "sharedEDTInvalidSelfShare": "Vous ne pouvez pas partager votre emploi du temps avec vous-même.",
+  "sharedEDTInvalidEmail": "L'adresse e-mail fournie est invalide."
 }

@@ -66,6 +66,26 @@ $langData = getLangData($lang);
                     <input type="submit" id="deconnexion" value="<?php echo t('profileLogout', $langData); ?>">
                     <script src="../script/deconnexion.js"></script>
                 </div>
+                <div style="margin-top:20px;">
+                    <button id="btnShareEDT" type="button" style="background:#555b63;color:#ffd700;border-radius:5px;padding:10px 18px;font-weight:bold;cursor:pointer;">Partager mon emploi du temps</button>
+                    <form id="formShareEDT" action="../controlleur/controlleur_partage_edt.php" method="post" style="display:none;margin-top:10px;">
+                        <label for="share_email">Email du destinataire :</label>
+                        <input type="email" id="share_email" name="share_email" required>
+                        <label for="share_rank">Rang d'accès :</label>
+                        <select id="share_rank" name="share_rank" required>
+                            <option value="1">Voir</option>
+                            <option value="2">Voir et modifier</option>
+                        </select>
+                        <input type="hidden" name="owner_email" value="<?php echo $user->getEmail(); ?>">
+                        <button type="submit" style="background:#ffd700;color:#2c2f33;border-radius:5px;padding:8px 16px;font-weight:bold;margin-top:8px;">Partager</button>
+                    </form>
+                    <script>
+                    document.getElementById('btnShareEDT').onclick = function() {
+                        var form = document.getElementById('formShareEDT');
+                        form.style.display = (form.style.display === 'none') ? 'block' : 'none';
+                    };
+                    </script>
+                </div>
             </div>
         </div>
     </main>

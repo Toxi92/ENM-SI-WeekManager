@@ -872,3 +872,54 @@ html, body {
     color: #ffd700;
     box-shadow: 0 4px 16px rgba(25, 118, 210, 0.15);
 }
+
+/* Styles pour la page des emplois du temps partagés (SharedEDT) - mode sombre */
+.sharededt-body {
+    background: #23272a;
+    color: #ffd700;
+    min-height: 100vh;
+}
+.sharededt-title {
+    color: #ffd700;
+    margin-bottom: 24px;
+}
+.sharededt-list {
+    background: #2c2f33;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+    padding: 24px 28px;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+.sharededt-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #555b63;
+    font-size: 1.08em;
+}
+.sharededt-item:last-child {
+    border-bottom: none;
+}
+.sharededt-view {
+    color: #ffd700;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-left: 8px;
+}
+.sharededt-view:hover {
+    color: #fff;
+}
+.sharededt-back {
+    display: inline-block;
+    margin: 18px auto 0 auto;
+    background: #555b63;
+    color: #ffd700;
+    padding: 8px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.sharededt-back:hover {
+    background: #ffd700;
+    color: #2c2f33;
+}

@@ -68,6 +68,50 @@ class QueryEDT{
             'dateFin' => $staticfinish,
             'id' => $id
         ));}
+    public function getSharedEDTs($email){
+        $req = $this->bdd->getConnexion()->prepare('SELECT * FROM Possède WHERE email = :email AND rang != 3');
+        $req->execute(array(
+            'email' => $email
+        ));
+        $sharedEDTs = $req->fetchAll(PDO::FETCH_ASSOC);
+        return $sharedEDTs;
+    }
+    public function deleteSharedEDT($email, $edtId){
+        $req = $this->bdd->getConnexion()->prepare('DELETE FROM Possède WHERE email = :email AND id = :id');
+        $req->execute(array(
+            'email' => $email,
+            'id' => $edtId
+        ));
+    }
+    public function getEDTOwner($edtId){
+        $req = $this->bdd->getConnexion()->prepare('SELECT email FROM Possède WHERE id = :id AND rang = 3');
+        $req->execute(array(
+            'id' => $edtId
+        ));
+        $result = $req->fetch();
+        $email = $result['email'] ?? null; // Retourne l'email du propriétaire ou null si non trouvé
+        $req2 = $this->bdd->getConnexion()->prepare('SELECT * FROM Utilisateurs WHERE email = :email');
+        $req2->execute(array(
+            'email' => $email
+        ));
+        $result2 = $req2->fetch();
+        return $result2;
+    }
+    public function shareEDT($emailOwner,$emailDest,$rank){
+        $req = $this->bdd->getConnexion()->prepare('SELECT id FROM Possède WHERE email = :emailOwner AND rang = 3');
+        $req->execute(array(
+            'emailOwner' => $emailOwner
+        ));
+        $result = $req->fetch();
+        var_dump($result);
+        $id= $result['id'];
+        $req2 = $this->bdd->getConnexion()->prepare('INSERT INTO Possède (email, id, rang) VALUES (:emailDest, :id, :rank)');
+        $req2->execute(array(
+            'emailDest' => $emailDest,
+            'id' => $id,
+            'rank' => $rank
+        ));
+    }
 }
 $bdd = new Database($host,$db,$user,$password);
 $query2 = new QueryEDT($bdd);
