@@ -1,46 +1,22 @@
-/* Couleurs générales */
 html, body {
-    background:#181a1b  no-repeat center center fixed;
-    color: #e0e0e0;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    color: black;
+    background: #2c2f33;
+    color: #ffd700;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     font-family: 'Lexend-VariableFont_wght';
-    min-height: 100vh;
-    height: 100%;
-}
-a, a:visited {
-    color: #80bfff;
-    text-decoration: none;
-}
-a:hover {
-    color: #ffb380;
-    text-decoration: underline;
 }
 
-.Titre, .TitreSection {
+.Titre{
+    display: flex;
+    justify-content: center;
     color: #ffd700;
-    margin-bottom: 20px;
-}
-
- .DivProfil {
-    background-color: #23272a;
-    border-radius: 8px;
-    padding: 16px;
-    margin-bottom: 16px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
 .DivLogin {
     display: flex;
     justify-content: flex-end; /* Aligne le bouton à droite */
     padding: 10px; /* Ajoute un peu d'espace autour */
-
 }
 
 .BouttonLogin {
@@ -49,30 +25,250 @@ a:hover {
     align-items: center;
     width: auto; /* Ajuste automatiquement la largeur */
     height: auto; /* Ajuste automatiquement la hauteur */
-    color: lightgray;
+    color: #ffd700;
+    background-color: #555b63; /* Couleur de fond derrière le bouton */
     padding: 5px 10px; /* Ajoute de l'espace interne au bouton */
     border-radius: 5px; /* Ajoute des coins arrondis */
     text-decoration: none; /* Supprime le soulignement du lien */
-    background-color: #444;
 }
 
-input, button, select, textarea {
+.DivAcceuil {
+    display: flex;
+    justify-content: flex-start; /* Aligne le bouton à droite */
+    padding: 10px; /* Ajoute un peu d'espace autour */
+}
+
+.BouttonAcceuil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto; /* Ajuste automatiquement la largeur */
+    height: auto; /* Ajuste automatiquement la hauteur */
+    color: #ffd700;
+    background-color: #555b63; /* Couleur de fond derrière le bouton */
+    padding: 5px 10px; /* Ajoute de l'espace interne au bouton */
+    border-radius: 5px; /* Ajoute des coins arrondis */
+    text-decoration: none; /* Supprime le soulignement du lien */
+}
+
+.DivConnexion {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 40vh; /* Prend 80% de la hauteur de la fenêtre */
+}
+
+.DivConnexion form {
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
     background-color: #2c2f33;
-    color: #e0e0e0;
-    border: 1px solid #444;
-    border-radius: 4px;
-    padding: 6px 10px;
+    padding: 20px; /* Ajoute de l'espace interne */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour un effet de profondeur */
+    width: 400px; /* Largeur fixe */
 }
 
-input:focus, button:focus, select:focus, textarea:focus {
-    outline: 2px solid #ffd700;
+.DivConnexion label {
+    margin-bottom: 5px; /* Espacement entre le label et l'input */
+    font-weight: bold; /* Met le texte en gras */
+    color: #ffd700; /* Couleur du texte */
 }
 
+.DivConnexion input[type="email"],
+.DivConnexion input[type="password"] {
+    padding: 10px; /* Ajoute de l'espace interne */
+    margin-bottom: 15px; /* Espacement entre les champs */
+    border: 1px solid #555b63; /* Bordure grise */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 14px; /* Taille de police */
+    background: #555b63;
+    color: #ffd700;
+}
+
+.DivConnexion input[type="submit"] {
+    padding: 10px;
+    background-color: #ffd700; /* Couleur verte */
+    color: #2c2f33; /* Texte blanc */
+    border: none; /* Supprime la bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Change le curseur au survol */
+    font-size: 16px; /* Taille de police */
+    transition: background-color 0.3s ease; /* Animation au survol */
+}
+
+.DivConnexion input[type="submit"]:hover {
+    background-color: #555b63;
+    color: #ffd700;
+}
+
+.DivConnexion p {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffd700; /* Couleur verte */
+    color: #2c2f33; /* Texte blanc */
+    border: none; /* Supprime la bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Change le curseur au survol */
+    font-size: 16px; /* Taille de police */
+    transition: background-color 0.3s ease;
+
+}
+
+.DivConnexion p:hover {
+    background-color: #555b63;
+    color: #ffd700;
+}
+
+.DivConnexion a {
+    text-decoration: none;
+    color: #ffd700;
+}
+
+.DivProfil {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #2c2f33;
+    color: #ffd700;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.DivProfil div {
+    margin-bottom: 15px;
+}
+
+.DivProfil label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ffd700;
+}
+
+.DivProfil input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555b63;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #555b63;
+    color: #ffd700;
+}
+
+.DivProfil button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #ffd700;
+    color: #2c2f33;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.DivProfil button:hover {
+    background-color: #555b63;
+    color: #ffd700;
+}
+
+/* Style pour le bouton de déconnexion */
+#deconnexion {
+    background-color: #555b63; /* Rouge */
+    color: #ffd700; /* Texte blanc */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#deconnexion:hover {
+    background-color: #2c2f33; /* Rouge plus foncé au survol */
+    color: #ffd700;
+    transform: scale(1.05); /* Légère mise en avant au survol */
+}
+
+#deconnexion:active {
+    background-color: #ffd700; /* Rouge encore plus foncé lors du clic */
+    color: #2c2f33;
+    transform: scale(0.95); /* Légère réduction lors du clic */
+}
+
+.BouttonAcceuilProfil {
+    display: inline-block;
+    background-color: #555b63; /* Bleu */
+    color: #ffd700; /* Texte blanc */
+    text-align: center;
+    padding: 5px 15px; /* Réduit la taille du bouton */
+    font-size: 14px; /* Réduit la taille du texte */
+    font-weight: bold;
+    border-radius: 4px; /* Coins légèrement arrondis */
+    text-decoration: none;
+    margin: 5px auto; /* Réduit l'espacement vertical */
+    position: relative;
+    top: -10px; /* Remonte légèrement le bouton */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.BouttonAcceuilProfil:hover {
+    background-color: #ffd700;
+    color: #2c2f33;
+    transform: scale(1.05); /* Légère mise en avant au survol */
+}
+
+.BouttonAcceuilProfil:active {
+    background-color: #2c2f33;
+    color: #ffd700;
+    transform: scale(0.95); /* Légère réduction lors du clic */
+}
+
+.TitreSection {
+    font-size: 20px; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    margin-bottom: 10px; /* Réduit l'espacement en dessous du titre */
+    text-align: center; /* Centre le texte */
+    color: #ffd700;
+}
+
+#toggleThemeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #555b63; /* Bleu */
+    color: #ffd700; /* Texte blanc */
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50%; /* Bouton rond */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#toggleThemeBtn:hover {
+    background-color: #ffd700;
+    color: #2c2f33;
+    transform: scale(1.1); /* Légère mise en avant au survol */
+}
+
+#toggleThemeBtn:active {
+    background-color: #2c2f33;
+    color: #ffd700;
+    transform: scale(0.95); /* Légère réduction lors du clic */
+}
+
+.DivAjoutTache {
+    text-align: left;
+    margin: 20px 0;
+    color: #ffd700;
+}
 
 .BouttonAjoutTache {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #444950;
+    background-color: #555b63;
     color: #ffd700;
     text-decoration: none;
     font-size: 16px;
@@ -82,33 +278,75 @@ input:focus, button:focus, select:focus, textarea:focus {
 }
 
 .BouttonAjoutTache:hover {
-    background-color: #555b63;
-    color: #fff;
+    background-color: #ffd700;
+    color: #2c2f33;
 }
 
-button {
-    background-color: #444950;
-    color: #ffd700;
-    border: none;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-button:hover{
-    background-color: #555b63;
-    color: #fff;
-}
-
-.Footer {
-    background-color: #23272a;
-    color: #e0e0e0;
-    border-top: 1px solid #444;
-    padding: 20px 0 10px 0;
-    margin-top: 40px;
-    position: relative;
+.EmploiDuTemps {
     width: 100%;
-    flex-shrink: 0;
+    border-collapse: collapse;
     text-align: center;
+    font-size: 14px;
+    color: #ffd700;
+}
+
+.EmploiDuTemps thead th {
+    background-color: #555b63;
+    color: #ffd700;
+    padding: 10px;
+    border: 1px solid #2c2f33;
+}
+
+.EmploiDuTemps tbody td {
+    padding: 10px;
+    border: 1px solid #555b63;
+    background: #2c2f33;
+    color: #ffd700;
+    height: 40px;
+}
+
+.EmploiDuTemps tbody tr:nth-child(even) {
+    background-color: #555b63;
+}
+
+.EmploiDuTemps tbody tr:nth-child(odd) {
+    background-color: #2c2f33;
+}
+.DivRemiseAZero {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.BouttonRemiseAZero {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #555b63; /* Rouge */
+    color: #ffd700;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.BouttonRemiseAZero:hover {
+    background-color: #ffd700;
+    color: #2c2f33;
+}
+
+/* Pied de page */
+.Footer {
+    background-color: #555b63;
+    color: #ffd700;
+    padding: 15px 0; /* Espacement en haut et en bas */
+    position: fixed; /* Fixe le pied de page en bas de la fenêtre */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Prend toute la largeur de la page */
+    z-index: 1000; /* Assure que le pied de page reste au-dessus des autres éléments */
+    text-align: center; /* Centre le contenu horizontalement */
 }
 
 .FooterButtons {
@@ -120,8 +358,8 @@ button:hover{
 .FooterButton {
     display: inline-block;
     padding: 10px 20px; /* Espacement interne des boutons */
-    background-color: #0078d7; /* Couleur de fond des boutons */
-    color: white; /* Couleur du texte */
+    background-color: #2c2f33;
+    color: #ffd700; /* Couleur du texte */
     text-decoration: none; /* Supprime le soulignement des liens */
     font-size: 14px; /* Taille du texte */
     font-weight: bold;
@@ -130,570 +368,304 @@ button:hover{
 }
 
 .FooterButton:hover {
-    background-color: #005a9e; /* Couleur plus foncée au survol */
+    background-color: #ffd700;
+    color: #2c2f33;
 }
 
-.LangSelector button {
-    background: none;
+.BouttonMdpOublie {
+    display: block;
+    margin-top: 10px;
+    color: #ffd700;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.BouttonMdpOublie:hover {
+    color: #555b63;
+    text-decoration: underline;
+}
+
+.FormNouveauMDP {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #2c2f33;
+    color: #ffd700;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.FormNouveauMDP label {
+    font-weight: bold;
+    text-align: left;
+    color: #ffd700;
+}
+.FormNouveauMDP input[type="password"],
+.FormNouveauMDP input[type="submit"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #555b63;
+    background: #555b63;
+    color: #ffd700;
+}
+.FormNouveauMDP input[type="submit"] {
+    background: #ffd700;
+    color: #2c2f33;
     border: none;
-    padding: 0;
-    margin: 0 2px;
+    font-weight: bold;
     cursor: pointer;
+    transition: background 0.3s;
+}
+.FormNouveauMDP input[type="submit"]:hover {
+    background: #555b63;
+    color: #ffd700;
 }
 
-.LangSelector img {
-    border: 1px solid #444;
-    border-radius: 3px;
+.notfound-container {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffd700;
     background: #2c2f33;
 }
-
-.DivProfil label {
+.notfound-title {
+    font-size: 4em;
     color: #ffd700;
-    display: block;
-    margin-top: 12px;
-    margin-bottom: 4px;
-}
-
-.DivProfil input[readonly] {
-    background-color: #23272a;
-    color: #aaa;
-    border: 1px solid #444;
-}
-
-.DivProfil button {
-    margin-left: 10px;
-    background: #444950;
-    color: #ffd700;
-    border: none;
-    border-radius: 4px;
-    padding: 8px 16px;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.2s, color 0.2s;
-}
-.DivProfil button:hover {
-    background: #555b63;
-    color: #fff;
-}
-
-form {
-    background: none;
-}
-
-/* Scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
-    background: #23272a;
-}
-::-webkit-scrollbar-thumb {
-    background: #444950;
-    border-radius: 5px;
-}
-
-.DivAjoutTache {
-    text-align: left;
-    margin: 20px 0;
-}
-
-/* Conteneur principal */
-.DivAjoutTacheForm {
-    background-color: #23272a;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-    padding: 32px 24px;
-    max-width: 500px;
-    margin: 40px auto;
-}
-
-/* Titres */
-h2 {
-    color: #ffd700;
-    margin-bottom: 24px;
-}
-
-/* Labels */
-label {
-    color: #ffd700;
-    display: block;
-    margin-top: 16px;
-    margin-bottom: 6px;
-}
-
-/* Inputs, selects, textarea */
-input[type="text"],
-input[type="submit"],
-select,
-textarea {
-    background-color: #2c2f33;
-    color: #e0e0e0;
-    border: 1px solid #444;
-    border-radius: 4px;
-    padding: 8px 10px;
-    width: 100%;
-    box-sizing: border-box;
     margin-bottom: 10px;
 }
-
-input[type="text"]:focus,
-select:focus,
-textarea:focus {
-    outline: 2px solid #ffd700;
+.notfound-message {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    color: #ffd700;
+}
+.notfound-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #555b63;
+    color: #ffd700;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.notfound-link:hover {
+    background: #ffd700;
+    color: #2c2f33;
 }
 
-textarea {
+/* Champs du formulaire de changement de mot de passe */
+#changePwdForm {
+    background: #2c2f33;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 20px 18px;
+    max-width: 350px;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#changePwdForm label {
+    font-weight: bold;
+    color: #ffd700;
+    margin-bottom: 4px;
+    text-align: left;
+}
+
+#changePwdForm input[type="password"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #555b63;
+    background: #555b63;
+    color: #ffd700;
+    font-size: 15px;
+    margin-bottom: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#changePwdForm input[type="submit"] {
+    background-color: #ffd700;
+    color: #2c2f33;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#changePwdForm input[type="submit"]:hover {
+    background-color: #555b63;
+    color: #ffd700;
+}
+
+.DivAjoutTacheForm {
+    max-width: 450px;
+    margin: 40px auto 0 auto;
+    padding: 30px 28px;
+    background: #2c2f33;
+    color: #ffd700;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    text-align: center;
+}
+
+.DivAjoutTacheForm h2 {
+    color: #ffd700;
+    margin-bottom: 22px;
+    font-size: 24px;
+}
+
+.FormAjoutTache {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.FormAjoutTache label {
+    font-weight: bold;
+    color: #ffd700;
+    text-align: left;
+    margin-bottom: 3px;
+}
+
+.FormAjoutTache input[type="text"],
+.FormAjoutTache textarea,
+.FormAjoutTache select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #555b63;
+    background: #555b63;
+    color: #ffd700;
+    font-size: 15px;
+    margin-bottom: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    background: #f8f8f8;
+}
+
+.FormAjoutTache textarea {
     resize: vertical;
 }
 
-/* Boutons */
-input[type="submit"],
-.BouttonAcceuil {
-    background-color: #444950;
-    color: #ffd700;
+.FormAjoutTache input[type="submit"] {
+    background-color: #ffd700;
+    color: #2c2f33;
     border: none;
-    border-radius: 4px;
-    padding: 10px 18px;
-    margin-top: 12px;
-    cursor: pointer;
+    border-radius: 5px;
+    padding: 12px;
     font-weight: bold;
-    transition: background 0.2s, color 0.2s;
-    display: inline-block;
-    text-decoration: none;
-    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
 }
 
-input[type="submit"]:hover,
-.BouttonAcceuil:hover {
+.FormAjoutTache input[type="submit"]:hover {
     background-color: #555b63;
-    color: #fff;
-}
-
-/* Bouton thème */
-#toggleThemeBtn {
-    background: #23272a;
     color: #ffd700;
-    border: 1px solid #444;
-    border-radius: 50%;
-    font-size: 1.5em;
-    padding: 8px 14px;
-    cursor: pointer;
-    margin: 20px 0 10px 20px;
-    transition: background 0.2s;
-}
-#toggleThemeBtn:hover {
-    background: #444950;
-    color: #fff;
-}
-
-/* Bouton accueil */
-.BouttonAcceuilProfil {
-    display: inline-block;
-    background: #444950;
-    color: #ffd700;
-    border-radius: 4px;
-    padding: 8px 18px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    transition: background 0.2s, color 0.2s;
-}
-.BouttonAcceuilProfil:hover {
-    background: #555b63;
-    color: #fff;
-}
-
-/* Bloc profil */
-.DivProfil {
-    background: #23272a;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-    padding: 24px 20px;
-    max-width: 500px;
-    margin: 0 auto 30px auto;
-}
-
-/* Inputs et boutons */
-.DivProfil input[type="text"],
-.DivProfil input[type="password"] {
-    background: #2c2f33;
-    color: #e0e0e0;
-    border: 1px solid #444;
-    border-radius: 4px;
-    padding: 8px 10px;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.DivProfil input[type="submit"] {
-    background: #444950;
-    color: #ffd700;
-    border: none;
-    border-radius: 4px;
-    padding: 8px 16px;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.2s, color 0.2s;
-}
-.DivProfil input[type="submit"]:hover {
-    background: #555b63;
-    color: #fff;
-}
-
-/* Formulaire de changement de mot de passe */
-#changePwdForm {
-    background: #23272a;
-    border-radius: 6px;
-    padding: 12px 10px;
-    margin-top: 10px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-}
-
-/* Not found */
-.notfound-container {
-    background: #23272a;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.5);
-    max-width: 480px;
-    margin: 60px auto 40px auto;
-    padding: 40px 30px 30px 30px;
-    text-align: center;
-}
-
-.notfound-title {
-    color: #ffd700;
-    font-size: 2.2em;
-    font-weight: bold;
-    margin-bottom: 18px;
-}
-
-.notfound-message {
-    color: #e0e0e0;
-    font-size: 1.2em;
-    margin-bottom: 28px;
-}
-
-.notfound-link {
-    display: inline-block;
-    background: #444950;
-    color: #ffd700;
-    border-radius: 4px;
-    padding: 10px 24px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background 0.2s, color 0.2s;
-    margin-top: 10px;
-}
-.notfound-link:hover {
-    background: #555b63;
-    color: #fff;
-}
-
-/* Accueil */
-.DivAcceuil {
-    margin: 30px 0 20px 0;
-    text-align: left;
 }
 
 .BouttonAcceuil {
     display: inline-block;
-    background: #444950;
-    color: #ffd700;
-    border-radius: 4px;
-    padding: 8px 18px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background 0.2s, color 0.2s;
     margin-top: 18px;
-}
-.BouttonAcceuil:hover {
-    background: #555b63;
-    color: #fff;
+    background-color: #555b63;
+    color: #ffd700;
+    padding: 8px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
 }
 
-/* Bloc connexion */
-.DivConnexion {
-    background: #23272a;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-    padding: 32px 24px;
+.BouttonAcceuil:hover {
+    background-color: #ffd700;
+    color: #2c2f33;
+}
+
+.TaskCell {
+    color: #ffd700;
+    border-radius: 3px;
+    padding: 2px 2px;
+    font-weight: bold;
+    text-align: center;
+    margin: 1px 0;
+    background: #555b63;
+}
+.TaskDesc {
+    color: #ffd700;
+    font-size: 0.9em;
+    font-weight: normal;
+    display: block;
+    margin-top: 2px;
+}
+
+.DivDetailsTask {
     max-width: 400px;
     margin: 40px auto;
-}
-
-.DivConnexion h3 {
+    background: #2c2f33;
     color: #ffd700;
-    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    padding: 30px 24px;
+    text-align: center;
 }
-
-.DivConnexion label {
-    color: #ffd700;
-    display: block;
-    margin-top: 16px;
-    margin-bottom: 6px;
-}
-
-.DivConnexion input[type="text"],
-.DivConnexion input[type="email"],
-.DivConnexion input[type="password"] {
-    background-color: #2c2f33;
-    color: #e0e0e0;
-    border: 1px solid #444;
-    border-radius: 4px;
-    padding: 8px 10px;
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 12px;
-}
-
-.DivConnexion input[type="text"]:focus,
-.DivConnexion input[type="email"]:focus,
-.DivConnexion input[type="password"]:focus {
-    outline: 2px solid #ffd700;
-}
-
-.DivConnexion input[type="submit"] {
-    background-color: #444950;
+.BtnSupprimerTache {
+    background: #555b63;
     color: #ffd700;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     padding: 10px 18px;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-    margin-top: 10px;
-}
-.DivConnexion input[type="submit"]:hover {
-    background-color: #555b63;
-    color: #fff;
-}
-
-/* Lien vers la connexion/inscription */
-.BouttonInscription {
-    display: block;
-    background: #23272a;
-    color: #80bfff;
-    border-radius: 4px;
-    padding: 8px 0;
-    text-align: center;
-    margin-top: 10px;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-.BouttonInscription:hover {
-    color: #ffb380;
-    background: #23272a;
-}
-
-/* Lien mot de passe oublié */
-.BouttonMdpOublie {
-    display: block;
-    color: #ffd700;
-    text-align: center;
-    margin-top: 8px;
-    text-decoration: underline;
-    font-size: 0.98em;
-    transition: color 0.2s;
-}
-.BouttonMdpOublie:hover {
-    color: #ffb380;
-}
-
-/* Bloc principal des détails */
-.DivDetailsTask {
-    background: #23272a;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.5);
-    max-width: 500px;
-    margin: 60px auto 40px auto;
-    padding: 36px 28px 28px 28px;
-    text-align: left;
-}
-
-.DivDetailsTask h2 {
-    color: #ffd700;
-    margin-bottom: 24px;
-}
-
-.DivDetailsTask p {
-    color: #e0e0e0;
-    margin-bottom: 16px;
-    font-size: 1.1em;
-}
-
-.DivDetailsTask strong {
-    color: #ffd700;
-}
-
-/* Bouton supprimer */
-.BtnSupprimerTache {
-    background: #c0392b;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 8px 16px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 10px;
     margin-bottom: 10px;
-    transition: background 0.2s;
+    transition: background 0.3s;
 }
 .BtnSupprimerTache:hover {
-    background: #e74c3c;
+    background: #ffd700;
+    color: #2c2f33;
 }
-
-/* Formulaire de couleur */
-.FormCouleurTache label {
-    color: #ffd700;
-    margin-right: 10px;
+.FormCouleurTache {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
 }
-
 .FormCouleurTache input[type="color"] {
-    background: #2c2f33;
-    border: 1px solid #444;
-    border-radius: 4px;
-    width: 40px;
-    height: 32px;
-    vertical-align: middle;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-.FormCouleurTache input[type="submit"] {
-    background: #444950;
-    color: #ffd700;
+    width: 50px;
+    height: 30px;
     border: none;
-    border-radius: 4px;
+    background: none;
+    cursor: pointer;
+    background: #555b63;
+}
+.FormCouleurTache input[type="submit"] {
+    background: #ffd700;
+    color: #2c2f33;
+    border: none;
+    border-radius: 5px;
     padding: 8px 16px;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.2s, color 0.2s;
+    transition: background 0.3s;
 }
 .FormCouleurTache input[type="submit"]:hover {
     background: #555b63;
-    color: #fff;
-}
-
-/* Bloc formulaire de contact */
-.DivContact {
-    background: #23272a;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-    padding: 32px 24px;
-    max-width: 420px;
-    margin: 40px auto 30px auto;
-}
-
-.DivContact label {
-    color: #ffd700;
-    display: block;
-    margin-top: 16px;
-    margin-bottom: 6px;
-}
-
-.DivContact input[type="email"],
-.DivContact input[type="text"],
-.DivContact textarea {
-    background-color: #2c2f33;
-    color: #e0e0e0;
-    border: 1px solid #444;
-    border-radius: 4px;
-    padding: 8px 10px;
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 12px;
-}
-
-.DivContact input[type="email"]:focus,
-.DivContact input[type="text"]:focus,
-.DivContact textarea:focus {
-    outline: 2px solid #ffd700;
-}
-
-.DivContact textarea {
-    resize: vertical;
-}
-
-.DivContact button[type="submit"] {
-    background-color: #444950;
-    color: #ffd700;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-    margin-top: 10px;
-}
-
-.DivContact button[type="submit"]:hover {
-    background-color: #555b63;
-    color: #fff;
-}
-
-/* Titre principal */
-h1 {
-    color: #ffd700;
-    margin-bottom: 18px;
-    text-align: center;
-}
-
-/* Paragraphes */
-p {
-    color: #e0e0e0;
-    max-width: 800px;
-    margin: 18px auto;
-    font-size: 1.08em;
-    line-height: 1.6;
-    text-align: center;
-}
-
-/* Liste d'aide */
-ul {
-    background: #23272a;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-    max-width: 600px;
-    margin: 32px auto 0 auto;
-    padding: 24px 30px;
-    color: #e0e0e0;
-    font-size: 1.08em;
-    list-style: disc inside;
-}
-
-ul li {
-    margin-bottom: 18px;
-    line-height: 1.5;
-}
-
-ul li strong {
     color: #ffd700;
 }
 
-/* Footer déjà stylé dans les précédents extraits */
-
-/* Scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
-    background: #23272a;
-}
-::-webkit-scrollbar-thumb {
-    background: #444950;
-    border-radius: 5px;
-}
-
-#btnPrintPDF:hover {
-
-    transform: translateY(-2px) scale(1.04);
-    box-shadow: 0 6px 24px rgba(255,0,234,0.18), 0 4px 16px rgba(0,224,255,0.14);
-}
-
-#btnEDTPDF:hover {
-    transform: translateY(-2px) scale(1.04);
-    box-shadow: 0 6px 24px rgba(0,224,255,0.18), 0 4px 16px rgba(255,0,234,0.14);
-}
-
+/* Conteneur des boutons sous l'EDT */
 #edt-btn-container {
     display: flex;
     justify-content: center;
@@ -709,7 +681,6 @@ ul li strong {
     font-weight: bold;
     border: none;
     border-radius: 8px;
-    color: #fff;
     cursor: pointer;
     box-shadow: 0 4px 16px rgba(0,224,255,0.10), 0 2px 8px rgba(255,0,234,0.08);
     transition: background 0.3s, transform 0.2s;
@@ -718,79 +689,115 @@ ul li strong {
     margin-bottom: 20px;
 }
 
-.DivRemiseAZero {
-    text-align: left;
-    margin: 20px 0;
+/* Bouton Télécharger l'EDT en PDF */
+#btnEDTPDF {
+    background: #ffd700;
+    color: #2c2f33;
+}
+#btnEDTPDF:hover {
+    background: #555b63;
+    color: #ffd700;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 6px 24px rgba(0,224,255,0.18), 0 4px 16px rgba(255,0,234,0.14);
 }
 
-.BouttonRemiseAZero {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #dc3545; /* Rouge */
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+/* Bouton Imprimer l'EDT */
+#btnPrintPDF {
+    background: #555b63;
+    color: #ffd700;
+}
+#btnPrintPDF:hover {
+    background: #ffd700;
+    color: #2c2f33;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 6px 24px rgba(255,0,234,0.18), 0 4px 16px rgba(0,224,255,0.14);
 }
 
-.BouttonRemiseAZero:hover {
-    background-color: #c82333; /* Rouge plus foncé */
+/* Container du formulaire de contact */
+.DivContact {
+    max-width: 500px;
+    margin: 40px auto 100px auto;
+    padding: 28px 32px;
+    background: #f7fafd;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.09);
+    color: #ffd700;
 }
 
-.EmploiDuTemps {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: center;
-    font-size: 14px;
-}
-
-.EmploiDuTemps thead th {
-    background-color: #0078d7;
-    color: white;
-    padding: 10px;
-    border: 1px solid #ccc;
-}
-
-.EmploiDuTemps tbody td {
-    padding: 10px;
-    border: 1px solid #ccc;
-    height: 40px;
-}
-
-.EmploiDuTemps tbody tr:nth-child(even) {
-    background-color: #444040;
-}
-
-.EmploiDuTemps tbody tr:nth-child(odd) {
-    background-color: #777070;
-}
-
-/* Ajoute ce bloc pour le layout principal */
-body {
+/* Style du formulaire */
+.DivContact form {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    gap: 2px;
 }
-main, .main-content {
-    flex: 1 0 auto;
+
+/* Labels */
+.DivContact label {
+    font-weight: 500;
+    margin-bottom: 3px;
+    color: #ffd700;
+}
+
+/* Champs de saisie */
+.DivContact input[type="email"],
+.DivContact input[type="text"],
+.DivContact textarea {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid #b5c1d8;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #555b63;
+    color: #ffd700;
+    transition: border 0.2s;
+    box-sizing: border-box;
+}
+
+.DivContact input[type="email"]:focus,
+.DivContact input[type="text"]:focus,
+.DivContact textarea:focus {
+    border-color: #ffd700;
+    outline: none;
+}
+
+/* Zone de texte */
+.DivContact textarea {
+    resize: vertical;
+    min-height: 90px;
+    font-family: inherit;
+}
+
+/* Bouton envoyer */
+.DivContact button[type="submit"] {
+    background: #ffd700;
+    color: #2c2f33;
+    border: none;
+    border-radius: 6px;
+    padding: 11px 0;
+    font-size: 1.08rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+
+.DivContact button[type="submit"]:hover {
+    background: #555b63;
+    color: #ffd700;
 }
 
 .activation-a2f-body {
-    background: #181c24;
-    color: #e0e6ed;
+    background: #2c2f33;
+    color: #ffd700;
     font-family: 'Segoe UI', Arial, sans-serif;
     min-height: 100vh;
     margin: 0;
 }
 
 .activation-a2f-container {
-    background: #232a36;
+    background: #555b63;
     border-radius: 12px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
     max-width: 400px;
     margin: 60px auto;
     padding: 32px 28px;
@@ -800,35 +807,35 @@ main, .main-content {
 .activation-a2f-title {
     font-size: 1.7em;
     margin-bottom: 24px;
-    color: #90caf9;
+    color: #ffd700;
 }
 
 .activation-a2f-label {
     font-size: 1.1em;
-    color: #b0bec5;
+    color: #ffd700;
 }
 
 .activation-a2f-input {
     margin-top: 10px;
     padding: 10px 12px;
     font-size: 1.1em;
-    border: 1px solid #374151;
+    border: 1px solid #ffd700;
     border-radius: 6px;
-    background: #232a36;
-    color: #e0e6ed;
+    background: #2c2f33;
+    color: #ffd700;
     outline: none;
     transition: border 0.2s;
 }
 
 .activation-a2f-input:focus {
-    border: 1.5px solid #90caf9;
+    border: 1.5px solid #ffd700;
 }
 
 .activation-a2f-button {
     margin-top: 18px;
     padding: 10px 28px;
-    background: #1976d2;
-    color: #fff;
+    background: #ffd700;
+    color: #2c2f33;
     border: none;
     border-radius: 6px;
     font-size: 1.1em;
@@ -837,19 +844,20 @@ main, .main-content {
 }
 
 .activation-a2f-button:hover {
-    background: #1565c0;
+    background: #555b63;
+    color: #ffd700;
 }
 
 .activation-a2f-help {
     margin-top: 22px;
-    color: #b0bec5;
+    color: #ffd700;
     font-size: 0.98em;
 }
 .activation-a2f-btn {
     display: inline-block;
     padding: 12px 28px;
-    background: #1976d2;
-    color: #fff;
+    background: #ffd700;
+    color: #2c2f33;
     border-radius: 6px;
     font-size: 1.1em;
     text-decoration: none;
@@ -860,6 +868,7 @@ main, .main-content {
     cursor: pointer;
 }
 .activation-a2f-btn:hover {
-    background: #1565c0;
+    background: #555b63;
+    color: #ffd700;
     box-shadow: 0 4px 16px rgba(25, 118, 210, 0.15);
 }
