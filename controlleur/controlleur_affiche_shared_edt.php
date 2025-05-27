@@ -9,7 +9,7 @@ if(!isset($_SESSION["user"])) {
     exit;
 }
 include_once(__DIR__."/../modele/db.edt.php");
-if($query2->isShared($_GET['edt_owner_email'],$_GET['edt_id'])==false) {
+if($query2->isShared($_GET['edt_owner_email'],$_GET['edt_id'])!=true) {
     echo "<script>alert('".t('sharedEDTNotShared', $langData)."');
     window.location.href = '/vue/Profile.php';
     </script>";

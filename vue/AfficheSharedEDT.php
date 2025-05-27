@@ -1,5 +1,11 @@
 <?php
-include_once(__DIR__ . "/../controlleur/controlleur_affiche_shared_edt.php");
+include_once(__DIR__ . "/../controlleur/controlleur_lang.php");
+include_once(__DIR__ ."/../modele/db.edt.php");
+include_once(__DIR__ ."/../modele/db.user.php");
+
+$user = unserialize($_SESSION['user']);
+$lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'fr';
+$langData = getLangData($lang);
 
 
 ?>
@@ -23,10 +29,17 @@ include_once(__DIR__ . "/../controlleur/controlleur_affiche_shared_edt.php");
 </head>
 <header>
     <a class="BouttonAcceuilProfil" href="../index.php"><p><?php echo t('profileHome', $langData); ?></p></a>
+    <?php if($query2->getRank($user->getEmail(),$_GET['edt_id']) == 2){ ?>
+    <div class="DivAjoutTache">
+        <a class="BouttonAjoutTache" href="/vue/Task.php"><?php echo t('homeAddTask', $langData); ?></a>
+    </div>
+    <?php } ?>
 </header>
 <body>
     <main>
-        
+        <?php
+        include_once(__DIR__ . "/../controlleur/controlleur_affiche_shared_edt.php");
+        ?>
     </main>
 </body>
 

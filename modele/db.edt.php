@@ -122,6 +122,15 @@ class QueryEDT{
         $result = $req->fetch(PDO::FETCH_ASSOC);
         return !empty($result); // Retourne true si l'emploi du temps est partagé avec l'email donné
     }
+    public function getRank($email, $edtId) {
+        $req = $this->bdd->getConnexion()->prepare('SELECT rang FROM Possède WHERE email = :email AND id = :id');
+        $req->execute(array(
+            'email' => $email,
+            'id' => $edtId
+        ));
+        $result = $req->fetch(PDO::FETCH_ASSOC);
+        return $result ? intval($result['rang']) : null; // Retourne le rang ou null si non trouvé
+    }
 }
 $bdd = new Database($host,$db,$user,$password);
 $query2 = new QueryEDT($bdd);
