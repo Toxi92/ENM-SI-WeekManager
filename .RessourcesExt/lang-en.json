@@ -140,7 +140,7 @@
   "sharedEDTTitle": "Timetables shared with me",
   "sharedEDTNone": "No timetable shared yet.",
   "sharedEDTOwner": "Owner:",
-  "sharedEDTRank": "Rank:",
+  "sharedEDTRank": "Permissions :",
   "sharedEDTView": "View",
   "sharedEDTRank1": "View",
   "sharedEDTRank2": "View and edit",
@@ -148,5 +148,7 @@
   "sharedEDTBackHome": "Back to home",
   "sharedEDTSuccess":"Timetable successfully shared with the email : ",
   "sharedEDTInvalidSelfShare": "You cannot share your own timetable with yourself.",
-  "sharedEDTInvalidEmail": "Invalid email address."
+  "sharedEDTInvalidEmail": "Invalid email address.",
+  "sharedEDTNotLoggedIn": "You must be logged in to access this resource.",
+  "sharedEDTNotShared": "This timetable is not shared with you."
 }

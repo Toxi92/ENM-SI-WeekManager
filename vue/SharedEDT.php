@@ -28,9 +28,9 @@ $langData = getLangData($lang);
                     <li class="sharededt-item">
                         <strong><?php echo t('sharedEDTOwner', $langData); ?></strong> <?php echo htmlspecialchars($query2->getEDTOwner($edt['id'])['username'] ); ?>
                         | <strong><?php echo t('sharedEDTRank', $langData); ?></strong> <?php echo t('sharedEDTRank' . intval($edt['rang']), $langData); ?>
-                        | <a class="sharededt-view" href="./AfficheSharedEDT.php?edt_id=<?php echo urlencode($edt['id']); ?>"><?php echo t('sharedEDTView', $langData); ?></a>
+                        | <a class="sharededt-view" href="./AfficheSharedEDT.php?edt_owner_email=<?php echo urlencode($query2->getEDTOwner($edt['id'])['email']); ?>&edt_id=<?php echo urlencode($edt['id'])?>"><?php echo t('sharedEDTView', $langData); ?></a>
                     </li>
-                <?php } ?>
+                <?php  } ?>
                 </ul>
             <?php } ?>
         </div>

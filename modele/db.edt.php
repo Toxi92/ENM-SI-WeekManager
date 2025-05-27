@@ -112,6 +112,16 @@ class QueryEDT{
             'rank' => $rank
         ));
     }
+
+    public function isShared($email, $edtId) {
+        $req = $this->bdd->getConnexion()->prepare('SELECT * FROM Possède WHERE email = :email AND id = :id');
+        $req->execute(array(
+            'email' => $email,
+            'id' => $edtId
+        ));
+        $result = $req->fetch(PDO::FETCH_ASSOC);
+        return !empty($result); // Retourne true si l'emploi du temps est partagé avec l'email donné
+    }
 }
 $bdd = new Database($host,$db,$user,$password);
 $query2 = new QueryEDT($bdd);

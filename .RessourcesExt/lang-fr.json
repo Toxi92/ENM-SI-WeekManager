@@ -141,7 +141,7 @@
   "sharedEDTTitle": "Emplois du temps partagés avec moi",
   "sharedEDTNone": "Aucun emploi du temps partagé pour l'instant.",
   "sharedEDTOwner": "Propriétaire :",
-  "sharedEDTRank": "Rang :",
+  "sharedEDTRank": "Permission(s) :",
   "sharedEDTView": "Voir",
   "sharedEDTRank1": "Voir",
   "sharedEDTRank2": "Voir et modifier",
@@ -149,5 +149,7 @@
   "sharedEDTBackHome": "Retour à l'accueil",
   "sharedEDTSuccess":"Emploi du temps partagé avec succès avec le mail : ",
   "sharedEDTInvalidSelfShare": "Vous ne pouvez pas partager votre emploi du temps avec vous-même.",
-  "sharedEDTInvalidEmail": "L'adresse e-mail fournie est invalide."
+  "sharedEDTInvalidEmail": "L'adresse e-mail fournie est invalide.",
+  "sharedEDTNotLoggedIn": "Vous devez être connecté pour accéder à cette ressource.",
+  "sharedEDTNotShared": "Cette emploi du temps n'est pas partagé avec vous."
 }

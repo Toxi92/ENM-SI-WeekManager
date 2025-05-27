@@ -19,7 +19,7 @@ class QueryTask{
     }
 
     public function getEDTidByEmail($email){
-        $req = $this->bdd->getConnexion()->prepare('SELECT id FROM Possède WHERE email = :email');
+        $req = $this->bdd->getConnexion()->prepare('SELECT id FROM Possède WHERE email = :email AND rang = 3');
         $req->execute(array(
             'email'=>$email
         ));
