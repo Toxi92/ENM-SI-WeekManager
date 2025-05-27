@@ -31,7 +31,7 @@ $langData = getLangData($lang);
     <a class="BouttonAcceuilProfil" href="../index.php"><p><?php echo t('profileHome', $langData); ?></p></a>
     <?php if($query2->getRank($user->getEmail(),$_GET['edt_id']) == 2){ ?>
     <div class="DivAjoutTache">
-        <a class="BouttonAjoutTache" href="/vue/Task.php"><?php echo t('homeAddTask', $langData); ?></a>
+        <a class="BouttonAjoutTache" href="/vue/SharedTask.php?edt_owner_email=<?php echo urlencode($_GET['edt_owner_email'])  ?>&edt_id=<?php echo urlencode($_GET['edt_id'])  ?>"><?php echo t('homeAddTask', $langData); ?></a>
     </div>
     <?php } ?>
 </header>

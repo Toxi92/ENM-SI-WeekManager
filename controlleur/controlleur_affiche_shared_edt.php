@@ -59,7 +59,7 @@ if (isset($_SESSION['user'])) {
         // Si l'heure de fin n'est pas pile sur un créneau, on la prend comme exclusive
         if ($startIndex !== false && $endIndex !== false) {
             for ($i = $startIndex; $i < $endIndex; $i++) {
-                $edt[$jour][$heures[$i]] = "<a href='/../vue/detailsTask.php?id=$id' style='color:inherit;text-decoration:none;'><div class='TaskCell' style='background: $color;'>$title<br><span class='TaskDesc'>$desc</span></div></a>";
+                $edt[$jour][$heures[$i]] = "<a href='/../vue/detailsSharedTask.php?id=$id' style='color:inherit;text-decoration:none;'><div class='TaskCell' style='background: $color;'>$title<br><span class='TaskDesc'>$desc</span></div></a>";
             }
         }
     }

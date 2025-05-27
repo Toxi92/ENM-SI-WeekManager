@@ -119,6 +119,30 @@ class QueryTask{
         $result = $req->fetch(PDO::FETCH_ASSOC);
         return !empty($result);
     }
+
+        public function getEDTAccess($email){
+        $req = $this->bdd->getConnexion()->prepare('SELECT id FROM Possède WHERE email = :email AND rang >= 2');
+        $req->execute(array(
+            'email'=>$email
+        ));
+        $result = $req->fetch(PDO::FETCH_ASSOC);
+        if($result){
+            $id = $result['id'];
+            return $id;
+        }else{
+            return null;
+        }
+    }
+
+    public function DoesUserHaveAccess($taskId, $email){
+        $req = $this->bdd->getConnexion()->prepare('SELECT * FROM Taches WHERE id = :id AND id_1 = :id_1');
+        $req->execute(array(
+            'id'=>$taskId,
+            'id_1'=>$this->getEDTAccess($email)
+        ));
+        $result = $req->fetch(PDO::FETCH_ASSOC);
+        return !empty($result);
+    }
 }
  
 $query3 = new QueryTask($bdd);
