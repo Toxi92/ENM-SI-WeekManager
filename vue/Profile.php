@@ -5,6 +5,8 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 include_once("../controlleur/controlleur_monprofil.php");
 require_once(__DIR__ . "/../controlleur/controlleur_lang.php");
+require_once(__DIR__ . "/../modele/db.user.php");
+$user = unserialize($_SESSION['user']);
 $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'fr';
 $langData = getLangData($lang);
 
@@ -62,10 +64,7 @@ $langData = getLangData($lang);
                     echo '<a href="../vue/ActivationA2F.php" class="activation-a2f-btn" >Activer la double authentification</a>';
                 }
                 ?>
-                <div>
-                    <input type="submit" id="deconnexion" value="<?php echo t('profileLogout', $langData); ?>">
-                    <script src="../script/deconnexion.js"></script>
-                </div>
+
                 <div style="margin-top:20px;">
                     <button id="btnShareEDT" type="button" style="background:#555b63;color:#ffd700;border-radius:5px;padding:10px 18px;font-weight:bold;cursor:pointer;">Partager mon emploi du temps</button>
                     <form id="formShareEDT" action="../controlleur/controlleur_partage_edt.php" method="post" style="display:none;margin-top:10px;">
@@ -85,7 +84,27 @@ $langData = getLangData($lang);
                         form.style.display = (form.style.display === 'none') ? 'block' : 'none';
                     };
                     </script>
+                    <?php if(count($query2->getListWhoHaveAccess($user->getEmail()))!=0){?>
+                    <h3 style="margin-top:20px;"><?php echo t('profileSharedEDTTitle', $langData); ?></h3>
+                    <ul>
+                        <?php foreach ($query2->getListWhoHaveAccess($user->getEmail()) as $sharedEDT) { ?>
+                            <li>
+                                <?php echo htmlspecialchars($sharedEDT['username']) . " | "; ?>
+                                <?php echo htmlspecialchars($sharedEDT['email']) . " | "; ?>
+                                <?php if(intval($sharedEDT['rang'])==1) {echo "Permission(s) : " . t('sharedEDTRank1', $langData);}elseif(intval($sharedEDT['rang'])==2){echo "Pemission(s) : " . t('sharedEDTRank2', $langData);} ?>
+                                <form action="../controlleur/controlleur_supression_share_access.php" method="post" style="display:inline;">
+                                    <input type="hidden" name="emailToRemove" value="<?php echo htmlspecialchars($sharedEDT['email']); ?>">
+                                    <input type="hidden" name="emailFromTo" value="<?php echo $user->getEmail(); ?>">
+                                    <button type="submit" style="background:#ff4d4d;color:#fff;border-radius:5px;padding:5px 10px;font-weight:bold;cursor:pointer;"><?php echo t('profileRemoveAccess', $langData); ?></button>
+
+                            </li>
+                        <?php } ?>
+                    <?php } ?>
                 </div>
+            </div>
+            <div>
+                <input type="submit" id="deconnexion" value="<?php echo t('profileLogout', $langData); ?>">
+                <script src="../script/deconnexion.js"></script>
             </div>
         </div>
     </main>

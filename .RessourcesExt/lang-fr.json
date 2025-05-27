@@ -151,5 +151,8 @@
   "sharedEDTInvalidSelfShare": "Vous ne pouvez pas partager votre emploi du temps avec vous-même.",
   "sharedEDTInvalidEmail": "L'adresse e-mail fournie est invalide.",
   "sharedEDTNotLoggedIn": "Vous devez être connecté pour accéder à cette ressource.",
-  "sharedEDTNotShared": "Cette emploi du temps n'est pas partagé avec vous."
+  "sharedEDTNotShared": "Cette emploi du temps n'est pas partagé avec vous.",
+  "profileSharedEDTTitle":"Liste des personnes avec qui vous avez partagé votre EDT :",
+  "profileRemoveAccess": "Retirer l'accès",
+  "sharedEDTRemoveSuccess": "Accès retiré avec succès pour l'email : "
 }

@@ -131,6 +131,31 @@ class QueryEDT{
         $result = $req->fetch(PDO::FETCH_ASSOC);
         return $result ? intval($result['rang']) : null; // Retourne le rang ou null si non trouvé
     }
+    public function getListWhoHaveAccess($email) {
+        $req = $this->bdd->getConnexion()->prepare('SELECT u.*,p.rang FROM Utilisateurs u JOIN Possède p ON u.email = p.email WHERE p.id = (SELECT id FROM Possède WHERE email = :email AND rang = 3)AND p.rang != 3');
+        $req->execute(array(
+            'email' => $email
+        ));
+        $result = $req->fetchAll(PDO::FETCH_ASSOC);
+        return $result; // Retourne la liste des emails qui ont accès à l'emploi du temps
+    }
+    public function getOwnedEDTId($email) {
+        $req = $this->bdd->getConnexion()->prepare(
+            'SELECT id FROM Possède WHERE email = :email AND rang = 3'
+        );
+        $req->execute(['email' => $email]);
+        $result = $req->fetch(PDO::FETCH_ASSOC);
+        return $result ? $result['id'] : null;
+    }
+    public function removeAccess($emailToRemove,$emailFromTo) {
+    $req = $this->bdd->getConnexion()->prepare(
+        'DELETE FROM Possède WHERE email = :email AND id = :id'
+    );
+    $req->execute(array(
+        'email' => $emailToRemove,
+        'id' => $this->getOwnedEDTId($emailFromTo)
+        ));
+    }
 }
 $bdd = new Database($host,$db,$user,$password);
 $query2 = new QueryEDT($bdd);
