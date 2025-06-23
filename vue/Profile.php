@@ -17,10 +17,10 @@ $langData = getLangData($lang);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <link  id='Style_theme' rel="stylesheet" href="../styles/style.css">
-    <script src="../script/SauvegardeProfile.js"></script>
-    <script src="../script/changeTheme.js"></script>
-    <title><?php echo t('profileTitle', $langData); ?></title>
+    <script src="../script/SauvegardeProfile.js"></script>    <script src="../script/changeTheme.js"></script>
+    <title>ENM WEEK MANAGER</title>
 </head>
 <body>
     <main>

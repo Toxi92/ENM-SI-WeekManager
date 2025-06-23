@@ -7,9 +7,9 @@ $langData = getLangData($lang);
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo htmlspecialchars($lang); ?>">
-<head>
-    <meta charset="UTF-8">
-    <title><?php echo t('contactTitle', $langData); ?></title>
+<head>    <meta charset="UTF-8">
+    <title>ENM WEEK MANAGER</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <link  id='Style_theme' rel="stylesheet" href="../styles/style.css">
     <script src="../script/changeTheme.js"></script>
 </head>

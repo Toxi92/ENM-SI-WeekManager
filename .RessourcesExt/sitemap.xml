@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Page d'accueil -->
+    <url>
+        <loc>https://molard.alwaysdata.net/</loc>
+        <lastmod>2025-06-23T14:55:02+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://molard.alwaysdata.net/index.php</loc>
+        <lastmod>2025-06-23T14:55:02+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Pages publiques -->
+    <url>
+        <loc>https://molard.alwaysdata.net/vue/Connexion.php</loc>
+        <lastmod>2025-06-23T14:55:02+01:00</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://molard.alwaysdata.net/vue/Inscription.php</loc>
+        <lastmod>2025-06-23T14:55:02+01:00</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://molard.alwaysdata.net/vue/MdpOublie.php</loc>
+        <lastmod>2025-06-23T14:55:02+01:00</lastmod>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Pages d'information -->
+    <url>
+        <loc>https://molard.alwaysdata.net/vue/About.php</loc>
+        <lastmod>2025-06-23T14:55:02+01:00</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://molard.alwaysdata.net/vue/Contact.php</loc>
+        <lastmod>2025-06-23T14:55:02+01:00</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://molard.alwaysdata.net/vue/Confidentialite.php</loc>
+        <lastmod>2025-06-23T14:55:02+01:00</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://molard.alwaysdata.net/vue/Aide.php</loc>
+        <lastmod>2025-06-23T14:55:02+01:00</lastmod>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Pages authentifiées (optionnel - pour les utilisateurs connectés) -->
+    <url>
+        <loc>https://molard.alwaysdata.net/vue/Profile.php</loc>
+        <lastmod>2025-06-23T14:55:02+01:00</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://molard.alwaysdata.net/vue/Task.php</loc>
+        <lastmod>2025-06-23T14:55:02+01:00</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://molard.alwaysdata.net/vue/SharedEDT.php</loc>
+        <lastmod>2025-06-23T14:55:02+01:00</lastmod>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- Pages d'activation/processus (optionnel) -->
+    <url>
+        <loc>https://molard.alwaysdata.net/vue/ActivationA2F.php</loc>
+        <lastmod>2025-06-23T14:55:02+01:00</lastmod>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>https://molard.alwaysdata.net/vue/Connexion_A2F.php</loc>
+        <lastmod>2025-06-23T14:55:02+01:00</lastmod>
+        <priority>0.4</priority>
+    </url>
+</urlset>

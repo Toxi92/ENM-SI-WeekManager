@@ -9,9 +9,9 @@ require_once (__DIR__.'/../controlleur/controlleur_connexion_a2f.php'); // Inclu
 
 <html lang="fr">
 
-<head>
-    <meta charset="UTF-8">
-    <title><?php echo t('connexiona2ftitle',$langData); ?></title>
+<head>    <meta charset="UTF-8">
+    <title>ENM WEEK MANAGER</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <link id="Style_theme" rel="stylesheet" href="../styles/style.css">
     <script src="../script/changeTheme.js"></script>
 </head>
