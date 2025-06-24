@@ -1,3 +1,4 @@
 .env
 phpdotenv-master
 MCD-Projet.loo
+*.conf
