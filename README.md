@@ -1,0 +1,1 @@
+Projet ( lors du stage de 1ere année ) de gestionnaire d'emploi du temps avec des fonctionnalitées intéressantes : possibilité d'activation A2F par application mobile, Multi-langues, partage et système de permissions.
