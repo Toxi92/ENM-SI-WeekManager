@@ -1,16 +1,17 @@
-    document.addEventListener("DOMContentLoaded", () => {
-        // Sélectionner tous les boutons "Modifier"
+document.addEventListener("DOMContentLoaded", () => {
+        // Toggle changement mot de passe
         document.getElementById('showChangePwdBtn').onclick = function() {
             var form = document.getElementById('changePwdForm');
             form.style.display = (form.style.display === 'none') ? 'block' : 'none';
         };
-        const buttons = document.querySelectorAll(".DivProfil button");
+        // Ne cibler que les boutons d'édition du profil
+        const buttons = document.querySelectorAll(".DivProfil .edit-btn");
 
         buttons.forEach(button => {
             button.addEventListener("click", () => {
                 const input = button.previousElementSibling; // Champ d'entrée associé au bouton
 
-                if (button.textContent === "Modifier") {
+                if (button.textContent === "Modifier" || button.textContent === "Edit") {
                     // Rendre le champ modifiable
                     input.removeAttribute("readonly");
                     input.focus();

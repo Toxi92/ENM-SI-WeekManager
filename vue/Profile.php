@@ -38,12 +38,12 @@ $langData = getLangData($lang);
                 <div>
                     <label for="nom"><?php echo t('profileUsername', $langData); ?></label>
                     <input type="text" id="username" value="<?php echo $user->getUsername(); ?>" readonly>
-                    <button><?php echo t('profileEdit', $langData); ?></button>
+                    <button class="edit-btn"><?php echo t('profileEdit', $langData); ?></button>
                 </div>
                 <div>
                     <label for="email"><?php echo t('profileEmail', $langData); ?></label>
                     <input type="text" id="email" value="<?php echo $user->getEmail(); ?>" readonly>
-                    <button><?php echo t('profileEdit', $langData); ?></button>
+                    <button class="edit-btn"><?php echo t('profileEdit', $langData); ?></button>
                 </div>
                 <div>
                     <button id="showChangePwdBtn" type="button"><?php echo t('profileChangePwd', $langData); ?></button>
@@ -85,7 +85,7 @@ $langData = getLangData($lang);
                     };
                     </script>
                     <?php if(count($query2->getListWhoHaveAccess($user->getEmail()))!=0){?>
-                    <h3 style="margin-top:20px;"><?php echo t('profileSharedEDTTitle', $langData); ?></h3>
+                    <h3 style="margin-top:20px;">&nbsp;<?php echo t('profileSharedEDTTitle', $langData); ?></h3>
                     <ul>
                         <?php foreach ($query2->getListWhoHaveAccess($user->getEmail()) as $sharedEDT) { ?>
                             <li>
@@ -95,10 +95,11 @@ $langData = getLangData($lang);
                                 <form action="../controlleur/controlleur_supression_share_access.php" method="post" style="display:inline;">
                                     <input type="hidden" name="emailToRemove" value="<?php echo htmlspecialchars($sharedEDT['email']); ?>">
                                     <input type="hidden" name="emailFromTo" value="<?php echo $user->getEmail(); ?>">
-                                    <button type="submit" style="background:#ff4d4d;color:#fff;border-radius:5px;padding:5px 10px;font-weight:bold;cursor:pointer;"><?php echo t('profileRemoveAccess', $langData); ?></button>
-
+                                    <button type="submit" style="background:#ff4d4d;color:#fff;border-radius:5px;padding:5px 10px;font-weight:bold;cursor:pointer;">&nbsp;<?php echo t('profileRemoveAccess', $langData); ?></button>
+                                </form>
                             </li>
                         <?php } ?>
+                    </ul>
                     <?php } ?>
                 </div>
             </div>

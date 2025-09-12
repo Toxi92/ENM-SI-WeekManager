@@ -7,6 +7,12 @@ html, body {
     font-family: 'Lexend-VariableFont_wght';
 }
 
+/* Empêche le footer fixe de chevaucher le contenu (même logique que thème clair) */
+main {
+    padding-bottom: 90px; /* légèrement plus que la hauteur du footer */
+    box-sizing: border-box;
+}
+
 .Titre{
     display: flex;
     justify-content: center;
@@ -15,85 +21,85 @@ html, body {
 
 .DivLogin {
     display: flex;
-    justify-content: flex-end; /* Aligne le bouton à droite */
-    padding: 10px; /* Ajoute un peu d'espace autour */
+    justify-content: flex-end;
+    padding: 10px;
 }
 
 .BouttonLogin {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: auto; /* Ajuste automatiquement la largeur */
-    height: auto; /* Ajuste automatiquement la hauteur */
+    width: auto;
+    height: auto;
     color: #ffd700;
-    background-color: #555b63; /* Couleur de fond derrière le bouton */
-    padding: 5px 10px; /* Ajoute de l'espace interne au bouton */
-    border-radius: 5px; /* Ajoute des coins arrondis */
-    text-decoration: none; /* Supprime le soulignement du lien */
+    background-color: #555b63;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
 .DivAcceuil {
     display: flex;
-    justify-content: flex-start; /* Aligne le bouton à droite */
-    padding: 10px; /* Ajoute un peu d'espace autour */
+    justify-content: flex-start;
+    padding: 10px;
 }
 
 .BouttonAcceuil {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: auto; /* Ajuste automatiquement la largeur */
-    height: auto; /* Ajuste automatiquement la hauteur */
+    width: auto;
+    height: auto;
     color: #ffd700;
-    background-color: #555b63; /* Couleur de fond derrière le bouton */
-    padding: 5px 10px; /* Ajoute de l'espace interne au bouton */
-    border-radius: 5px; /* Ajoute des coins arrondis */
-    text-decoration: none; /* Supprime le soulignement du lien */
+    background-color: #555b63;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
 .DivConnexion {
     display: flex;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
-    height: 40vh; /* Prend 80% de la hauteur de la fenêtre */
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
 }
 
 .DivConnexion form {
     display: flex;
-    flex-direction: column; /* Aligne les éléments verticalement */
+    flex-direction: column;
     background-color: #2c2f33;
-    padding: 20px; /* Ajoute de l'espace interne */
-    border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour un effet de profondeur */
-    width: 400px; /* Largeur fixe */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
 }
 
 .DivConnexion label {
-    margin-bottom: 5px; /* Espacement entre le label et l'input */
-    font-weight: bold; /* Met le texte en gras */
-    color: #ffd700; /* Couleur du texte */
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ffd700;
 }
 
 .DivConnexion input[type="email"],
 .DivConnexion input[type="password"] {
-    padding: 10px; /* Ajoute de l'espace interne */
-    margin-bottom: 15px; /* Espacement entre les champs */
-    border: 1px solid #555b63; /* Bordure grise */
-    border-radius: 5px; /* Coins arrondis */
-    font-size: 14px; /* Taille de police */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #555b63;
+    border-radius: 5px;
+    font-size: 14px;
     background: #555b63;
     color: #ffd700;
 }
 
 .DivConnexion input[type="submit"] {
     padding: 10px;
-    background-color: #ffd700; /* Couleur verte */
-    color: #2c2f33; /* Texte blanc */
-    border: none; /* Supprime la bordure */
-    border-radius: 5px; /* Coins arrondis */
-    cursor: pointer; /* Change le curseur au survol */
-    font-size: 16px; /* Taille de police */
-    transition: background-color 0.3s ease; /* Animation au survol */
+    background-color: #ffd700;
+    color: #2c2f33;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 .DivConnexion input[type="submit"]:hover {
@@ -104,14 +110,13 @@ html, body {
 .DivConnexion p {
     text-align: center;
     padding: 10px;
-    background-color: #ffd700; /* Couleur verte */
-    color: #2c2f33; /* Texte blanc */
-    border: none; /* Supprime la bordure */
-    border-radius: 5px; /* Coins arrondis */
-    cursor: pointer; /* Change le curseur au survol */
-    font-size: 16px; /* Taille de police */
+    background-color: #ffd700;
+    color: #2c2f33;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
     transition: background-color 0.3s ease;
-
 }
 
 .DivConnexion p:hover {
@@ -134,47 +139,24 @@ html, body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.DivProfil div {
-    margin-bottom: 15px;
-}
+.DivProfil div { margin-bottom: 15px; }
 
-.DivProfil label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #ffd700;
-}
+.DivProfil label { display: block; font-weight: bold; margin-bottom: 5px; color: #ffd700; }
 
 .DivProfil input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #555b63;
-    border-radius: 5px;
-    font-size: 16px;
-    background: #555b63;
-    color: #ffd700;
+    width: 100%; padding: 10px; border: 1px solid #555b63; border-radius: 5px; font-size: 16px; background: #555b63; color: #ffd700;
 }
 
 .DivProfil button {
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #ffd700;
-    color: #2c2f33;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    margin-top: 10px; padding: 10px 15px; background-color: #ffd700; color: #2c2f33; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;
 }
 
-.DivProfil button:hover {
-    background-color: #555b63;
-    color: #ffd700;
-}
+.DivProfil button:hover { background-color: #555b63; color: #ffd700; }
 
-/* Style pour le bouton de déconnexion */
+/* Style pour le bouton de déconnexion (copié du thème clair: position fixed) */
 #deconnexion {
-    background-color: #555b63; /* Rouge */
-    color: #ffd700; /* Texte blanc */
+    background-color: #555b63; /* sombre */
+    color: #ffd700; /* texte */
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -182,744 +164,135 @@ html, body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    /* Fixe le bouton au-dessus du footer pour qu'il reste visible */
+    position: fixed;
+    right: 20px;
+    bottom: 90px; /* identique au thème clair */
+    z-index: 1101; /* au-dessus du footer (1000) */
 }
-
-#deconnexion:hover {
-    background-color: #2c2f33; /* Rouge plus foncé au survol */
-    color: #ffd700;
-    transform: scale(1.05); /* Légère mise en avant au survol */
-}
-
-#deconnexion:active {
-    background-color: #ffd700; /* Rouge encore plus foncé lors du clic */
-    color: #2c2f33;
-    transform: scale(0.95); /* Légère réduction lors du clic */
-}
+#deconnexion:hover { background-color: #ffd700; color: #2c2f33; transform: scale(1.05); }
+#deconnexion:active { background-color: #2c2f33; color: #ffd700; transform: scale(0.95); }
 
 .BouttonAcceuilProfil {
-    display: inline-block;
-    background-color: #555b63; /* Bleu */
-    color: #ffd700; /* Texte blanc */
-    text-align: center;
-    padding: 5px 15px; /* Réduit la taille du bouton */
-    font-size: 14px; /* Réduit la taille du texte */
-    font-weight: bold;
-    border-radius: 4px; /* Coins légèrement arrondis */
-    text-decoration: none;
-    margin: 5px auto; /* Réduit l'espacement vertical */
-    position: relative;
-    top: -10px; /* Remonte légèrement le bouton */
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block; background-color: #555b63; color: #ffd700; text-align: center; padding: 5px 15px; font-size: 14px; font-weight: bold; border-radius: 4px; text-decoration: none; margin: 5px auto; position: relative; top: -10px; transition: background-color 0.3s ease, transform 0.2s ease;
 }
+.BouttonAcceuilProfil:hover { background-color: #ffd700; color: #2c2f33; transform: scale(1.05); }
+.BouttonAcceuilProfil:active { background-color: #2c2f33; color: #ffd700; transform: scale(0.95); }
 
-.BouttonAcceuilProfil:hover {
-    background-color: #ffd700;
-    color: #2c2f33;
-    transform: scale(1.05); /* Légère mise en avant au survol */
-}
-
-.BouttonAcceuilProfil:active {
-    background-color: #2c2f33;
-    color: #ffd700;
-    transform: scale(0.95); /* Légère réduction lors du clic */
-}
-
-.TitreSection {
-    font-size: 20px; /* Taille du texte */
-    font-weight: bold; /* Texte en gras */
-    margin-bottom: 10px; /* Réduit l'espacement en dessous du titre */
-    text-align: center; /* Centre le texte */
-    color: #ffd700;
-}
+.TitreSection { font-size: 20px; font-weight: bold; margin-bottom: 10px; text-align: center; color: #ffd700; }
 
 #toggleThemeBtn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #555b63; /* Bleu */
-    color: #ffd700; /* Texte blanc */
-    border: none;
-    padding: 10px 15px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 50%; /* Bouton rond */
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: absolute; top: 10px; right: 10px; background-color: #555b63; color: #ffd700; border: none; padding: 10px 15px; font-size: 18px; font-weight: bold; border-radius: 50%; cursor: pointer; transition: background-color 0.3s ease, transform 0.2s ease;
 }
+#toggleThemeBtn:hover { background-color: #ffd700; color: #2c2f33; transform: scale(1.1); }
+#toggleThemeBtn:active { background-color: #2c2f33; color: #ffd700; transform: scale(0.95); }
 
-#toggleThemeBtn:hover {
-    background-color: #ffd700;
-    color: #2c2f33;
-    transform: scale(1.1); /* Légère mise en avant au survol */
-}
+.DivAjoutTache { text-align: left; margin: 20px 0; color: #ffd700; }
 
-#toggleThemeBtn:active {
-    background-color: #2c2f33;
-    color: #ffd700;
-    transform: scale(0.95); /* Légère réduction lors du clic */
-}
+.BouttonAjoutTache { display: inline-block; padding: 10px 20px; background-color: #555b63; color: #ffd700; text-decoration: none; font-size: 16px; font-weight: bold; border-radius: 5px; transition: background-color 0.3s ease; }
+.BouttonAjoutTache:hover { background-color: #ffd700; color: #2c2f33; }
 
-.DivAjoutTache {
-    text-align: left;
-    margin: 20px 0;
-    color: #ffd700;
-}
+.EmploiDuTemps { width: 100%; border-collapse: collapse; text-align: center; font-size: 14px; color: #ffd700; }
+.EmploiDuTemps thead th { background-color: #555b63; color: #ffd700; padding: 10px; border: 1px solid #2c2f33; }
+.EmploiDuTemps tbody td { padding: 10px; border: 1px solid #555b63; background: #2c2f33; color: #ffd700; height: 40px; }
+.EmploiDuTemps tbody tr:nth-child(even) { background-color: #555b63; }
+.EmploiDuTemps tbody tr:nth-child(odd) { background-color: #2c2f33; }
 
-.BouttonAjoutTache {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #555b63;
-    color: #ffd700;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.BouttonAjoutTache:hover {
-    background-color: #ffd700;
-    color: #2c2f33;
-}
-
-.EmploiDuTemps {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: center;
-    font-size: 14px;
-    color: #ffd700;
-}
-
-.EmploiDuTemps thead th {
-    background-color: #555b63;
-    color: #ffd700;
-    padding: 10px;
-    border: 1px solid #2c2f33;
-}
-
-.EmploiDuTemps tbody td {
-    padding: 10px;
-    border: 1px solid #555b63;
-    background: #2c2f33;
-    color: #ffd700;
-    height: 40px;
-}
-
-.EmploiDuTemps tbody tr:nth-child(even) {
-    background-color: #555b63;
-}
-
-.EmploiDuTemps tbody tr:nth-child(odd) {
-    background-color: #2c2f33;
-}
-.DivRemiseAZero {
-    text-align: left;
-    margin: 20px 0;
-}
-
-.BouttonRemiseAZero {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #555b63; /* Rouge */
-    color: #ffd700;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.BouttonRemiseAZero:hover {
-    background-color: #ffd700;
-    color: #2c2f33;
-}
+.DivRemiseAZero { text-align: left; margin: 20px 0; }
+.BouttonRemiseAZero { display: inline-block; padding: 10px 20px; background-color: #555b63; color: #ffd700; text-decoration: none; font-size: 16px; font-weight: bold; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease; }
+.BouttonRemiseAZero:hover { background-color: #ffd700; color: #2c2f33; }
 
 /* Pied de page */
-.Footer {
-    background-color: #555b63;
-    color: #ffd700;
-    padding: 15px 0; /* Espacement en haut et en bas */
-    position: fixed; /* Fixe le pied de page en bas de la fenêtre */
-    bottom: 0;
-    left: 0;
-    width: 100%; /* Prend toute la largeur de la page */
-    z-index: 1000; /* Assure que le pied de page reste au-dessus des autres éléments */
-    text-align: center; /* Centre le contenu horizontalement */
-}
+.Footer { background-color: #555b63; color: #ffd700; padding: 15px 0; position: fixed; bottom: 0; left: 0; width: 100%; z-index: 1000; text-align: center; }
+.FooterButtons { display: flex; justify-content: center; gap: 20px; }
+.FooterButton { display: inline-block; padding: 10px 20px; background-color: #2c2f33; color: #ffd700; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 5px; transition: background-color 0.3s ease; }
+.FooterButton:hover { background-color: #ffd700; color: #2c2f33; }
 
-.FooterButtons {
-    display: flex;
-    justify-content: center; /* Centre les boutons horizontalement */
-    gap: 20px; /* Espacement entre les boutons */
-}
+.BouttonMdpOublie { display: block; margin-top: 10px; color: #ffd700; text-align: center; text-decoration: none; font-size: 14px; transition: color 0.3s; }
+.BouttonMdpOublie:hover { color: #555b63; text-decoration: underline; }
 
-.FooterButton {
-    display: inline-block;
-    padding: 10px 20px; /* Espacement interne des boutons */
-    background-color: #2c2f33;
-    color: #ffd700; /* Couleur du texte */
-    text-decoration: none; /* Supprime le soulignement des liens */
-    font-size: 14px; /* Taille du texte */
-    font-weight: bold;
-    border-radius: 5px; /* Coins arrondis */
-    transition: background-color 0.3s ease; /* Animation pour le survol */
-}
+.FormNouveauMDP { max-width: 400px; margin: 30px auto; padding: 20px; background: #2c2f33; color: #ffd700; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); display: flex; flex-direction: column; gap: 12px; }
+.FormNouveauMDP label { font-weight: bold; text-align: left; color: #ffd700; }
+.FormNouveauMDP input[type="password"], .FormNouveauMDP input[type="submit"] { padding: 10px; border-radius: 5px; border: 1px solid #555b63; background: #555b63; color: #ffd700; }
+.FormNouveauMDP input[type="submit"] { background: #ffd700; color: #2c2f33; border: none; font-weight: bold; cursor: pointer; transition: background 0.3s; }
+.FormNouveauMDP input[type="submit"]:hover { background: #555b63; color: #ffd700; }
 
-.FooterButton:hover {
-    background-color: #ffd700;
-    color: #2c2f33;
-}
-
-.BouttonMdpOublie {
-    display: block;
-    margin-top: 10px;
-    color: #ffd700;
-    text-align: center;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s;
-}
-
-.BouttonMdpOublie:hover {
-    color: #555b63;
-    text-decoration: underline;
-}
-
-.FormNouveauMDP {
-    max-width: 400px;
-    margin: 30px auto;
-    padding: 20px;
-    background: #2c2f33;
-    color: #ffd700;
-    border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-.FormNouveauMDP label {
-    font-weight: bold;
-    text-align: left;
-    color: #ffd700;
-}
-.FormNouveauMDP input[type="password"],
-.FormNouveauMDP input[type="submit"] {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #555b63;
-    background: #555b63;
-    color: #ffd700;
-}
-.FormNouveauMDP input[type="submit"] {
-    background: #ffd700;
-    color: #2c2f33;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-.FormNouveauMDP input[type="submit"]:hover {
-    background: #555b63;
-    color: #ffd700;
-}
-
-.notfound-container {
-    min-height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #ffd700;
-    background: #2c2f33;
-}
-.notfound-title {
-    font-size: 4em;
-    color: #ffd700;
-    margin-bottom: 10px;
-}
-.notfound-message {
-    font-size: 1.5em;
-    margin-bottom: 30px;
-    color: #ffd700;
-}
-.notfound-link {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #555b63;
-    color: #ffd700;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-.notfound-link:hover {
-    background: #ffd700;
-    color: #2c2f33;
-}
+.notfound-container { min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #ffd700; background: #2c2f33; }
+.notfound-title { font-size: 4em; color: #ffd700; margin-bottom: 10px; }
+.notfound-message { font-size: 1.5em; margin-bottom: 30px; color: #ffd700; }
+.notfound-link { display: inline-block; padding: 10px 20px; background: #555b63; color: #ffd700; border-radius: 5px; text-decoration: none; font-weight: bold; transition: background 0.3s; }
+.notfound-link:hover { background: #ffd700; color: #2c2f33; }
 
 /* Champs du formulaire de changement de mot de passe */
-#changePwdForm {
-    background: #2c2f33;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    padding: 20px 18px;
-    max-width: 350px;
-    margin: 15px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
+#changePwdForm { background: #2c2f33; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 20px 18px; max-width: 350px; margin: 15px 0; display: flex; flex-direction: column; gap: 12px; }
+#changePwdForm label { font-weight: bold; color: #ffd700; margin-bottom: 4px; text-align: left; }
+#changePwdForm input[type="password"] { padding: 10px; border-radius: 5px; border: 1px solid #555b63; background: #555b63; color: #ffd700; font-size: 15px; margin-bottom: 8px; width: 100%; box-sizing: border-box; }
+#changePwdForm input[type="submit"] { background-color: #ffd700; color: #2c2f33; border: none; border-radius: 5px; padding: 10px; font-weight: bold; font-size: 16px; cursor: pointer; transition: background 0.3s; }
+#changePwdForm input[type="submit"]:hover { background-color: #555b63; color: #ffd700; }
 
-#changePwdForm label {
-    font-weight: bold;
-    color: #ffd700;
-    margin-bottom: 4px;
-    text-align: left;
-}
+.DivAjoutTacheForm { max-width: 450px; margin: 40px auto 0 auto; padding: 30px 28px; background: #2c2f33; color: #ffd700; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.10); text-align: center; }
+.DivAjoutTacheForm h2 { color: #ffd700; margin-bottom: 22px; font-size: 24px; }
+.FormAjoutTache { display: flex; flex-direction: column; gap: 15px; }
+.FormAjoutTache label { font-weight: bold; color: #ffd700; text-align: left; margin-bottom: 3px; }
+.FormAjoutTache input[type="text"], .FormAjoutTache textarea, .FormAjoutTache select { padding: 10px; border-radius: 5px; border: 1px solid #555b63; background: #555b63; color: #ffd700; font-size: 15px; margin-bottom: 5px; width: 100%; box-sizing: border-box; }
+.FormAjoutTache textarea { resize: vertical; }
+.FormAjoutTache input[type="submit"] { background-color: #ffd700; color: #2c2f33; border: none; border-radius: 5px; padding: 12px; font-weight: bold; font-size: 16px; cursor: pointer; margin-top: 10px; transition: background 0.3s; }
+.FormAjoutTache input[type="submit"]:hover { background-color: #555b63; color: #ffd700; }
 
-#changePwdForm input[type="password"] {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #555b63;
-    background: #555b63;
-    color: #ffd700;
-    font-size: 15px;
-    margin-bottom: 8px;
-    width: 100%;
-    box-sizing: border-box;
-}
+.BouttonAcceuil { display: inline-block; margin-top: 18px; background-color: #555b63; color: #ffd700; padding: 8px 18px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: background 0.3s; }
+.BouttonAcceuil:hover { background-color: #ffd700; color: #2c2f33; }
 
-#changePwdForm input[type="submit"] {
-    background-color: #ffd700;
-    color: #2c2f33;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
+.TaskCell { color: #ffd700; border-radius: 3px; padding: 2px 2px; font-weight: bold; text-align: center; margin: 1px 0; background: #555b63; }
+.TaskDesc { color: #ffd700; font-size: 0.9em; font-weight: normal; display: block; margin-top: 2px; }
 
-#changePwdForm input[type="submit"]:hover {
-    background-color: #555b63;
-    color: #ffd700;
-}
-
-.DivAjoutTacheForm {
-    max-width: 450px;
-    margin: 40px auto 0 auto;
-    padding: 30px 28px;
-    background: #2c2f33;
-    color: #ffd700;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-    text-align: center;
-}
-
-.DivAjoutTacheForm h2 {
-    color: #ffd700;
-    margin-bottom: 22px;
-    font-size: 24px;
-}
-
-.FormAjoutTache {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.FormAjoutTache label {
-    font-weight: bold;
-    color: #ffd700;
-    text-align: left;
-    margin-bottom: 3px;
-}
-
-.FormAjoutTache input[type="text"],
-.FormAjoutTache textarea,
-.FormAjoutTache select {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #555b63;
-    background: #555b63;
-    color: #ffd700;
-    font-size: 15px;
-    margin-bottom: 5px;
-    width: 100%;
-    box-sizing: border-box;
-    background: #f8f8f8;
-}
-
-.FormAjoutTache textarea {
-    resize: vertical;
-}
-
-.FormAjoutTache input[type="submit"] {
-    background-color: #ffd700;
-    color: #2c2f33;
-    border: none;
-    border-radius: 5px;
-    padding: 12px;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background 0.3s;
-}
-
-.FormAjoutTache input[type="submit"]:hover {
-    background-color: #555b63;
-    color: #ffd700;
-}
-
-.BouttonAcceuil {
-    display: inline-block;
-    margin-top: 18px;
-    background-color: #555b63;
-    color: #ffd700;
-    padding: 8px 18px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-
-.BouttonAcceuil:hover {
-    background-color: #ffd700;
-    color: #2c2f33;
-}
-
-.TaskCell {
-    color: #ffd700;
-    border-radius: 3px;
-    padding: 2px 2px;
-    font-weight: bold;
-    text-align: center;
-    margin: 1px 0;
-    background: #555b63;
-}
-.TaskDesc {
-    color: #ffd700;
-    font-size: 0.9em;
-    font-weight: normal;
-    display: block;
-    margin-top: 2px;
-}
-
-.DivDetailsTask {
-    max-width: 400px;
-    margin: 40px auto;
-    background: #2c2f33;
-    color: #ffd700;
-    border-radius: 10px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-    padding: 30px 24px;
-    text-align: center;
-}
-.BtnSupprimerTache {
-    background: #555b63;
-    color: #ffd700;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 18px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-bottom: 10px;
-    transition: background 0.3s;
-}
-.BtnSupprimerTache:hover {
-    background: #ffd700;
-    color: #2c2f33;
-}
-.FormCouleurTache {
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-}
-.FormCouleurTache input[type="color"] {
-    width: 50px;
-    height: 30px;
-    border: none;
-    background: none;
-    cursor: pointer;
-    background: #555b63;
-}
-.FormCouleurTache input[type="submit"] {
-    background: #ffd700;
-    color: #2c2f33;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-.FormCouleurTache input[type="submit"]:hover {
-    background: #555b63;
-    color: #ffd700;
-}
+.DivDetailsTask { max-width: 400px; margin: 40px auto; background: #2c2f33; color: #ffd700; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.10); padding: 30px 24px; text-align: center; }
+.BtnSupprimerTache { background: #555b63; color: #ffd700; border: none; border-radius: 5px; padding: 10px 18px; font-weight: bold; cursor: pointer; margin-bottom: 10px; transition: background 0.3s; }
+.BtnSupprimerTache:hover { background: #ffd700; color: #2c2f33; }
+.FormCouleurTache { margin-top: 15px; display: flex; flex-direction: column; gap: 10px; align-items: center; }
+.FormCouleurTache input[type="color"] { width: 50px; height: 30px; border: none; background: none; cursor: pointer; background: #555b63; }
+.FormCouleurTache input[type="submit"] { background: #ffd700; color: #2c2f33; border: none; border-radius: 5px; padding: 8px 16px; font-weight: bold; cursor: pointer; transition: background 0.3s; }
+.FormCouleurTache input[type="submit"]:hover { background: #555b63; color: #ffd700; }
 
 /* Conteneur des boutons sous l'EDT */
-#edt-btn-container {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin: 32px auto 70px auto;
-    flex-wrap: wrap;
-}
-
+#edt-btn-container { display: flex; justify-content: center; gap: 24px; margin: 32px auto 70px auto; flex-wrap: wrap; }
 /* Style général pour les deux boutons */
-#edt-btn-container button {
-    padding: 12px 32px;
-    font-size: 1.1em;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 4px 16px rgba(0,224,255,0.10), 0 2px 8px rgba(255,0,234,0.08);
-    transition: background 0.3s, transform 0.2s;
-    letter-spacing: 0.5px;
-    margin: 0;
-    margin-bottom: 20px;
-}
-
+#edt-btn-container button { padding: 12px 32px; font-size: 1.1em; font-weight: bold; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 16px rgba(0,224,255,0.10), 0 2px 8px rgba(255,0,234,0.08); transition: background 0.3s, transform 0.2s; letter-spacing: 0.5px; margin: 0; margin-bottom: 20px; }
 /* Bouton Télécharger l'EDT en PDF */
-#btnEDTPDF {
-    background: #ffd700;
-    color: #2c2f33;
-}
-#btnEDTPDF:hover {
-    background: #555b63;
-    color: #ffd700;
-    transform: translateY(-2px) scale(1.04);
-    box-shadow: 0 6px 24px rgba(0,224,255,0.18), 0 4px 16px rgba(255,0,234,0.14);
-}
-
+#btnEDTPDF { background: #ffd700; color: #2c2f33; }
+#btnEDTPDF:hover { background: #555b63; color: #ffd700; transform: translateY(-2px) scale(1.04); box-shadow: 0 6px 24px rgba(0,224,255,0.18), 0 4px 16px rgba(255,0,234,0.14); }
 /* Bouton Imprimer l'EDT */
-#btnPrintPDF {
-    background: #555b63;
-    color: #ffd700;
-}
-#btnPrintPDF:hover {
-    background: #ffd700;
-    color: #2c2f33;
-    transform: translateY(-2px) scale(1.04);
-    box-shadow: 0 6px 24px rgba(255,0,234,0.18), 0 4px 16px rgba(0,224,255,0.14);
-}
+#btnPrintPDF { background: #555b63; color: #ffd700; }
+#btnPrintPDF:hover { background: #ffd700; color: #2c2f33; transform: translateY(-2px) scale(1.04); box-shadow: 0 6px 24px rgba(255,0,234,0.18), 0 4px 16px rgba(0,224,255,0.14); }
 
 /* Container du formulaire de contact */
-.DivContact {
-    max-width: 500px;
-    margin: 40px auto 100px auto;
-    padding: 28px 32px;
-    background: #f7fafd;
-    border-radius: 14px;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.09);
-    color: #ffd700;
-}
+.DivContact { max-width: 500px; margin: 40px auto 100px auto; padding: 28px 32px; background: #2c2f33; border-radius: 14px; box-shadow: 0 2px 16px rgba(0,0,0,0.2); color: #ffd700; }
+.DivContact form { display: flex; flex-direction: column; gap: 2px; }
+.DivContact label { font-weight: 500; margin-bottom: 3px; color: #ffd700; }
+.DivContact input[type="email"], .DivContact input[type="text"], .DivContact textarea { width: 100%; padding: 9px 12px; border: 1px solid #555b63; border-radius: 6px; font-size: 1rem; background: #555b63; color: #ffd700; transition: border 0.2s; box-sizing: border-box; }
+.DivContact input[type="email"]:focus, .DivContact input[type="text"]:focus, .DivContact textarea:focus { border-color: #ffd700; outline: none; }
+.DivContact textarea { resize: vertical; min-height: 90px; font-family: inherit; }
+.DivContact button[type="submit"] { background: #ffd700; color: #2c2f33; border: none; border-radius: 6px; padding: 11px 0; font-size: 1.08rem; font-weight: 600; cursor: pointer; margin-top: 8px; transition: background 0.2s; }
+.DivContact button[type="submit"]:hover { background: #555b63; color: #ffd700; }
 
-/* Style du formulaire */
-.DivContact form {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-}
-
-/* Labels */
-.DivContact label {
-    font-weight: 500;
-    margin-bottom: 3px;
-    color: #ffd700;
-}
-
-/* Champs de saisie */
-.DivContact input[type="email"],
-.DivContact input[type="text"],
-.DivContact textarea {
-    width: 100%;
-    padding: 9px 12px;
-    border: 1px solid #b5c1d8;
-    border-radius: 6px;
-    font-size: 1rem;
-    background: #555b63;
-    color: #ffd700;
-    transition: border 0.2s;
-    box-sizing: border-box;
-}
-
-.DivContact input[type="email"]:focus,
-.DivContact input[type="text"]:focus,
-.DivContact textarea:focus {
-    border-color: #ffd700;
-    outline: none;
-}
-
-/* Zone de texte */
-.DivContact textarea {
-    resize: vertical;
-    min-height: 90px;
-    font-family: inherit;
-}
-
-/* Bouton envoyer */
-.DivContact button[type="submit"] {
-    background: #ffd700;
-    color: #2c2f33;
-    border: none;
-    border-radius: 6px;
-    padding: 11px 0;
-    font-size: 1.08rem;
-    font-weight: 600;
-    cursor: pointer;
-    margin-top: 8px;
-    transition: background 0.2s;
-}
-
-.DivContact button[type="submit"]:hover {
-    background: #555b63;
-    color: #ffd700;
-}
-
-.activation-a2f-body {
-    background: #2c2f33;
-    color: #ffd700;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    min-height: 100vh;
-    margin: 0;
-}
-
-.activation-a2f-container {
-    background: #555b63;
-    border-radius: 12px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-    max-width: 400px;
-    margin: 60px auto;
-    padding: 32px 28px;
-    text-align: center;
-}
-
-.activation-a2f-title {
-    font-size: 1.7em;
-    margin-bottom: 24px;
-    color: #ffd700;
-}
-
-.activation-a2f-label {
-    font-size: 1.1em;
-    color: #ffd700;
-}
-
-.activation-a2f-input {
-    margin-top: 10px;
-    padding: 10px 12px;
-    font-size: 1.1em;
-    border: 1px solid #ffd700;
-    border-radius: 6px;
-    background: #2c2f33;
-    color: #ffd700;
-    outline: none;
-    transition: border 0.2s;
-}
-
-.activation-a2f-input:focus {
-    border: 1.5px solid #ffd700;
-}
-
-.activation-a2f-button {
-    margin-top: 18px;
-    padding: 10px 28px;
-    background: #ffd700;
-    color: #2c2f33;
-    border: none;
-    border-radius: 6px;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.activation-a2f-button:hover {
-    background: #555b63;
-    color: #ffd700;
-}
-
-.activation-a2f-help {
-    margin-top: 22px;
-    color: #ffd700;
-    font-size: 0.98em;
-}
-.activation-a2f-btn {
-    display: inline-block;
-    padding: 12px 28px;
-    background: #ffd700;
-    color: #2c2f33;
-    border-radius: 6px;
-    font-size: 1.1em;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background 0.2s, box-shadow 0.2s;
-    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
-    margin: 18px 0;
-    cursor: pointer;
-}
-.activation-a2f-btn:hover {
-    background: #555b63;
-    color: #ffd700;
-    box-shadow: 0 4px 16px rgba(25, 118, 210, 0.15);
-}
+.activation-a2f-body { background: #2c2f33; color: #ffd700; font-family: 'Segoe UI', Arial, sans-serif; min-height: 100vh; margin: 0; }
+.activation-a2f-container { background: #555b63; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); max-width: 400px; margin: 60px auto; padding: 32px 28px; text-align: center; }
+.activation-a2f-title { font-size: 1.7em; margin-bottom: 24px; color: #ffd700; }
+.activation-a2f-label { font-size: 1.1em; color: #ffd700; }
+.activation-a2f-input { margin-top: 10px; padding: 10px 12px; font-size: 1.1em; border: 1px solid #ffd700; border-radius: 6px; background: #2c2f33; color: #ffd700; outline: none; transition: border 0.2s; }
+.activation-a2f-input:focus { border: 1.5px solid #ffd700; }
+.activation-a2f-button { margin-top: 18px; padding: 10px 28px; background: #ffd700; color: #2c2f33; border: none; border-radius: 6px; font-size: 1.1em; cursor: pointer; transition: background 0.2s; }
+.activation-a2f-button:hover { background: #555b63; color: #ffd700; }
+.activation-a2f-help { margin-top: 22px; color: #ffd700; font-size: 0.98em; }
+.activation-a2f-btn { display: inline-block; padding: 12px 28px; background: #ffd700; color: #2c2f33; border-radius: 6px; font-size: 1.1em; text-decoration: none; font-weight: 500; transition: background 0.2s, box-shadow 0.2s; box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08); margin: 18px 0; cursor: pointer; }
+.activation-a2f-btn:hover { background: #555b63; color: #ffd700; box-shadow: 0 4px 16px rgba(25, 118, 210, 0.15); }
 
 /* Styles pour la page des emplois du temps partagés (SharedEDT) - mode sombre */
-.sharededt-body {
-    background: #23272a;
-    color: #ffd700;
-    min-height: 100vh;
-}
-.sharededt-title {
-    color: #ffd700;
-    margin-bottom: 24px;
-}
-.sharededt-list {
-    background: #2c2f33;
-    border-radius: 10px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.13);
-    padding: 24px 28px;
-    max-width: 600px;
-    margin: 0 auto 30px auto;
-}
-.sharededt-item {
-    padding: 10px 0;
-    border-bottom: 1px solid #555b63;
-    font-size: 1.08em;
-}
-.sharededt-item:last-child {
-    border-bottom: none;
-}
-.sharededt-view {
-    color: #ffd700;
-    text-decoration: underline;
-    font-weight: bold;
-    margin-left: 8px;
-}
-.sharededt-view:hover {
-    color: #fff;
-}
-.sharededt-back {
-    display: inline-block;
-    margin: 18px auto 0 auto;
-    background: #555b63;
-    color: #ffd700;
-    padding: 8px 18px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-.sharededt-back:hover {
-    background: #ffd700;
-    color: #2c2f33;
-}
+.sharededt-body { background: #23272a; color: #ffd700; min-height: 100vh; }
+.sharededt-title { color: #ffd700; margin-bottom: 24px; }
+.sharededt-list { background: #2c2f33; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.13); padding: 24px 28px; max-width: 600px; margin: 0 auto 30px auto; }
+.sharededt-item { padding: 10px 0; border-bottom: 1px solid #555b63; font-size: 1.08em; }
+.sharededt-item:last-child { border-bottom: none; }
+.sharededt-view { color: #ffd700; text-decoration: underline; font-weight: bold; margin-left: 8px; }
+.sharededt-view:hover { color: #fff; }
+.sharededt-back { display: inline-block; margin: 18px auto 0 auto; background: #555b63; color: #ffd700; padding: 8px 18px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: background 0.3s; }
+.sharededt-back:hover { background: #ffd700; color: #2c2f33; }

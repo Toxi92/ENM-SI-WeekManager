@@ -181,6 +181,11 @@ main {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    /* Fixe le bouton au-dessus du footer pour qu'il reste visible */
+    position: fixed;
+    right: 20px;
+    bottom: 90px; /* un peu au-dessus du footer (footer ~ 60-75px) */
+    z-index: 1101; /* supérieur au footer (1000) */
 }
 
 #deconnexion:hover {

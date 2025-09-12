@@ -56,7 +56,7 @@ $langData = getLangData($lang);
                 <a class="BouttonAjoutTache" href="/vue/Task.php"><?php echo t('homeAddTask', $langData); ?></a>
             </div>
             <div class="DivAjoutTache">
-                <a class="BouttonAjoutTache" href="/vue/SharedEDT.php">Emplois du temps partagés avec moi</a>
+                <a class="BouttonAjoutTache" href="/vue/SharedEDT.php"><?php echo t('homeSharedEDTWithMe', $langData); ?></a>
             </div>
             <div class="DivRemiseAZero">
                 <form action="index.php?action=reset" method="post">

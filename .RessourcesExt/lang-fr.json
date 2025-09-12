@@ -161,5 +161,6 @@
   "profileShareEDTButton": "Partager mon emploi du temps",
   "shareEmailLabel": "Email du destinataire :",
   "shareRankLabel": "Rang d'accès :",
-  "shareSubmit": "Partager"
+  "shareSubmit": "Partager",
+  "homeSharedEDTWithMe": "Emplois du temps partagés avec moi"
 }
