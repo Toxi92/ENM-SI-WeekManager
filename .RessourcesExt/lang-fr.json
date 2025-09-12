@@ -155,4 +155,11 @@
   "profileSharedEDTTitle":"Liste des personnes avec qui vous avez partagé votre EDT :",
   "profileRemoveAccess": "Retirer l'accès",
   "sharedEDTRemoveSuccess": "Accès retiré avec succès pour l'email : "
+  ,
+  "a2fActivateButton": "Activer la double authentification",
+  "a2fDeactivateButton": "Désactiver la double authentification",
+  "profileShareEDTButton": "Partager mon emploi du temps",
+  "shareEmailLabel": "Email du destinataire :",
+  "shareRankLabel": "Rang d'accès :",
+  "shareSubmit": "Partager"
 }

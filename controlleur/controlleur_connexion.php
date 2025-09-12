@@ -22,8 +22,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit;
         }else{
             $_SESSION['email'] = $email;
-            $_SESSSION['pwd'] = $password;
             header('Location: /../vue/Connexion_A2F.php');
+            exit;
         }
 
     } elseif ($query->getUserByEmail($email)==false) {

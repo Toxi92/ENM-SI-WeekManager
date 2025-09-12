@@ -59,24 +59,24 @@ $langData = getLangData($lang);
                 <?php
                 include_once(__DIR__ . "/../modele/db.auth.php");
                 if ($query->ISa2fON($user->getEmail())) {
-                    echo '<a href="../controlleur/controlleur_desactivation_a2f.php" class="activation-a2f-btn">Désactiver la double authentification</a>';
+                    echo '<a href="../controlleur/controlleur_desactivation_a2f.php" class="activation-a2f-btn">' . t('a2fDeactivateButton', $langData) . '</a>';
                 } else {
-                    echo '<a href="../vue/ActivationA2F.php" class="activation-a2f-btn" >Activer la double authentification</a>';
+                    echo '<a href="../vue/ActivationA2F.php" class="activation-a2f-btn" >' . t('a2fActivateButton', $langData) . '</a>';
                 }
                 ?>
 
                 <div style="margin-top:20px;">
-                    <button id="btnShareEDT" type="button" style="background:#555b63;color:#ffd700;border-radius:5px;padding:10px 18px;font-weight:bold;cursor:pointer;">Partager mon emploi du temps</button>
+                    <button id="btnShareEDT" type="button" style="background:#555b63;color:#ffd700;border-radius:5px;padding:10px 18px;font-weight:bold;cursor:pointer;"><?php echo t('profileShareEDTButton', $langData); ?></button>
                     <form id="formShareEDT" action="../controlleur/controlleur_partage_edt.php" method="post" style="display:none;margin-top:10px;">
-                        <label for="share_email">Email du destinataire :</label>
+                        <label for="share_email"><?php echo t('shareEmailLabel', $langData); ?></label>
                         <input type="email" id="share_email" name="share_email" required>
-                        <label for="share_rank">Rang d'accès :</label>
+                        <label for="share_rank"><?php echo t('shareRankLabel', $langData); ?></label>
                         <select id="share_rank" name="share_rank" required>
-                            <option value="1">Voir</option>
-                            <option value="2">Voir et modifier</option>
+                            <option value="1"><?php echo t('sharedEDTRank1', $langData); ?></option>
+                            <option value="2"><?php echo t('sharedEDTRank2', $langData); ?></option>
                         </select>
                         <input type="hidden" name="owner_email" value="<?php echo $user->getEmail(); ?>">
-                        <button type="submit" style="background:#ffd700;color:#2c2f33;border-radius:5px;padding:8px 16px;font-weight:bold;margin-top:8px;">Partager</button>
+                        <button type="submit" style="background:#ffd700;color:#2c2f33;border-radius:5px;padding:8px 16px;font-weight:bold;margin-top:8px;"><?php echo t('shareSubmit', $langData); ?></button>
                     </form>
                     <script>
                     document.getElementById('btnShareEDT').onclick = function() {

@@ -153,5 +153,11 @@
   "sharedEDTNotShared": "This timetable is not shared with you.",
   "profileSharedEDTTitle":"List of the persons the shared your timetable with : ",
   "profileRemoveAccess":"Remove access",
-  "sharedEDTRemoveSuccess": "Access removed successfully for the following email : "
+  "sharedEDTRemoveSuccess": "Access removed successfully for the following email : ",
+  "a2fActivateButton": "Enable two-factor authentication",
+  "a2fDeactivateButton": "Disable two-factor authentication",
+  "profileShareEDTButton": "Share my timetable",
+  "shareEmailLabel": "Recipient's email:",
+  "shareRankLabel": "Access level:",
+  "shareSubmit": "Share"
 }

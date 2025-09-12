@@ -20,11 +20,27 @@ $langData = getLangData($lang);
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_SESSION['email'])) {
         $email = $_SESSION['email'];
-        $password = $_SESSION['pwd'];
-        $a2f_code = $_POST['a2f_code'];
-        $totp = TOTP::create($query->getSecret($email));
+        // Do not read/store password from session; only the email and A2F code are needed here
+        $a2f_code = isset($_POST['a2f_code']) ? trim($_POST['a2f_code']) : null;
+        if ($a2f_code === null) {
+            $_SESSION['a2f_error'] = t('a2fIncorrect', $langData);
+            header('Location: ../vue/Connexion_A2F.php');
+            exit;
+        }
+        // Basic format check (6 digits)
+        if (!ctype_digit($a2f_code) || strlen($a2f_code) !== 6) {
+            $_SESSION['a2f_error'] = t('a2fIncorrect', $langData);
+            header('Location: ../vue/Connexion_A2F.php');
+            exit;
+        }
+        $secret = $query->getSecret($email);
+        if (empty($secret)) {
+            $_SESSION['a2f_error'] = t('a2fIncorrect', $langData);
+            header('Location: ../vue/Connexion.php');
+            exit;
+        }
+        $totp = TOTP::create($secret);
         if ($totp->verify($a2f_code)) {
-            session_start();
             $res=$query->getUserByEmail($email);
             $user->login($res['username'], $res['pwd'], $res['email'], $res['admin']);
             $_SESSION['user'] = serialize($user);
@@ -32,10 +48,15 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
             window.location.href = '../index.php';
             </script>";
         }else {
-            echo "<script>alert('".t('a2fIncorrect', $langData)."');
-            window.location.href = '../vue/Connexion_A2F.php';
-            </script>";
+            $_SESSION['a2f_error'] = t('a2fIncorrect', $langData);
+            header('Location: ../vue/Connexion_A2F.php');
+            exit;
         }
+    } else {
+        // No email in session: user likely accessed A2F page directly or session expired
+        $_SESSION['a2f_error'] = t('a2fIncorrect', $langData);
+        header('Location: ../vue/Connexion.php');
+        exit;
     }
 }
 

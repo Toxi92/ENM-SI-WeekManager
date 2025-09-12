@@ -11,6 +11,12 @@ html, body {
     font-family: 'Lexend-VariableFont_wght';
 }
 
+/* Prevent fixed footer from overlapping page content */
+main {
+    padding-bottom: 90px; /* slightly larger than footer height to avoid overlap */
+    box-sizing: border-box;
+}
+
 .Titre{
     display: flex;
     justify-content: center;
